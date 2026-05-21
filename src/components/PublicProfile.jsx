@@ -1,4 +1,26 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
+
+const CSS = `
+  html { scroll-behavior: smooth; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  .np-hero    { animation: fadeUp 0.55s cubic-bezier(.22,1,.36,1) both; }
+  .np-outcomes{ animation: fadeUp 0.55s cubic-bezier(.22,1,.36,1) 0.08s both; }
+  .np-section { animation: fadeUp 0.5s cubic-bezier(.22,1,.36,1) both; }
+  .np-card    { transition: box-shadow 0.18s, transform 0.18s; }
+  .np-card:hover { box-shadow: 0 4px 20px rgba(28,25,23,0.09); transform: translateY(-2px); }
+`;
+
+function GlobalStyles() {
+  return <style>{CSS}</style>;
+}
 
 const S = {
   amber: "#D97706", amberDeep: "#B45309", amberTint: "#FEF3C7", amberBorder: "#FCD34D",
@@ -110,7 +132,7 @@ function SectionHead({ num, kicker, title, anchor }) {
 
 function Hero({ data, t }) {
   return (
-    <section style={{ marginBottom: 56 }}>
+    <section className="np-hero" style={{ marginBottom: 56 }}>
       <div style={{ display: "flex", gap: 6, marginBottom: 22, flexWrap: "wrap" }}>
         <Pill dot color="green">{t.statusLabel(data)}</Pill>
       </div>
@@ -130,7 +152,7 @@ function Hero({ data, t }) {
 
 function Outcomes({ outcomes, t }) {
   return (
-    <section style={{ marginBottom: 56 }}>
+    <section className="np-outcomes" style={{ marginBottom: 56 }}>
       <div style={{
         display: "grid", gridTemplateColumns: `repeat(${outcomes.length}, 1fr)`,
         border: `1px solid ${S.border}`, borderRadius: 10, overflow: "hidden", background: S.bgWarm,
@@ -148,7 +170,7 @@ function Outcomes({ outcomes, t }) {
 
 function NowBlock({ now, t }) {
   return (
-    <section style={{ marginBottom: 56 }}>
+    <section className="np-section" style={{ marginBottom: 56 }}>
       <SectionHead num="01" kicker={t.nowKicker} title={t.nowTitle} anchor="now" />
       <div style={{
         display: "grid", gridTemplateColumns: "1fr 1fr", gap: 1,
@@ -173,7 +195,7 @@ function Timeline({ timeline, t }) {
   const years = y1 - y0;
 
   return (
-    <section style={{ marginBottom: 56 }}>
+    <section className="np-section" style={{ marginBottom: 56 }}>
       <SectionHead num="02" kicker={t.careerKicker} title={`${years} years, traced.`} anchor="timeline" />
       <div style={{
         position: "relative", background: S.white, border: `1px solid ${S.border}`,
@@ -243,11 +265,11 @@ function Timeline({ timeline, t }) {
 
 function CaseStudies({ caseStudies, t }) {
   return (
-    <section style={{ marginBottom: 56 }}>
+    <section className="np-section" style={{ marginBottom: 56 }}>
       <SectionHead num="03" kicker={t.casesKicker} title={t.casesTitle} anchor="cases" />
       <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
         {caseStudies.map((c, i) => (
-          <article key={i} style={{ border: `1px solid ${S.border}`, borderRadius: 10, background: S.white, overflow: "hidden" }}>
+          <article key={i} className="np-card" style={{ border: `1px solid ${S.border}`, borderRadius: 10, background: S.white, overflow: "hidden" }}>
             <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr" }}>
               <div style={{ padding: "26px 28px", borderRight: `1px solid ${S.border}` }}>
                 <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: S.stoneHair, letterSpacing: 2, marginBottom: 8 }}>{t.case} 0{i + 1}</div>
@@ -285,7 +307,7 @@ function CaseStudies({ caseStudies, t }) {
 
 function Plan({ plan, t }) {
   return (
-    <section style={{ marginBottom: 56 }}>
+    <section className="np-section" style={{ marginBottom: 56 }}>
       <SectionHead num="04" kicker={t.planKicker} title={t.planTitle} anchor="plan" />
       <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12 }}>
         {plan.map((b, i) => (
@@ -304,7 +326,7 @@ function Plan({ plan, t }) {
 function Recommendations({ recommendations, t }) {
   if (!recommendations?.length) return null;
   return (
-    <section style={{ marginBottom: 56 }}>
+    <section className="np-section" style={{ marginBottom: 56 }}>
       <SectionHead num="05" kicker={t.recsKicker} title={t.recsTitle} anchor="recs" />
       <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
         {recommendations.map((r, i) => (
@@ -362,7 +384,7 @@ export default function PublicProfile({ data }) {
     ["recs", t.nav[4]],
   ];
 
-  // Scroll spy
+  // Scroll spy — fires when section enters the viewport
   useEffect(() => {
     const observers = NAV_IDS.map((id) => {
       const el = document.getElementById(id);
@@ -377,8 +399,16 @@ export default function PublicProfile({ data }) {
     return () => observers.forEach((o) => o?.disconnect());
   }, []);
 
+  // Click nav: set active immediately, then scroll smoothly
+  const handleNavClick = useCallback((e, id) => {
+    e.preventDefault();
+    setActiveSection(id);
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, []);
+
   return (
     <div style={{ minHeight: "100vh", background: "#f0eee9", paddingBottom: 40 }}>
+      <GlobalStyles />
       {/* Top bar — minimal: just Contact, LinkedIn, lang toggle */}
       <div style={{
         background: S.white, borderBottom: `1px solid ${S.border}`,
@@ -413,15 +443,21 @@ export default function PublicProfile({ data }) {
               {navItems.map(([id, label]) => {
                 const isActive = activeSection === id;
                 return (
-                  <a key={id} href={`#${id}`} style={{
+                  <a key={id} href={`#${id}`} onClick={(e) => handleNavClick(e, id)} style={{
                     display: "flex", alignItems: "center", gap: 10, fontSize: 12.5,
                     color: isActive ? S.stone : S.stoneFaint,
-                    textDecoration: "none", padding: "4px 0",
+                    textDecoration: "none", padding: "5px 0",
                     fontWeight: isActive ? 600 : 400,
                     fontFamily: "'Inter', sans-serif",
-                    transition: "color 0.15s",
+                    transition: "color 0.2s, font-weight 0.2s",
+                    cursor: "pointer",
                   }}>
-                    <span style={{ width: 12, height: 1, background: isActive ? S.amber : "#D6D3CE", display: "inline-block", transition: "background 0.15s" }} />
+                    <span style={{
+                      width: isActive ? 20 : 12, height: 1,
+                      background: isActive ? S.amber : "#D6D3CE",
+                      display: "inline-block",
+                      transition: "width 0.25s cubic-bezier(.22,1,.36,1), background 0.2s",
+                    }} />
                     {label}
                   </a>
                 );
