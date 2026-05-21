@@ -12,13 +12,13 @@ const profile = {
   },
 
   summary:
-    "13 years building engineering teams and product-critical systems across B2B SaaS, fintech, and ESG. Most recently led a 5× infrastructure scale at Invofox (YC S22) and designed an 8-agent AI system that gave a non-engineering team full operational self-service. I grow into roles — joined every company as a contributor, left as the technical pillar.",
+    "15 years building engineering teams and product-critical systems across B2B SaaS, fintech, and ESG. Most recently led a 5× infrastructure scale at Invofox (YC S22) and designed an 8-agent AI system that gave a non-engineering team full operational self-service. I grow into roles — joined every company as a contributor, left as the technical pillar.",
 
   summaryEs:
-    "13 años construyendo equipos de ingeniería y sistemas críticos de producto en B2B SaaS, fintech y ESG. En Invofox (YC S22) lideré un escalado de infraestructura 5× y diseñé un sistema de 8 agentes con IA que dio autonomía operativa total a un equipo no técnico. Entré en cada empresa como desarrollador y salí como pilar técnico del equipo.",
+    "15 años construyendo equipos de ingeniería y sistemas críticos de producto en B2B SaaS, fintech y ESG. En Invofox (YC S22) lideré un escalado de infraestructura 5× y diseñé un sistema de 8 agentes con IA que dio autonomía operativa total a un equipo no técnico. Entré en cada empresa como desarrollador y salí como pilar técnico del equipo.",
 
   outcomes: [
-    { lbl: "CAREER",    lblEs: "CARRERA",    val: "13yr" },
+    { lbl: "CAREER",    lblEs: "CARRERA",    val: "15yr" },
     { lbl: "INFRA SCALE", lblEs: "ESCALA INFRA", val: "5×" },
     { lbl: "COST CUT",  lblEs: "AHORRO",     val: "30%" },
     { lbl: "ONBOARDING", lblEs: "ONBOARDING", val: "−65%" },

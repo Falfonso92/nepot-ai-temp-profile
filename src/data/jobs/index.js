@@ -13,9 +13,9 @@ const jobs = {
       headline: "Engineering Manager",
     },
     summary:
-      "Engineering Manager with 13 years of experience scaling product-critical teams across B2B SaaS. At Invofox (YC S22) I rebuilt the engineering org, scaled infra 5×, and delivered AI-driven operational tooling that gave non-engineering teams full self-service. I thrive in product-led environments where engineering decisions connect directly to revenue.",
+      "Engineering Manager with 15 years of experience scaling product-critical teams across B2B SaaS. At Invofox (YC S22) I rebuilt the engineering org, scaled infra 5×, and delivered AI-driven operational tooling that gave non-engineering teams full self-service. I thrive in product-led environments where engineering decisions connect directly to revenue.",
     summaryEs:
-      "Engineering Manager con 13 años de experiencia escalando equipos en B2B SaaS. En Invofox (YC S22) reconstruí la organización de ingeniería, escalé la infraestructura 5× y entregué herramientas operativas basadas en IA que dieron autonomía total a equipos no técnicos.",
+      "Engineering Manager con 15 años de experiencia escalando equipos en B2B SaaS. En Invofox (YC S22) reconstruí la organización de ingeniería, escalé la infraestructura 5× y entregué herramientas operativas basadas en IA que dieron autonomía total a equipos no técnicos.",
     now: [
       { lbl: "Stack match",    lbl_es: "Stack",        val: "Engineering org design · Technical roadmap · AI systems · Microservices",           val_es: "Diseño de org de ingeniería · Roadmap técnico · Sistemas de IA · Microservicios" },
       { lbl: "What I bring",   lbl_es: "Lo que aporto", val: "A track record of making engineering teams coherent, fast, and product-aligned",    val_es: "Un historial de hacer equipos de ingeniería coherentes, rápidos y alineados con producto" },
@@ -31,9 +31,9 @@ const jobs = {
       headline: "Full-Stack Developer",
     },
     summary:
-      "Full-stack developer with 13 years across TypeScript, React, and Node.js — expert level in all three, active through 2026. At Invofox I built an 8-agent AI system that gave the app team full operational self-service. At Sygris I redesigned a B2B portal's core data model to cut load time from 2 minutes to 10 seconds. I write code, I also know when not to.",
+      "Full-stack developer with 15 years across TypeScript, React, and Node.js — expert level in all three, active through 2026. At Invofox I built an 8-agent AI system that gave the app team full operational self-service. At Sygris I redesigned a B2B portal's core data model to cut load time from 2 minutes to 10 seconds. I write code, I also know when not to.",
     summaryEs:
-      "Desarrollador full-stack con 13 años en TypeScript, React y Node.js — nivel experto en los tres, activo hasta 2026. En Invofox construí un sistema de 8 agentes de IA y en Sygris rediseñé el modelo de datos central de un portal B2B para reducir el tiempo de carga de 2 minutos a 10 segundos.",
+      "Desarrollador full-stack con 15 años en TypeScript, React y Node.js — nivel experto en los tres, activo hasta 2026. En Invofox construí un sistema de 8 agentes de IA y en Sygris rediseñé el modelo de datos central de un portal B2B para reducir el tiempo de carga de 2 minutos a 10 segundos.",
     now: [
       { lbl: "Stack match",        lbl_es: "Stack",        val: "TypeScript (9yr expert) · React (7yr expert) · Node.js (8yr) · CI/CD · Azure/AWS",                   val_es: "TypeScript (9 años, experto) · React (7 años, experto) · Node.js (8 años) · CI/CD · Azure/AWS" },
       { lbl: "AI differentiator",  lbl_es: "IA en prod",   val: "8-agent AI system with Claude API — LLM benchmarking, hot-balancing, multi-model orchestration",     val_es: "Sistema de 8 agentes con Claude API — benchmarking de LLMs, hot-balancing, orquestación multi-modelo" },
