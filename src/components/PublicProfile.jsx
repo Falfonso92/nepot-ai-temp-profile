@@ -455,10 +455,9 @@ export default function PublicProfile({ data }) {
 
           <footer style={{
             marginTop: 16, paddingTop: 18, borderTop: `1px solid ${S.border}`,
-            display: "flex", justifyContent: "space-between",
+            display: "flex", justifyContent: "flex-end",
             fontFamily: "'JetBrains Mono', monospace", fontSize: 10.5, color: S.stoneHair, letterSpacing: 1.2,
           }}>
-            <span>{data.footer.handle}.nepot.ai</span>
             <span>BUILT WITH NEPOT.AI</span>
           </footer>
         </main>
