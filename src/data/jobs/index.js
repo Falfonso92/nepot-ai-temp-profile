@@ -1,11 +1,12 @@
 import baseProfile from "../profile.js";
 
-// Opaque job IDs — URLs don't reveal which company.
-// Add a new entry + push → Vercel auto-deploys the new /:id page.
+// Opaque GUID-based IDs — URLs reveal nothing about the company or role.
+// Add a new entry + push → Vercel auto-deploys the new /:guid page.
 // The profile URL for each job goes into the CV PDF at generation time.
+// Source of truth for job→guid mapping: src/data/registry.js
 
 const jobs = {
-  j01: {
+  "ded9ee7e-8445-4f64-9d59-44fbe47204bb": {
     ...baseProfile,
     meta: {
       ...baseProfile.meta,
@@ -23,7 +24,7 @@ const jobs = {
     ],
   },
 
-  j02: {
+  "40fd9954-d4fd-456b-a94e-38d4737cc076": {
     ...baseProfile,
     meta: {
       ...baseProfile.meta,
@@ -57,7 +58,7 @@ const jobs = {
     ],
   },
 
-  j03: {
+  "463bd5b0-d8e4-419d-a9bb-5b57d1bee042": {
     ...baseProfile,
     meta: {
       ...baseProfile.meta,
