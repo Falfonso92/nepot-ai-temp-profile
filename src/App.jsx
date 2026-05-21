@@ -1,11 +1,19 @@
-import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useParams, Navigate } from "react-router-dom";
 import PublicProfile from "./components/PublicProfile.jsx";
 import baseProfile from "./data/profile.js";
 import jobs from "./data/jobs/index.js";
 
+const GENERAL_ID = "francisco";
+
 function ProfilePage() {
-  const { jobId } = useParams();
-  const data = jobId ? (jobs[jobId] ?? baseProfile) : baseProfile;
+  const { profileId } = useParams();
+  let data;
+  if (!profileId || profileId === GENERAL_ID) {
+    data = baseProfile;
+  } else {
+    data = jobs[profileId] ?? null;
+  }
+  if (!data) return <NotFound />;
   return <PublicProfile data={data} />;
 }
 
@@ -15,7 +23,7 @@ function NotFound() {
       <div style={{ textAlign: "center" }}>
         <div style={{ fontSize: 48, fontWeight: 700, color: "#1C1917" }}>404</div>
         <div style={{ marginTop: 8, fontSize: 13, letterSpacing: 1.5 }}>PROFILE NOT FOUND</div>
-        <a href="/" style={{ display: "inline-block", marginTop: 20, color: "#D97706", fontSize: 12 }}>Back to main profile</a>
+        <a href={`/${GENERAL_ID}`} style={{ display: "inline-block", marginTop: 20, color: "#D97706", fontSize: 12 }}>Back to profile</a>
       </div>
     </div>
   );
@@ -25,8 +33,8 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<ProfilePage />} />
-        <Route path="/:jobId" element={<ProfilePage />} />
+        <Route path="/" element={<Navigate to={`/${GENERAL_ID}`} replace />} />
+        <Route path="/:profileId" element={<ProfilePage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
