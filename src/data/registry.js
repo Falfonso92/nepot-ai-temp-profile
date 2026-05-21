@@ -1,10 +1,17 @@
 // Job → profile URL registry.
-// This is the source of truth consumed by TAILOR when generating CV PDFs.
-// When a new job is added, generate a UUID and add it here + in jobs/index.js.
+// Source of truth consumed by TAILOR when generating CV PDFs.
+// When a new job is added: generate a UUID, add to registry + jobs/index.js, push.
 
-const BASE_URL = "https://nepot-ai-temp-profile.vercel.app";
+const BASE_URL = "https://profile.nepot-ai.com";
 
 const registry = [
+  {
+    jobId: "general",
+    guid: "edfef3a9-2658-49c0-8dbc-0ba17ea04fda",
+    url: `${BASE_URL}/edfef3a9-2658-49c0-8dbc-0ba17ea04fda`,
+    role: "General profile",
+    company: null,
+  },
   {
     jobId: "J1-ashby-em",
     guid: "ded9ee7e-8445-4f64-9d59-44fbe47204bb",
