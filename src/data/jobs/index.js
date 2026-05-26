@@ -122,6 +122,23 @@ const jobs = {
       },
     ],
   },
+  "375b33bd-18fa-4845-91d4-dffbbaa9bc44": {
+    ...baseProfile,
+    meta: {
+      ...baseProfile.meta,
+      headline: "Engineering Lead · Staff Engineer",
+    },
+    summary:
+      "I work across the full engineering spectrum — cloud architecture, distributed systems, infrastructure, APIs, and product interfaces — and I lead the teams that build it. Before writing a line of code or opening a planning doc, I need to know what the business is optimising for, how success gets measured, and what the team needs to move without bottlenecks.",
+    summaryEs:
+      "Trabajo en todo el espectro de la ingeniería — arquitectura cloud, sistemas distribuidos, infraestructura, APIs e interfaces de producto — y lidero los equipos que lo construyen. Antes de escribir una línea de código necesito saber qué está optimizando el negocio, cómo se mide el éxito y qué necesita el equipo para moverse sin fricciones.",
+    now: [
+      { lbl: "Stack match",    lbl_es: "Stack",        val: "React · Next.js · Node.js · .NET · Python · AWS",                                            val_es: "React · Next.js · Node.js · .NET · Python · AWS" },
+      { lbl: "What I bring",   lbl_es: "Lo que aporto", val: "15 years of full-stack depth — hands-on IC and engineering leadership, both at once if needed", val_es: "15 años de profundidad full-stack — IC hands-on y liderazgo técnico, ambos a la vez si hace falta" },
+      { lbl: "Open to",        lbl_es: "Abierto a",    val: "Engineering Lead · Staff Engineer · Engineering Manager · Hybrid or Remote",                  val_es: "Engineering Lead · Staff Engineer · Engineering Manager · Híbrido o Remoto" },
+      { lbl: "Available",      lbl_es: "Disponible",   val: "Immediate",                                                                                   val_es: "Inmediata" },
+    ],
+  },
 };
 
 export default jobs;

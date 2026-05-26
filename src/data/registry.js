@@ -33,6 +33,13 @@ const registry = [
     role: "Staff Frontend Engineer",
     company: "Oneclick",
   },
+  {
+    jobId: "J4-colliers",
+    guid: "375b33bd-18fa-4845-91d4-dffbbaa9bc44",
+    url: `${BASE_URL}/375b33bd-18fa-4845-91d4-dffbbaa9bc44`,
+    role: "Engineering Lead / Staff Engineer",
+    company: "Colliers",
+  },
 ];
 
 export default registry;
