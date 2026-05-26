@@ -1,6 +1,6 @@
 const profile = {
   meta: {
-    name: "Francisco Buitrago",
+    name: "Francisco Alfonso",
     headline: "Engineering Manager · Staff Engineer",
     location: "Madrid, Spain",
     email: "fabuitrago92@gmail.com",
@@ -12,10 +12,10 @@ const profile = {
   },
 
   summary:
-    "15 years building engineering teams and product-critical systems across B2B SaaS, fintech, and ESG. Most recently led a 5× infrastructure scale at Invofox (YC S22) and designed an 8-agent AI system that gave a non-engineering team full operational self-service. I grow into roles — joined every company as a contributor, left as the technical pillar.",
+    "I work across the full engineering spectrum — cloud architecture, distributed systems, infrastructure, APIs, and product interfaces — and I lead the teams that build it. Before writing a line of code or opening a planning doc, I need to know what the business is optimising for, how success gets measured, and what the team needs to move without bottlenecks.",
 
   summaryEs:
-    "15 años construyendo equipos de ingeniería y sistemas críticos de producto en B2B SaaS, fintech y ESG. En Invofox (YC S22) lideré un escalado de infraestructura 5× y diseñé un sistema de 8 agentes con IA que dio autonomía operativa total a un equipo no técnico. Entré en cada empresa como desarrollador y salí como pilar técnico del equipo.",
+    "Trabajo en todo el espectro de la ingeniería — arquitectura cloud, sistemas distribuidos, infraestructura, APIs e interfaces de producto — y lidero los equipos que lo construyen. Antes de escribir una línea de código o abrir un documento de planificación, necesito saber qué está optimizando el negocio, cómo se mide el éxito y qué necesita el equipo para moverse sin fricciones.",
 
   outcomes: [
     { lbl: "CAREER",    lblEs: "CARRERA",    val: "15yr" },
@@ -29,7 +29,7 @@ const profile = {
     { lbl: "Focused on", lbl_es: "Enfocado en",  val: "Job search — EM and Staff Engineer roles in product-led companies",                         val_es: "Búsqueda de empleo — roles de EM y Staff Engineer en empresas product-led" },
     { lbl: "Building",   lbl_es: "Construyendo",  val: "Nepot.ai — AI-assisted job search and CV builder for engineers",                           val_es: "Nepot.ai — búsqueda de empleo con IA y generador de CVs para ingenieros" },
     { lbl: "Open to",    lbl_es: "Abierto a",     val: "Engineering Manager · Staff / Principal Engineer · Tech Lead · Remote or Hybrid Madrid",   val_es: "Engineering Manager · Staff / Principal Engineer · Tech Lead · Remoto o Híbrido Madrid" },
-    { lbl: "Not looking for", lbl_es: "No busco", val: "VP, Director, Enterprise Architect, pure consulting roles",                                 val_es: "VP, Director, Arquitecto Enterprise, roles de consultoría pura" },
+    { lbl: "Available",       lbl_es: "Disponible",  val: "Immediate",                                                                              val_es: "Inmediata" },
   ],
 
   timeline: {

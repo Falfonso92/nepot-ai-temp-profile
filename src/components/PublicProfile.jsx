@@ -16,7 +16,23 @@ const CSS = `
   .np-section { animation: fadeUp 0.5s cubic-bezier(.22,1,.36,1) both; }
   .np-card    { transition: box-shadow 0.18s, transform 0.18s; }
   .np-card:hover { box-shadow: 0 4px 20px rgba(28,25,23,0.09); transform: translateY(-2px); }
+
+  .np-mobile-nav::-webkit-scrollbar { display: none; }
+  .np-mobile-nav { -ms-overflow-style: none; scrollbar-width: none; }
 `;
+
+function useIsMobile(breakpoint = 768) {
+  const get = () => typeof window !== "undefined" && window.innerWidth < breakpoint;
+  const [isMobile, setIsMobile] = useState(get);
+  useEffect(() => {
+    const mq = window.matchMedia(`(max-width: ${breakpoint - 1}px)`);
+    const onChange = (e) => setIsMobile(e.matches);
+    mq.addEventListener("change", onChange);
+    setIsMobile(mq.matches);
+    return () => mq.removeEventListener("change", onChange);
+  }, [breakpoint]);
+  return isMobile;
+}
 
 function GlobalStyles() {
   return <style>{CSS}</style>;
@@ -117,67 +133,76 @@ function Pill({ children, dot, color = "stone" }) {
   );
 }
 
-function SectionHead({ num, kicker, title, anchor }) {
+function SectionHead({ num, kicker, title, anchor, isMobile }) {
   return (
-    <div id={anchor} style={{ marginBottom: 28, paddingTop: 12, scrollMarginTop: 72 }}>
-      <div style={{ display: "flex", alignItems: "baseline", gap: 14, marginBottom: 8 }}>
+    <div id={anchor} style={{ marginBottom: isMobile ? 22 : 28, paddingTop: 12, scrollMarginTop: isMobile ? 110 : 72 }}>
+      <div style={{ display: "flex", alignItems: "baseline", gap: isMobile ? 10 : 14, marginBottom: 8 }}>
         <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: S.stoneHair, letterSpacing: 0.1 }}>§ {num}</span>
         <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: S.amberDeep, textTransform: "uppercase", letterSpacing: 2, fontWeight: 600 }}>{kicker}</span>
         <div style={{ flex: 1, height: 1, background: S.border }} />
       </div>
-      <h2 style={{ fontWeight: 600, fontSize: 30, letterSpacing: -0.5, lineHeight: 1.05, margin: 0, color: S.stone }}>{title}</h2>
+      <h2 style={{ fontWeight: 600, fontSize: isMobile ? 24 : 30, letterSpacing: -0.5, lineHeight: 1.1, margin: 0, color: S.stone }}>{title}</h2>
     </div>
   );
 }
 
-function Hero({ data, t }) {
+function Hero({ data, t, isMobile }) {
   return (
-    <section className="np-hero" style={{ marginBottom: 56 }}>
-      <div style={{ display: "flex", gap: 6, marginBottom: 22, flexWrap: "wrap" }}>
+    <section className="np-hero" style={{ marginBottom: isMobile ? 40 : 56 }}>
+      <div style={{ display: "flex", gap: 6, marginBottom: isMobile ? 16 : 22, flexWrap: "wrap" }}>
         <Pill dot color="green">{t.statusLabel(data)}</Pill>
       </div>
-      <h1 style={{ fontWeight: 700, fontSize: "clamp(42px, 6.5vw, 68px)", letterSpacing: -2, lineHeight: 0.98, margin: "0 0 16px", color: S.stone }}>
+      <h1 style={{ fontWeight: 700, fontSize: "clamp(34px, 8vw, 68px)", letterSpacing: isMobile ? -1.4 : -2, lineHeight: 1.02, margin: "0 0 14px", color: S.stone }}>
         {data.meta.name}
       </h1>
-      <div style={{ display: "flex", alignItems: "baseline", gap: 18, flexWrap: "wrap" }}>
-        <div style={{ fontSize: 19, color: S.stoneMuted, fontWeight: 400, letterSpacing: -0.3 }}>{data.meta.headline}</div>
+      <div style={{ display: "flex", alignItems: "baseline", gap: isMobile ? 10 : 18, flexWrap: "wrap" }}>
+        <div style={{ fontSize: isMobile ? 16 : 19, color: S.stoneMuted, fontWeight: 400, letterSpacing: -0.3 }}>{data.meta.headline}</div>
         <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: S.stoneHair }}>{data.meta.location}</span>
       </div>
-      <p style={{ marginTop: 24, fontSize: 16, lineHeight: 1.65, color: S.stoneMid, maxWidth: 680 }}>
+      <p style={{ marginTop: isMobile ? 18 : 24, fontSize: isMobile ? 15 : 16, lineHeight: 1.6, color: S.stoneMid, maxWidth: 680 }}>
         {t.summary(data)}
       </p>
     </section>
   );
 }
 
-function Outcomes({ outcomes, t }) {
+function Outcomes({ outcomes, t, isMobile }) {
+  const cols = isMobile ? 2 : outcomes.length;
   return (
-    <section className="np-outcomes" style={{ marginBottom: 56 }}>
+    <section className="np-outcomes" style={{ marginBottom: isMobile ? 40 : 56 }}>
       <div style={{
-        display: "grid", gridTemplateColumns: `repeat(${outcomes.length}, 1fr)`,
+        display: "grid", gridTemplateColumns: `repeat(${cols}, 1fr)`,
         border: `1px solid ${S.border}`, borderRadius: 10, overflow: "hidden", background: S.bgWarm,
       }}>
-        {outcomes.map((it, i) => (
-          <div key={i} style={{ padding: "18px 16px", borderLeft: i ? `1px solid ${S.border}` : "none" }}>
-            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: S.stoneFaint, letterSpacing: 1.6, fontWeight: 600 }}>{t.outcomeLbl(it)}</div>
-            <div style={{ fontWeight: 700, fontSize: 26, letterSpacing: -0.8, lineHeight: 1, marginTop: 8, color: S.stone }}>{it.val}</div>
-          </div>
-        ))}
+        {outcomes.map((it, i) => {
+          const col = i % cols;
+          const row = Math.floor(i / cols);
+          return (
+            <div key={i} style={{
+              padding: isMobile ? "14px 14px" : "18px 16px",
+              borderLeft: col ? `1px solid ${S.border}` : "none",
+              borderTop: row ? `1px solid ${S.border}` : "none",
+            }}>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: S.stoneFaint, letterSpacing: 1.6, fontWeight: 600 }}>{t.outcomeLbl(it)}</div>
+              <div style={{ fontWeight: 700, fontSize: isMobile ? 22 : 26, letterSpacing: -0.8, lineHeight: 1, marginTop: 8, color: S.stone }}>{it.val}</div>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
 }
 
-function NowBlock({ now, t }) {
+function NowBlock({ now, t, isMobile }) {
   return (
-    <section className="np-section" style={{ marginBottom: 56 }}>
-      <SectionHead num="01" kicker={t.nowKicker} title={t.nowTitle} anchor="now" />
+    <section className="np-section" style={{ marginBottom: isMobile ? 40 : 56 }}>
+      <SectionHead num="01" kicker={t.nowKicker} title={t.nowTitle} anchor="now" isMobile={isMobile} />
       <div style={{
-        display: "grid", gridTemplateColumns: "1fr 1fr", gap: 1,
+        display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: 1,
         background: S.border, border: `1px solid ${S.border}`, borderRadius: 10, overflow: "hidden",
       }}>
         {now.map((x, i) => (
-          <div key={i} style={{ background: S.white, padding: "20px 22px" }}>
+          <div key={i} style={{ background: S.white, padding: isMobile ? "16px 18px" : "20px 22px" }}>
             <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: S.stoneFaint, textTransform: "uppercase", letterSpacing: 1.6, fontWeight: 600, marginBottom: 8 }}>{t.nowLbl(x)}</div>
             <div style={{ fontSize: 14, color: S.stone, lineHeight: 1.5 }}>{t.nowVal(x)}</div>
           </div>
@@ -187,12 +212,70 @@ function NowBlock({ now, t }) {
   );
 }
 
-function Timeline({ timeline, t }) {
+function Timeline({ timeline, t, isMobile }) {
   const { y0, y1, nodes } = timeline;
   const pct = (y) => ((y - y0) / (y1 - y0)) * 100;
   const activeNodes = nodes.filter((n) => n.active);
   const activeFrom = activeNodes.length ? pct(Math.min(...activeNodes.map((n) => n.y))) : null;
   const years = y1 - y0;
+
+  if (isMobile) {
+    const sorted = [...nodes].sort((a, b) => a.y - b.y);
+    const firstActiveIdx = sorted.findIndex((n) => n.active);
+    return (
+      <section className="np-section" style={{ marginBottom: 40 }}>
+        <SectionHead num="02" kicker={t.careerKicker} title={`${years} years, traced.`} anchor="timeline" isMobile={isMobile} />
+        <div style={{ background: S.white, border: `1px solid ${S.border}`, borderRadius: 10, padding: "20px 18px" }}>
+          <div style={{ position: "relative", paddingLeft: 22 }}>
+            {/* vertical axis */}
+            <div style={{ position: "absolute", left: 5, top: 6, bottom: 6, width: 1, background: S.border }} />
+            {/* active region overlay */}
+            {firstActiveIdx >= 0 && (
+              <div style={{
+                position: "absolute", left: 4, width: 2,
+                top: `calc(${(firstActiveIdx / Math.max(sorted.length - 1, 1)) * 100}% + 6px)`,
+                bottom: 6, background: S.amber,
+              }} />
+            )}
+            <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
+              {sorted.map((n, i) => (
+                <div key={i} style={{ position: "relative" }}>
+                  <span style={{
+                    position: "absolute", left: -22, top: 5,
+                    width: n.active ? 12 : 8, height: n.active ? 12 : 8, borderRadius: 999,
+                    background: n.active ? S.amber : S.stone,
+                    transform: n.active ? "translateX(-1px)" : "translateX(1px)",
+                    boxShadow: n.active ? `0 0 0 4px ${S.amberTint}` : "none",
+                  }} />
+                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: n.active ? S.amberDeep : S.stoneFaint, fontWeight: 600, letterSpacing: 0.5 }}>
+                    '{String(n.y).slice(2)}
+                  </div>
+                  <div style={{ fontSize: 13, lineHeight: 1.35, color: n.active ? S.stone : S.stoneMid, fontWeight: n.active ? 600 : 500, marginTop: 2 }}>{n.t}</div>
+                  {n.sub && <div style={{ fontSize: 10.5, color: S.stoneFaint, marginTop: 2, fontFamily: "'JetBrains Mono', monospace" }}>{n.sub}</div>}
+                </div>
+              ))}
+              {/* NOW marker */}
+              <div style={{ position: "relative" }}>
+                <span style={{
+                  position: "absolute", left: -22, top: 4,
+                  width: 10, height: 10, borderRadius: 999, background: S.green,
+                  boxShadow: `0 0 0 4px rgba(22,163,74,0.18)`,
+                }} />
+                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: "#166534", letterSpacing: 1.6, fontWeight: 600 }}>NOW</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{
+          marginTop: 10, display: "flex", justifyContent: "space-between",
+          fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: S.stoneHair, letterSpacing: 1.5,
+        }}>
+          <span>{y0} → {y1}</span>
+          <span>{nodes.length} ROLES</span>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="np-section" style={{ marginBottom: 56 }}>
@@ -263,29 +346,33 @@ function Timeline({ timeline, t }) {
   );
 }
 
-function CaseStudies({ caseStudies, t }) {
+function CaseStudies({ caseStudies, t, isMobile }) {
   return (
-    <section className="np-section" style={{ marginBottom: 56 }}>
-      <SectionHead num="03" kicker={t.casesKicker} title={t.casesTitle} anchor="cases" />
+    <section className="np-section" style={{ marginBottom: isMobile ? 40 : 56 }}>
+      <SectionHead num="03" kicker={t.casesKicker} title={t.casesTitle} anchor="cases" isMobile={isMobile} />
       <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
         {caseStudies.map((c, i) => (
           <article key={i} className="np-card" style={{ border: `1px solid ${S.border}`, borderRadius: 10, background: S.white, overflow: "hidden" }}>
-            <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr" }}>
-              <div style={{ padding: "26px 28px", borderRight: `1px solid ${S.border}` }}>
+            <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1.5fr 1fr" }}>
+              <div style={{
+                padding: isMobile ? "20px 18px" : "26px 28px",
+                borderRight: isMobile ? "none" : `1px solid ${S.border}`,
+                borderBottom: isMobile ? `1px solid ${S.border}` : "none",
+              }}>
                 <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: S.stoneHair, letterSpacing: 2, marginBottom: 8 }}>{t.case} 0{i + 1}</div>
-                <h3 style={{ fontWeight: 600, fontSize: 22, letterSpacing: -0.5, color: S.stone, margin: 0 }}>{t.caseTitle(c)}</h3>
+                <h3 style={{ fontWeight: 600, fontSize: isMobile ? 18 : 22, letterSpacing: -0.5, color: S.stone, margin: 0, lineHeight: 1.2 }}>{t.caseTitle(c)}</h3>
                 <div style={{ marginTop: 6, fontSize: 12, color: S.stoneFaint, fontFamily: "'JetBrains Mono', monospace" }}>{c.sub}</div>
-                <p style={{ marginTop: 16, fontSize: 14, lineHeight: 1.65, color: S.stoneMid }}>{t.caseBody(c)}</p>
-                <div style={{ display: "flex", gap: 6, marginTop: 16, flexWrap: "wrap" }}>
+                <p style={{ marginTop: 14, fontSize: isMobile ? 13.5 : 14, lineHeight: 1.6, color: S.stoneMid }}>{t.caseBody(c)}</p>
+                <div style={{ display: "flex", gap: 6, marginTop: 14, flexWrap: "wrap" }}>
                   {c.tags.map((tag, j) => (
                     <span key={j} style={{ padding: "3px 9px", borderRadius: 999, fontSize: 10.5, background: S.bgTint, color: S.stoneMuted, fontFamily: "'JetBrains Mono', monospace" }}>{tag}</span>
                   ))}
                 </div>
               </div>
-              <div style={{ padding: 24, background: S.bgWarm, display: "flex", flexDirection: "column" }}>
-                <div style={{ fontWeight: 700, fontSize: 36, letterSpacing: -1.4, lineHeight: 1, color: S.amberDeep }}>{c.stat}</div>
+              <div style={{ padding: isMobile ? "20px 18px" : 24, background: S.bgWarm, display: "flex", flexDirection: "column" }}>
+                <div style={{ fontWeight: 700, fontSize: isMobile ? 30 : 36, letterSpacing: -1.4, lineHeight: 1, color: S.amberDeep }}>{c.stat}</div>
                 <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: S.stoneFaint, letterSpacing: 1.6, marginTop: 6, fontWeight: 600 }}>{t.caseStatLbl(c)}</div>
-                <div style={{ marginTop: 22 }}>
+                <div style={{ marginTop: isMobile ? 16 : 22 }}>
                   <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: S.stoneFaint, letterSpacing: 1.6, fontWeight: 600, marginBottom: 8 }}>{t.artifacts}</div>
                   <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
                     {c.artifacts.map((a, j) => (
@@ -305,17 +392,17 @@ function CaseStudies({ caseStudies, t }) {
   );
 }
 
-function Plan({ plan, t }) {
+function Plan({ plan, t, isMobile }) {
   return (
-    <section className="np-section" style={{ marginBottom: 56 }}>
-      <SectionHead num="04" kicker={t.planKicker} title={t.planTitle} anchor="plan" />
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12 }}>
+    <section className="np-section" style={{ marginBottom: isMobile ? 40 : 56 }}>
+      <SectionHead num="04" kicker={t.planKicker} title={t.planTitle} anchor="plan" isMobile={isMobile} />
+      <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(3, 1fr)", gap: 12 }}>
         {plan.map((b, i) => (
-          <div key={i} style={{ background: S.stone, color: S.bg, borderRadius: 10, padding: "26px 24px" }}>
-            <div style={{ fontWeight: 700, fontSize: 60, letterSpacing: -2.5, lineHeight: 0.9, color: S.amber }}>{b.d}</div>
+          <div key={i} style={{ background: S.stone, color: S.bg, borderRadius: 10, padding: isMobile ? "22px 20px" : "26px 24px" }}>
+            <div style={{ fontWeight: 700, fontSize: isMobile ? 48 : 60, letterSpacing: -2.5, lineHeight: 0.9, color: S.amber }}>{b.d}</div>
             <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: S.stoneHair, letterSpacing: 1.6, marginTop: 4, fontWeight: 600 }}>{t.days}</div>
-            <h4 style={{ margin: "20px 0 8px", fontWeight: 600, fontSize: 16, color: S.bg, letterSpacing: -0.3 }}>{t.planT(b)}</h4>
-            <p style={{ fontSize: 13, lineHeight: 1.6, color: "#D6D3CE" }}>{t.planBody(b)}</p>
+            <h4 style={{ margin: isMobile ? "14px 0 6px" : "20px 0 8px", fontWeight: 600, fontSize: 16, color: S.bg, letterSpacing: -0.3 }}>{t.planT(b)}</h4>
+            <p style={{ fontSize: 13, lineHeight: 1.6, color: "#D6D3CE", margin: 0 }}>{t.planBody(b)}</p>
           </div>
         ))}
       </div>
@@ -323,15 +410,15 @@ function Plan({ plan, t }) {
   );
 }
 
-function Recommendations({ recommendations, t }) {
+function Recommendations({ recommendations, t, isMobile }) {
   if (!recommendations?.length) return null;
   return (
-    <section className="np-section" style={{ marginBottom: 56 }}>
-      <SectionHead num="05" kicker={t.recsKicker} title={t.recsTitle} anchor="recs" />
+    <section className="np-section" style={{ marginBottom: isMobile ? 40 : 56 }}>
+      <SectionHead num="05" kicker={t.recsKicker} title={t.recsTitle} anchor="recs" isMobile={isMobile} />
       <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
         {recommendations.map((r, i) => (
-          <div key={i} style={{ background: S.white, border: `1px solid ${S.border}`, borderRadius: 10, padding: "26px 28px" }}>
-            <div style={{ fontFamily: "'Fraunces', serif", fontStyle: "italic", fontSize: 18, lineHeight: 1.55, color: S.stone, letterSpacing: -0.2 }}>
+          <div key={i} style={{ background: S.white, border: `1px solid ${S.border}`, borderRadius: 10, padding: isMobile ? "20px 18px" : "26px 28px" }}>
+            <div style={{ fontFamily: "'Fraunces', serif", fontStyle: "italic", fontSize: isMobile ? 16 : 18, lineHeight: 1.5, color: S.stone, letterSpacing: -0.2 }}>
               "{t.recQ(r)}"
             </div>
             <div style={{ marginTop: 18, display: "flex", alignItems: "center", gap: 12 }}>
@@ -349,18 +436,22 @@ function Recommendations({ recommendations, t }) {
   );
 }
 
-function FooterCTA({ data, t }) {
+function FooterCTA({ data, t, isMobile }) {
   return (
     <section style={{
-      marginTop: 24, marginBottom: 24, padding: "36px 40px",
+      marginTop: 24, marginBottom: 24,
+      padding: isMobile ? "26px 22px" : "36px 40px",
       background: S.stone, color: S.bg, borderRadius: 14,
-      display: "grid", gridTemplateColumns: "1fr auto", gap: 20, alignItems: "center",
+      display: "grid",
+      gridTemplateColumns: isMobile ? "1fr" : "1fr auto",
+      gap: isMobile ? 22 : 20,
+      alignItems: "center",
     }}>
       <div>
         <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: S.amberBorder, letterSpacing: 2, marginBottom: 10 }}>{t.ctaStatus(data)}</div>
-        <h3 style={{ fontWeight: 600, fontSize: 24, letterSpacing: -0.6, lineHeight: 1.1, margin: 0 }}>{t.ctaHeadline(data)}</h3>
+        <h3 style={{ fontWeight: 600, fontSize: isMobile ? 20 : 24, letterSpacing: -0.6, lineHeight: 1.15, margin: 0 }}>{t.ctaHeadline(data)}</h3>
         <p style={{ margin: "10px 0 0", color: S.stoneHair, fontSize: 14, lineHeight: 1.55, maxWidth: 520 }}>
-          {t.ctaSub(data)} <span style={{ color: S.amberBorder }}>{data.cta.email}</span>
+          {t.ctaSub(data)} <span style={{ color: S.amberBorder, wordBreak: "break-all" }}>{data.cta.email}</span>
         </p>
       </div>
       <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
@@ -375,7 +466,11 @@ export default function PublicProfile({ data }) {
   const [lang, setLang] = useState("en");
   const [activeSection, setActiveSection] = useState("now");
   const t = T[lang];
+  const isMobile = useIsMobile();
+  const mobileNavRef = useRef(null);
 
+  const isProgrammaticScroll = useRef(false);
+  const scrollLockTimer = useRef(null);
   const navItems = [
     ["now", t.nav[0]],
     ["timeline", t.nav[1]],
@@ -384,110 +479,185 @@ export default function PublicProfile({ data }) {
     ["recs", t.nav[4]],
   ];
 
-  // Scroll spy — fires when section enters the viewport
   useEffect(() => {
-    const observers = NAV_IDS.map((id) => {
-      const el = document.getElementById(id);
-      if (!el) return null;
-      const obs = new IntersectionObserver(
-        ([entry]) => { if (entry.isIntersecting) setActiveSection(id); },
-        { rootMargin: "-25% 0px -65% 0px" }
-      );
-      obs.observe(el);
-      return obs;
-    });
-    return () => observers.forEach((o) => o?.disconnect());
+    if (!isMobile || !mobileNavRef.current) return;
+    const el = mobileNavRef.current.querySelector(`[data-nav-id="${activeSection}"]`);
+    if (el) el.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+  }, [activeSection, isMobile]);
+
+  // Scroll spy: RAF-throttled, direction-safe.
+  // Lock extends with each scroll event during a programmatic scroll,
+  // then releases 150ms after the last event and snaps the nav to the real position.
+  useEffect(() => {
+    const TRIGGER = window.innerHeight * 0.35;
+    let raf = null;
+
+    const update = () => {
+      let current = NAV_IDS[0];
+      for (const id of NAV_IDS) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top < TRIGGER) current = id;
+      }
+      setActiveSection(current);
+      raf = null;
+    };
+
+    const onScroll = () => {
+      if (isProgrammaticScroll.current) {
+        clearTimeout(scrollLockTimer.current);
+        scrollLockTimer.current = setTimeout(() => {
+          isProgrammaticScroll.current = false;
+          update();
+        }, 150);
+        return;
+      }
+      if (raf === null) raf = requestAnimationFrame(update);
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (raf !== null) cancelAnimationFrame(raf);
+    };
   }, []);
 
-  // Click nav: set active immediately, then scroll smoothly
   const handleNavClick = useCallback((e, id) => {
     e.preventDefault();
     setActiveSection(id);
+    isProgrammaticScroll.current = true;
+    // Fallback: if target already in view, no scroll events fire — release after 100ms
+    clearTimeout(scrollLockTimer.current);
+    scrollLockTimer.current = setTimeout(() => {
+      isProgrammaticScroll.current = false;
+    }, 100);
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
   }, []);
 
   return (
     <div style={{ minHeight: "100vh", background: "#f0eee9", paddingBottom: 40 }}>
       <GlobalStyles />
-      {/* Top bar — minimal: just Contact, LinkedIn, lang toggle */}
+      {/* Top bar */}
       <div style={{
         background: S.white, borderBottom: `1px solid ${S.border}`,
-        padding: "0 32px", display: "flex", alignItems: "center", justifyContent: "flex-end", gap: 8,
+        padding: isMobile ? "0 14px" : "0 32px",
+        display: "flex", alignItems: "center", justifyContent: "flex-end", gap: isMobile ? 6 : 8,
         height: 48, position: "sticky", top: 0, zIndex: 10,
       }}>
         <a href={`mailto:${data.meta.email}`} style={{
-          padding: "6px 14px", background: S.bgTint, borderRadius: 6,
+          padding: isMobile ? "6px 11px" : "6px 14px", background: S.bgTint, borderRadius: 6,
           textDecoration: "none", color: S.stoneMid,
-          fontFamily: "'Inter', sans-serif", fontSize: 13, fontWeight: 500,
+          fontFamily: "'Inter', sans-serif", fontSize: isMobile ? 12 : 13, fontWeight: 500,
         }}>Contact</a>
         <a href={data.meta.linkedin} target="_blank" rel="noreferrer" style={{
-          padding: "6px 14px", background: S.bgTint, borderRadius: 6,
+          padding: isMobile ? "6px 11px" : "6px 14px", background: S.bgTint, borderRadius: 6,
           textDecoration: "none", color: S.stoneMid,
-          fontFamily: "'Inter', sans-serif", fontSize: 13, fontWeight: 500,
+          fontFamily: "'Inter', sans-serif", fontSize: isMobile ? 12 : 13, fontWeight: 500,
         }}>LinkedIn</a>
         <button onClick={() => setLang(l => l === "en" ? "es" : "en")} style={{
-          padding: "6px 14px", background: S.stone, color: S.bg, border: 0, borderRadius: 6,
+          padding: isMobile ? "6px 11px" : "6px 14px", background: S.stone, color: S.bg, border: 0, borderRadius: 6,
           fontFamily: "'JetBrains Mono', monospace", fontSize: 12, fontWeight: 600,
           cursor: "pointer", letterSpacing: 0.5,
         }}>{lang === "en" ? "ES" : "EN"}</button>
       </div>
 
+      {/* Mobile sticky section nav */}
+      {isMobile && (
+        <div
+          ref={mobileNavRef}
+          className="np-mobile-nav"
+          style={{
+            position: "sticky", top: 48, zIndex: 9,
+            background: S.white, borderBottom: `1px solid ${S.border}`,
+            display: "flex", gap: 4, padding: "8px 14px",
+            overflowX: "auto", whiteSpace: "nowrap",
+          }}
+        >
+          {navItems.map(([id, label]) => {
+            const isActive = activeSection === id;
+            return (
+              <a
+                key={id} href={`#${id}`}
+                data-nav-id={id}
+                onClick={(e) => handleNavClick(e, id)}
+                style={{
+                  padding: "6px 12px", borderRadius: 999,
+                  fontSize: 12, fontWeight: isActive ? 600 : 500,
+                  color: isActive ? S.white : S.stoneMid,
+                  background: isActive ? S.stone : S.bgTint,
+                  textDecoration: "none",
+                  fontFamily: "'Inter', sans-serif",
+                  flexShrink: 0,
+                }}
+              >{label}</a>
+            );
+          })}
+        </div>
+      )}
+
       {/* Body */}
-      <div style={{ maxWidth: 1080, margin: "0 auto", display: "grid", gridTemplateColumns: "180px 1fr", gap: 0, padding: "48px 32px 32px" }}>
+      <div style={{
+        maxWidth: 1080, margin: "0 auto",
+        display: "grid",
+        gridTemplateColumns: isMobile ? "1fr" : "180px 1fr",
+        gap: 0,
+        padding: isMobile ? "28px 16px 24px" : "48px 32px 32px",
+      }}>
 
-        {/* Side nav */}
-        <aside style={{ paddingRight: 16 }}>
-          <div style={{ position: "sticky", top: 68 }}>
-            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: S.stoneHair, letterSpacing: 2, fontWeight: 600, marginBottom: 14 }}>{t.onThisPage}</div>
-            <nav style={{ display: "flex", flexDirection: "column", gap: 4 }}>
-              {navItems.map(([id, label]) => {
-                const isActive = activeSection === id;
-                return (
-                  <a key={id} href={`#${id}`} onClick={(e) => handleNavClick(e, id)} style={{
-                    display: "flex", alignItems: "center", gap: 10, fontSize: 12.5,
-                    color: isActive ? S.stone : S.stoneFaint,
-                    textDecoration: "none", padding: "5px 0",
-                    fontWeight: isActive ? 600 : 400,
-                    fontFamily: "'Inter', sans-serif",
-                    transition: "color 0.2s, font-weight 0.2s",
-                    cursor: "pointer",
-                  }}>
-                    <span style={{
-                      width: isActive ? 20 : 12, height: 1,
-                      background: isActive ? S.amber : "#D6D3CE",
-                      display: "inline-block",
-                      transition: "width 0.25s cubic-bezier(.22,1,.36,1), background 0.2s",
-                    }} />
-                    {label}
-                  </a>
-                );
-              })}
-            </nav>
+        {/* Side nav — desktop only */}
+        {!isMobile && (
+          <aside style={{ paddingRight: 16 }}>
+            <div style={{ position: "sticky", top: 68 }}>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: S.stoneHair, letterSpacing: 2, fontWeight: 600, marginBottom: 14 }}>{t.onThisPage}</div>
+              <nav style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+                {navItems.map(([id, label]) => {
+                  const isActive = activeSection === id;
+                  return (
+                    <a key={id} href={`#${id}`} onClick={(e) => handleNavClick(e, id)} style={{
+                      display: "flex", alignItems: "center", gap: 10, fontSize: 12.5,
+                      color: isActive ? S.stone : S.stoneFaint,
+                      textDecoration: "none", padding: "5px 0",
+                      fontWeight: isActive ? 600 : 400,
+                      fontFamily: "'Inter', sans-serif",
+                      transition: "color 0.2s, font-weight 0.2s",
+                      cursor: "pointer",
+                    }}>
+                      <span style={{
+                        width: isActive ? 20 : 12, height: 1,
+                        background: isActive ? S.amber : "#D6D3CE",
+                        display: "inline-block",
+                        transition: "width 0.25s cubic-bezier(.22,1,.36,1), background 0.2s",
+                      }} />
+                      {label}
+                    </a>
+                  );
+                })}
+              </nav>
 
-            <div style={{ marginTop: 36, padding: "16px 14px", background: S.white, border: `1px solid ${S.border}`, borderRadius: 8 }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-                <span style={{ width: 6, height: 6, borderRadius: 999, background: S.green, boxShadow: "0 0 0 3px rgba(22,163,74,0.18)", display: "inline-block" }} />
-                <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: "#166534", letterSpacing: 1.4, fontWeight: 600 }}>{t.openToTalk}</span>
+              <div style={{ marginTop: 36, padding: "16px 14px", background: S.white, border: `1px solid ${S.border}`, borderRadius: 8 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                  <span style={{ width: 6, height: 6, borderRadius: 999, background: S.green, boxShadow: "0 0 0 3px rgba(22,163,74,0.18)", display: "inline-block" }} />
+                  <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: "#166534", letterSpacing: 1.4, fontWeight: 600 }}>{t.openToTalk}</span>
+                </div>
+                <a href={`mailto:${data.meta.email}`} style={{
+                  display: "block", marginTop: 12, padding: "8px 12px",
+                  background: S.stone, color: S.white, borderRadius: 6,
+                  fontSize: 12, fontWeight: 500, textDecoration: "none", textAlign: "center",
+                }}>{t.getInTouch}</a>
               </div>
-              <a href={`mailto:${data.meta.email}`} style={{
-                display: "block", marginTop: 12, padding: "8px 12px",
-                background: S.stone, color: S.white, borderRadius: 6,
-                fontSize: 12, fontWeight: 500, textDecoration: "none", textAlign: "center",
-              }}>{t.getInTouch}</a>
             </div>
-          </div>
-        </aside>
+          </aside>
+        )}
 
         {/* Main */}
-        <main>
-          <Hero data={data} t={t} />
-          <Outcomes outcomes={data.outcomes} t={t} />
-          <NowBlock now={data.now} t={t} />
-          <Timeline timeline={data.timeline} t={t} />
-          <CaseStudies caseStudies={data.caseStudies} t={t} />
-          <Plan plan={data.plan} t={t} />
-          <Recommendations recommendations={data.recommendations} t={t} />
-          <FooterCTA data={data} t={t} />
+        <main style={{ minWidth: 0 }}>
+          <Hero data={data} t={t} isMobile={isMobile} />
+          <Outcomes outcomes={data.outcomes} t={t} isMobile={isMobile} />
+          <NowBlock now={data.now} t={t} isMobile={isMobile} />
+          <Timeline timeline={data.timeline} t={t} isMobile={isMobile} />
+          <CaseStudies caseStudies={data.caseStudies} t={t} isMobile={isMobile} />
+          <Plan plan={data.plan} t={t} isMobile={isMobile} />
+          <Recommendations recommendations={data.recommendations} t={t} isMobile={isMobile} />
+          <FooterCTA data={data} t={t} isMobile={isMobile} />
 
           <footer style={{
             marginTop: 16, paddingTop: 18, borderTop: `1px solid ${S.border}`,
