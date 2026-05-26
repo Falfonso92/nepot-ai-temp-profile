@@ -498,6 +498,9 @@ export default function PublicProfile({ data }) {
         const el = document.getElementById(id);
         if (el && el.getBoundingClientRect().top < TRIGGER) current = id;
       }
+      // At page bottom the last section may never reach the trigger — pin it.
+      const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+      if (atBottom) current = NAV_IDS[NAV_IDS.length - 1];
       setActiveSection(current);
       raf = null;
     };
