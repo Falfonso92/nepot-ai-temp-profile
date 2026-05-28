@@ -139,6 +139,310 @@ const jobs = {
       { lbl: "Available",      lbl_es: "Disponible",   val: "Immediate",                                                                                   val_es: "Inmediata" },
     ],
   },
+
+  // j001 — Jotelulu
+  "fb257785-c31a-43fb-a24b-a18b1b7f31ff": {
+    ...baseProfile,
+    meta: {
+      ...baseProfile.meta,
+      headline: "Senior Frontend Engineer & Team Lead",
+    },
+    summary:
+      "Frontend engineering leader with 15 years building production systems and the teams that ship them — 7 years in React and TypeScript at expert depth. I own frontend architecture end-to-end: microfrontends at scale, monorepo structures, shared libraries, design standards, and performance.",
+    summaryEs:
+      "Líder de ingeniería frontend con 15 años construyendo sistemas en producción y los equipos que los entregan — 7 años en React y TypeScript a nivel experto. Soy responsable de la arquitectura frontend de extremo a extremo: microfrontends a escala, monorepos, librerías compartidas, estándares de diseño y rendimiento.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "React (7yr expert) · TypeScript (9yr expert) · Microfrontends · Node.js · AI systems (Claude API)", val_es: "React (7 años, experto) · TypeScript (9 años, experto) · Microfrontends · Node.js · Sistemas de IA (Claude API)" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "Frontend architecture ownership — from microfrontend strategy to team technical growth",            val_es: "Ownership de arquitectura frontend — desde la estrategia de microfrontends hasta el crecimiento técnico del equipo" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Senior Frontend Engineer & Team Lead · Hybrid Madrid",                                                val_es: "Senior Frontend Engineer & Team Lead · Híbrido Madrid" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate",                                                                                           val_es: "Inmediata" },
+    ],
+  },
+
+  // j002 — Alan
+  "eb94c6ce-012e-43de-b113-250d519b64d5": {
+    ...baseProfile,
+    meta: {
+      ...baseProfile.meta,
+      headline: "Fullstack Software Engineer",
+    },
+    summary:
+      "Fullstack engineer and technical leader with 15 years of professional experience building and shipping web applications — TypeScript and React expert with a deep Node.js backend history. I design and own systems end-to-end: from architecture to production monitoring.",
+    summaryEs:
+      "Ingeniero fullstack y líder técnico con 15 años de experiencia construyendo y entregando aplicaciones web — experto en TypeScript y React, con sólida trayectoria en backend Node.js. Diseño y soy responsable de los sistemas de extremo a extremo: desde la arquitectura hasta el monitoreo en producción.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "TypeScript · React · Node.js · Microservices · Claude API · LLM integration · AWS", val_es: "TypeScript · React · Node.js · Microservicios · Claude API · Integración LLM · AWS" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "End-to-end system design from architecture to production — healthcare-scale reliability", val_es: "Diseño de sistemas de extremo a extremo, de la arquitectura a producción — fiabilidad a escala healthcare" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Fullstack Software Engineer · Remote or Hybrid", val_es: "Fullstack Software Engineer · Remoto o Híbrido" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j003 — Topi
+  "247a5f72-d21b-4451-8085-22d57a2ad68a": {
+    ...baseProfile,
+    meta: {
+      ...baseProfile.meta,
+      headline: "Senior React Engineer, Full Stack",
+    },
+    summary:
+      "Senior Full-Stack engineer with 11 years of production experience and deep React / TypeScript expertise — 7 years designing, building, and owning frontend architectures at scale. Expert in modern React tooling, microfrontend patterns, and CI/CD pipelines in cloud environments.",
+    summaryEs:
+      "Ingeniero Senior Full-Stack con 11 años de experiencia en producción y profunda experiencia en React/TypeScript — 7 años diseñando, construyendo y siendo responsable de arquitecturas frontend a escala. Experto en herramientas modernas de React, patrones de microfrontends y pipelines de CI/CD en entornos cloud.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "React (7yr expert) · TypeScript (9yr expert) · Node.js · GraphQL · Storybook · Jest · Cypress", val_es: "React (7 años, experto) · TypeScript (9 años, experto) · Node.js · GraphQL · Storybook · Jest · Cypress" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "IC frontend depth with architectural thinking and a performance culture", val_es: "Profundidad frontend como IC con pensamiento arquitectónico y cultura de rendimiento" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Senior React Engineer · Remote", val_es: "Senior React Engineer · Remoto" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j005 — Dex
+  "c4919d21-bb6c-4660-869e-f08b0d273e93": {
+    ...baseProfile,
+    meta: {
+      ...baseProfile.meta,
+      headline: "Senior Full-Stack Engineer",
+    },
+    summary:
+      "Senior full-stack engineer with 15 years building production systems — 9 years in TypeScript at expert depth, 7 in React. I ship end-to-end with minimal hand-holding: architected an 8-agent AI platform running real-time operational intelligence in production, and drove 5× throughput and 30% cost reduction on a live document-processing pipeline.",
+    summaryEs:
+      "Ingeniero senior full-stack con 15 años construyendo sistemas en producción — 9 años en TypeScript a nivel experto, 7 en React. Entrego de extremo a extremo con autonomía: diseñé una plataforma de IA de 8 agentes con inteligencia operativa en tiempo real en producción, y logré 5× de throughput y 30% de reducción de coste en un pipeline de procesamiento documental en vivo.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "TypeScript (9yr expert) · React (7yr expert) · Node.js · Microservices · Claude API · AWS · CI/CD", val_es: "TypeScript (9 años, experto) · React (7 años, experto) · Node.js · Microservicios · Claude API · AWS · CI/CD" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "End-to-end ownership — from blank canvas to production — in async-first distributed teams", val_es: "Ownership de extremo a extremo — del lienzo en blanco a producción — en equipos distribuidos async-first" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Senior Full-Stack Engineer · Remote", val_es: "Senior Full-Stack Engineer · Remoto" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j009 — RevenueCat
+  "2ae17a8b-9c5b-4eb7-a767-14d309edad41": {
+    ...baseProfile,
+    meta: {
+      ...baseProfile.meta,
+      headline: "Engineering Manager",
+    },
+    summary:
+      "Engineering manager with 7 years leading distributed teams and 15 years shipping production systems — TypeScript, React, Node.js, cloud infrastructure. I build the conditions for engineers to do their best work: distributed team leadership, hiring, coaching, and predictable iterative delivery.",
+    summaryEs:
+      "Engineering manager con 7 años liderando equipos distribuidos y 15 años entregando sistemas en producción — TypeScript, React, Node.js, infraestructura cloud. Creo las condiciones para que los ingenieros hagan su mejor trabajo: liderazgo distribuido, contratación, mentoring y entrega iterativa predecible.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "Engineering Management · TypeScript · React · Node.js · AWS · Multi-agent AI systems", val_es: "Engineering Management · TypeScript · React · Node.js · AWS · Sistemas multi-agente de IA" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "Distributed team leadership with a track record of connecting engineering to commercial outcomes", val_es: "Liderazgo de equipos distribuidos con historial conectando ingeniería a resultados comerciales" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Engineering Manager · Remote", val_es: "Engineering Manager · Remoto" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j010 — Taxfix
+  "e762ffa0-d768-45ac-842f-9871c75c52bf": {
+    ...baseProfile,
+    meta: {
+      ...baseProfile.meta,
+      headline: "Engineering Manager — Monetization",
+    },
+    summary:
+      "Engineering Manager with 15 years building production systems and the teams that ship them. I connect engineering to commercial outcomes — 5× throughput, 30% infrastructure cost reduction, feature delivery from 3/year to 15. Shipped an 8-agent AI system enabling real-time infrastructure monitoring and process health evaluation for a YC-backed company.",
+    summaryEs:
+      "Engineering Manager con 15 años construyendo sistemas en producción y los equipos que los entregan. Conecto ingeniería con resultados comerciales — 5× throughput, 30% de reducción de coste de infraestructura, entrega de features de 3/año a 15. Entregué un sistema de 8 agentes de IA que permite monitoreo en tiempo real y evaluación de salud de procesos para una empresa respaldada por YC.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "Engineering Management · Multi-agent AI · TypeScript · React · Node.js · Microservices · Azure · AWS", val_es: "Engineering Management · IA multi-agente · TypeScript · React · Node.js · Microservicios · Azure · AWS" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "Revenue-connected engineering leadership — monetization, velocity, and team growth in one", val_es: "Liderazgo de ingeniería conectado a ingresos — monetización, velocidad y crecimiento del equipo en uno" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Engineering Manager · Hybrid or Remote", val_es: "Engineering Manager · Híbrido o Remoto" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j011 — Prima
+  "44c62acc-bba4-4978-adfc-662dc3da1c2c": {
+    ...baseProfile,
+    meta: {
+      ...baseProfile.meta,
+      headline: "Engineering Manager",
+    },
+    summary:
+      "Engineering Manager with 7 years of management experience and 15 years building and shipping production systems. I connect engineering to measurable business outcomes — 5× throughput, 30% infrastructure cost reduction, onboarding compressed from 6 weeks to 2, and feature delivery lifted from 3 releases/year to 15.",
+    summaryEs:
+      "Engineering Manager con 7 años de experiencia de gestión y 15 años construyendo y entregando sistemas en producción. Conecto ingeniería con resultados de negocio medibles — 5× throughput, 30% de reducción de coste de infraestructura, onboarding comprimido de 6 semanas a 2, y entrega de features pasada de 3 releases/año a 15.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "Engineering Management · TypeScript · Node.js · Microservices · Domain-Driven Design · Azure", val_es: "Engineering Management · TypeScript · Node.js · Microservicios · Domain-Driven Design · Azure" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "Technical roadmap ownership with four documented junior-to-senior progressions across two companies", val_es: "Ownership de roadmap técnico con cuatro progresiones documentadas de junior a senior en dos empresas" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Engineering Manager · Hybrid or Remote", val_es: "Engineering Manager · Híbrido o Remoto" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j014 — Deel
+  "936fc926-916e-420a-8dcd-668e684b57a4": {
+    ...baseProfile,
+    meta: {
+      ...baseProfile.meta,
+      headline: "Team Lead, Engineering",
+    },
+    summary:
+      "Engineering Team Lead with 15 years building distributed systems and the teams that operate them. I split my time between hands-on technical delivery and people leadership — I do not choose one or the other. My background is Node.js, TypeScript, and API-first backend systems.",
+    summaryEs:
+      "Team Lead de Ingeniería con 15 años construyendo sistemas distribuidos y los equipos que los operan. Reparto mi tiempo entre entrega técnica hands-on y liderazgo de personas — no elijo entre uno u otro. Mi background es Node.js, TypeScript y sistemas backend API-first.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "Node.js · TypeScript · SQL (MySQL, PostgreSQL) · Microservices · REST · GraphQL · AWS · CI/CD", val_es: "Node.js · TypeScript · SQL (MySQL, PostgreSQL) · Microservicios · REST · GraphQL · AWS · CI/CD" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "Player-coach leadership — hands-on system design and people development in parallel", val_es: "Liderazgo player-coach — diseño de sistemas hands-on y desarrollo de personas en paralelo" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Team Lead, Engineering · Remote", val_es: "Team Lead, Engineering · Remoto" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j015 — Fever
+  "27a7ecb9-d987-4a1b-8486-31e1ee8cf67e": {
+    ...baseProfile,
+    meta: {
+      ...baseProfile.meta,
+      headline: "Staff Engineer",
+    },
+    summary:
+      "Staff-level engineering leader — 15 years building distributed systems and the teams that ship them. Combines deep technical execution with cross-team influence, roadmap ownership, and measurable business impact: 5× throughput, 30% infrastructure cost reduction, feature delivery 5× faster.",
+    summaryEs:
+      "Líder de ingeniería a nivel Staff — 15 años construyendo sistemas distribuidos y los equipos que los entregan. Combino ejecución técnica profunda con influencia cross-team, ownership del roadmap e impacto de negocio medible: 5× throughput, 30% de reducción de coste de infraestructura, entrega de features 5× más rápida.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "TypeScript · React · Node.js · Microservices · Multi-agent AI (Claude API) · AWS · Architecture", val_es: "TypeScript · React · Node.js · Microservicios · IA multi-agente (Claude API) · AWS · Arquitectura" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "Staff-level technical influence — system design, cross-team alignment, and production AI systems", val_es: "Influencia técnica a nivel Staff — diseño de sistemas, alineamiento cross-team y sistemas de IA en producción" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Staff Engineer · Hybrid or Remote", val_es: "Staff Engineer · Híbrido o Remoto" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j016 — E-Frontiers
+  "452c380e-0a26-4677-b289-6f9abf5f4144": {
+    ...baseProfile,
+    meta: {
+      ...baseProfile.meta,
+      headline: "Lead Full-Stack Software Engineer",
+    },
+    summary:
+      "Full-stack engineering leader with 15 years building production systems across the complete stack — React frontends, .NET/C# and Node.js backends, cloud infrastructure, and AI-powered capabilities. I began my career writing C# with .NET on enterprise platforms; the last decade extended that foundation into modern React, TypeScript, microservices, and production multi-agent AI systems.",
+    summaryEs:
+      "Líder de ingeniería full-stack con 15 años construyendo sistemas en producción en el stack completo — frontends en React, backends en .NET/C# y Node.js, infraestructura cloud y capacidades basadas en IA. Empecé mi carrera escribiendo C# con .NET en plataformas enterprise; la última década extendió esa base a React moderno, TypeScript, microservicios y sistemas de IA multi-agente en producción.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "React · TypeScript · .NET / C# · Node.js · Azure · Microservices · Claude API · CI/CD", val_es: "React · TypeScript · .NET / C# · Node.js · Azure · Microservicios · Claude API · CI/CD" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "Full-stack breadth from .NET origins through React expertise to production AI systems", val_es: "Amplitud full-stack desde orígenes en .NET, pasando por experiencia en React, hasta sistemas de IA en producción" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Lead Full-Stack Software Engineer · Remote or Hybrid", val_es: "Lead Full-Stack Software Engineer · Remoto o Híbrido" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j019 — Nory
+  "7d38d9f9-380d-4f38-a71e-4119a1cf8fe9": {
+    ...baseProfile,
+    meta: {
+      ...baseProfile.meta,
+      headline: "Engineering Manager",
+    },
+    summary:
+      "Engineering manager with 7+ years leading cross-functional squads and owning technical roadmaps at SaaS and platform companies. Built integration-heavy systems, reduced client onboarding from 6 weeks to 2, and scaled platform throughput 5× — each time by connecting engineering decisions directly to commercial outcomes.",
+    summaryEs:
+      "Engineering manager con más de 7 años liderando squads cross-funcionales y siendo responsable de roadmaps técnicos en empresas SaaS y de plataforma. Construí sistemas con muchas integraciones, reduje el onboarding de clientes de 6 semanas a 2 y escalé el throughput de la plataforma 5× — siempre conectando decisiones de ingeniería directamente con resultados comerciales.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "Engineering Management · TypeScript · Node.js · Integrations · REST APIs · Microservices · AWS", val_es: "Engineering Management · TypeScript · Node.js · Integraciones · REST APIs · Microservicios · AWS" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "Integration-led engineering management — platform throughput, onboarding speed, and team growth", val_es: "Gestión de ingeniería liderada por integraciones — throughput de plataforma, velocidad de onboarding y crecimiento del equipo" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Engineering Manager · Remote", val_es: "Engineering Manager · Remoto" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j021 — eDreams ODIGEO
+  "b99d8460-4b3e-4626-84a2-8497e6655876": {
+    ...baseProfile,
+    meta: {
+      ...baseProfile.meta,
+      headline: "Frontend Lead Engineer · AI",
+    },
+    summary:
+      "Frontend engineering leader with 15 years shipping production systems and the teams that build them. I lead squads of 7–10 engineers in player-coach roles — owning technical architecture while running mentoring cycles that have produced measurable career outcomes. Designed and shipped a production multi-agent AI system enabling cross-functional self-serve on operational data without engineering involvement.",
+    summaryEs:
+      "Líder de ingeniería frontend con 15 años entregando sistemas en producción y los equipos que los construyen. Lidero squads de 7-10 ingenieros como player-coach — ownership de arquitectura técnica mientras ejecuto ciclos de mentoring con resultados de carrera medibles. Diseñé y entregué un sistema de IA multi-agente en producción que permite self-serve cross-funcional sobre datos operativos sin intervención de ingeniería.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "React · TypeScript · JavaScript · Microfrontends · Claude API · Multi-agent AI · CI/CD · Performance", val_es: "React · TypeScript · JavaScript · Microfrontends · Claude API · IA multi-agente · CI/CD · Rendimiento" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "Frontend leadership depth — microfrontend architecture, AI systems, and measurable team growth", val_es: "Profundidad de liderazgo frontend — arquitectura de microfrontends, sistemas de IA y crecimiento medible del equipo" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Frontend Lead Engineer · Hybrid Barcelona or Remote", val_es: "Frontend Lead Engineer · Híbrido Barcelona o Remoto" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j023 — Jobgether
+  "43e92b69-6766-483c-a2b3-c49820d3d707": {
+    ...baseProfile,
+    meta: {
+      ...baseProfile.meta,
+      headline: "Staff Engineer, Full-Stack",
+    },
+    summary:
+      "Full-stack staff engineer with 15 years building production systems and the teams that ship them. Deep Node.js and TypeScript expertise on the backend; React and Vue.js on the frontend. Built and orchestrated an 8-agent AI system in production using Claude API for real-time monitoring and process evaluation at scale.",
+    summaryEs:
+      "Staff engineer full-stack con 15 años construyendo sistemas en producción y los equipos que los entregan. Profunda experiencia en Node.js y TypeScript en el backend; React y Vue.js en el frontend. Construí y orquesté un sistema de 8 agentes de IA en producción con Claude API para monitoreo en tiempo real y evaluación de procesos a escala.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "Node.js · TypeScript · React · Vue.js · GraphQL · PostgreSQL · Microservices · Claude API", val_es: "Node.js · TypeScript · React · Vue.js · GraphQL · PostgreSQL · Microservicios · Claude API" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "Full-stack systems thinking — backend depth, frontend ownership, and AI integration in production", val_es: "Pensamiento sistémico full-stack — profundidad backend, ownership frontend e integración de IA en producción" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Staff Engineer, Full-Stack · Remote", val_es: "Staff Engineer, Full-Stack · Remoto" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j025 — Wizeline
+  "44c04837-5158-44fd-adbd-5690ab85bf39": {
+    ...baseProfile,
+    meta: {
+      ...baseProfile.meta,
+      headline: "Staff React Engineer · TypeScript + AI",
+    },
+    summary:
+      "Staff-level React and TypeScript engineer with 15 years building enterprise front-end systems and the teams that deliver them. Architected a production 8-agent AI system using the Anthropic/Claude API enabling autonomous operational insights for a YC-backed company without engineering intervention.",
+    summaryEs:
+      "Ingeniero React y TypeScript a nivel Staff con 15 años construyendo sistemas front-end enterprise y los equipos que los entregan. Diseñé un sistema de IA de 8 agentes en producción usando la API de Anthropic/Claude que permite insights operativos autónomos para una empresa respaldada por YC sin intervención de ingeniería.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "React (7yr expert) · TypeScript (9yr expert) · Claude API · Multi-agent AI · Microfrontends · Azure", val_es: "React (7 años, experto) · TypeScript (9 años, experto) · Claude API · IA multi-agente · Microfrontends · Azure" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "Staff React depth combined with hands-on AI system architecture in production", val_es: "Profundidad React a nivel Staff combinada con arquitectura hands-on de sistemas de IA en producción" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Staff React Engineer · Remote", val_es: "Staff React Engineer · Remoto" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j027 — n8n
+  "999c771e-e49e-44c7-a0c3-4ea6627523a6": {
+    ...baseProfile,
+    meta: {
+      ...baseProfile.meta,
+      headline: "Engineering Manager, Core Platform",
+    },
+    summary:
+      "Engineering leader with 15 years of hands-on software engineering and 7 years building and developing the teams that ship production systems. I work at the boundary of platform thinking and business outcomes: not what the platform can do, but what it enables — and how to measure that.",
+    summaryEs:
+      "Líder de ingeniería con 15 años de ingeniería de software hands-on y 7 años construyendo y desarrollando los equipos que entregan sistemas en producción. Trabajo en la frontera entre el pensamiento de plataforma y los resultados de negocio: no qué puede hacer la plataforma, sino qué habilita — y cómo medirlo.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "Engineering Management · TypeScript · Node.js · Platform systems · Observability · Multi-agent AI", val_es: "Engineering Management · TypeScript · Node.js · Sistemas de plataforma · Observabilidad · IA multi-agente" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "Platform-first engineering leadership — outcomes over features, ownership over instruction", val_es: "Liderazgo de ingeniería platform-first — resultados sobre features, ownership sobre instrucción" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Engineering Manager, Core Platform · Remote", val_es: "Engineering Manager, Core Platform · Remoto" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j028 — Huspy
+  "f26931c9-279c-42f0-a591-ee70e3eaedcb": {
+    ...baseProfile,
+    meta: {
+      ...baseProfile.meta,
+      headline: "Frontend Engineer",
+    },
+    summary:
+      "Senior frontend engineer with 11 years of JavaScript/TypeScript depth and 7 years of React experience, specialising in high-performance interfaces, scalable frontend architecture, and cross-functional delivery with Product and Design.",
+    summaryEs:
+      "Ingeniero frontend senior con 11 años de profundidad en JavaScript/TypeScript y 7 años de experiencia en React, especializado en interfaces de alto rendimiento, arquitectura frontend escalable y entrega cross-funcional con Producto y Diseño.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "React (7yr expert) · TypeScript (9yr expert) · JavaScript · Next.js · CSS · Microfrontends · CI/CD", val_es: "React (7 años, experto) · TypeScript (9 años, experto) · JavaScript · Next.js · CSS · Microfrontends · CI/CD" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "Performance-first frontend delivery — UI load time from 7s to 3s, architecture that scales", val_es: "Entrega frontend performance-first — tiempo de carga de UI de 7s a 3s, arquitectura que escala" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Frontend Engineer · Hybrid Madrid", val_es: "Frontend Engineer · Híbrido Madrid" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
 };
 
 export default jobs;
