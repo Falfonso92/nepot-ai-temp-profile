@@ -197,21 +197,21 @@ const jobs = {
     ],
   },
 
-  // j005 — Dex
+  // j005 — Linear (via Dex aggregator)
   "c4919d21-bb6c-4660-869e-f08b0d273e93": {
     ...baseProfile,
     meta: {
       ...baseProfile.meta,
-      headline: "Senior Full-Stack Engineer",
+      headline: "Senior Software Engineer",
     },
     summary:
-      "Senior full-stack engineer with 15 years building production systems — 9 years in TypeScript at expert depth, 7 in React. I ship end-to-end with minimal hand-holding: architected an 8-agent AI platform running real-time operational intelligence in production, and drove 5× throughput and 30% cost reduction on a live document-processing pipeline.",
+      "Full-stack engineer with 15 years building production systems and a strong bias toward product craft. TypeScript and React at expert depth — 9 and 7 years, both current and daily. I shape features from problem to production without a PM layer. At Invofox I embedded AI into the core product, going from blank canvas to a production 8-agent system handling real-time operational intelligence. Performance is a design constraint for me — I've cut load times from 90s to 10s and driven 5× throughput gains by fixing root causes, not symptoms.",
     summaryEs:
-      "Ingeniero senior full-stack con 15 años construyendo sistemas en producción — 9 años en TypeScript a nivel experto, 7 en React. Entrego de extremo a extremo con autonomía: diseñé una plataforma de IA de 8 agentes con inteligencia operativa en tiempo real en producción, y logré 5× de throughput y 30% de reducción de coste en un pipeline de procesamiento documental en vivo.",
+      "Ingeniero full-stack con 15 años construyendo sistemas en producción y un fuerte sesgo hacia la calidad del producto. TypeScript y React a nivel experto — 9 y 7 años respectivamente, ambos actuales y diarios. Desarrollo features de principio a fin sin capa de PM. En Invofox integré IA en el producto principal, desde lienzo en blanco hasta un sistema de 8 agentes en producción con inteligencia operativa en tiempo real. El rendimiento es una restricción de diseño para mí — he reducido tiempos de carga de 90s a 10s y logrado 5× de throughput resolviendo causas raíz.",
     now: [
-      { lbl: "Stack match",   lbl_es: "Stack",         val: "TypeScript (9yr expert) · React (7yr expert) · Node.js · Microservices · Claude API · AWS · CI/CD", val_es: "TypeScript (9 años, experto) · React (7 años, experto) · Node.js · Microservicios · Claude API · AWS · CI/CD" },
-      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "End-to-end ownership — from blank canvas to production — in async-first distributed teams", val_es: "Ownership de extremo a extremo — del lienzo en blanco a producción — en equipos distribuidos async-first" },
-      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Senior Full-Stack Engineer · Remote", val_es: "Senior Full-Stack Engineer · Remoto" },
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "TypeScript (9yr expert) · React (7yr expert) · Node.js · GraphQL · PostgreSQL · Claude API · Multi-agent AI · AWS", val_es: "TypeScript (9 años, experto) · React (7 años, experto) · Node.js · GraphQL · PostgreSQL · Claude API · IA multi-agente · AWS" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "Product-craft IC — end-to-end ownership, AI feature embedding, and obsessive performance optimisation", val_es: "IC orientado al producto — ownership completo, integración de IA y optimización de rendimiento obsesiva" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Senior Engineer · Remote", val_es: "Senior Engineer · Remoto" },
       { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
     ],
   },

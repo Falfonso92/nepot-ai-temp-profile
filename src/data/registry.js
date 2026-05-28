@@ -62,11 +62,11 @@ const registry = [
     company: "Topi",
   },
   {
-    jobId: "j005-dex",
+    jobId: "j005-linear",
     guid: "c4919d21-bb6c-4660-869e-f08b0d273e93",
     url: `${BASE_URL}/c4919d21-bb6c-4660-869e-f08b0d273e93`,
-    role: "Senior Full-Stack Engineer",
-    company: "Dex",
+    role: "Senior Engineer",
+    company: "Linear",
   },
   {
     jobId: "j006-unleash",
