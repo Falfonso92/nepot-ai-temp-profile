@@ -153,6 +153,27 @@ const registry = [
     company: "n8n",
   },
   {
+    jobId: "s01-attio-em",
+    guid: "e3f1572a-7b2c-4f0c-9a78-67fbc3185b37",
+    url: `${BASE_URL}/e3f1572a-7b2c-4f0c-9a78-67fbc3185b37`,
+    role: "Engineering Manager",
+    company: "Attio",
+  },
+  {
+    jobId: "s02-synthesia",
+    guid: "c4772afc-1cb4-4f01-b86c-ecf53633fe94",
+    url: `${BASE_URL}/c4772afc-1cb4-4f01-b86c-ecf53633fe94`,
+    role: "Engineering Manager",
+    company: "Synthesia",
+  },
+  {
+    jobId: "s04-ably",
+    guid: "e1c331fc-cdb7-4552-b854-a06e75d44636",
+    url: `${BASE_URL}/e1c331fc-cdb7-4552-b854-a06e75d44636`,
+    role: "Technical Lead, Developer Experience",
+    company: "Ably",
+  },
+  {
     jobId: "j028-huspy",
     guid: "f26931c9-279c-42f0-a591-ee70e3eaedcb",
     url: `${BASE_URL}/f26931c9-279c-42f0-a591-ee70e3eaedcb`,

@@ -539,6 +539,63 @@ const jobs = {
     ],
   },
 
+  // s01 — Attio (Engineering Manager)
+  "e3f1572a-7b2c-4f0c-9a78-67fbc3185b37": {
+    ...baseProfile,
+    meta: {
+      ...baseProfile.meta,
+      headline: "Engineering Manager",
+    },
+    summary:
+      "Engineering Manager and hands-on architect with 15 years building production systems and the teams that ship them — the last two as EM at a YC-backed startup running TypeScript/Node.js microservices, microfrontends, and production multi-agent AI systems. Leads best from inside the code: 70% architecture and systems work, 30% leadership, team development, and product decisions grounded in real customer interactions.",
+    summaryEs:
+      "Engineering Manager y arquitecto hands-on con 15 años construyendo sistemas en producción y los equipos que los entregan — los últimos dos como EM en una startup respaldada por YC con microservicios TypeScript/Node.js, microfrontends y sistemas de IA multi-agente en producción. Lidera mejor desde dentro del código: 70% arquitectura y sistemas, 30% liderazgo, desarrollo del equipo y decisiones de producto.",
+    now: [
+      { lbl: "Stack match",    lbl_es: "Stack",         val: "TypeScript · Node.js · Microservices · Multi-agent AI (Claude API) · AWS · Azure",                              val_es: "TypeScript · Node.js · Microservicios · IA multi-agente (Claude API) · AWS · Azure" },
+      { lbl: "What I bring",   lbl_es: "Lo que aporto", val: "An EM who codes — 70% architecture and systems ownership, 30% people and product decisions",                   val_es: "Un EM que programa — 70% ownership de arquitectura y sistemas, 30% personas y decisiones de producto" },
+      { lbl: "Open to",        lbl_es: "Abierto a",     val: "Engineering Manager · Hybrid or Remote (Madrid)",                                                               val_es: "Engineering Manager · Híbrido o Remoto (Madrid)" },
+      { lbl: "Available",      lbl_es: "Disponible",    val: "Immediate",                                                                                                     val_es: "Inmediata" },
+    ],
+  },
+
+  // s02 — Synthesia (Engineering Manager)
+  "c4772afc-1cb4-4f01-b86c-ecf53633fe94": {
+    ...baseProfile,
+    meta: {
+      ...baseProfile.meta,
+      headline: "Engineering Manager",
+    },
+    summary:
+      "Engineering Manager with 7+ years leading cross-functional teams across distributed systems, AI/ML systems, and high-throughput backend pipelines. Proven track record bridging research to production — from designing multi-agent AI systems to translating ambiguous platform challenges into structured plans with measurable outcomes. Brings a record of improving system reliability, developer productivity, and team capability at each stage of growth.",
+    summaryEs:
+      "Engineering Manager con más de 7 años liderando equipos cross-funcionales en sistemas distribuidos, sistemas de IA/ML y pipelines backend de alto throughput. Historial probado de llevar investigación a producción — desde el diseño de sistemas de IA multi-agente hasta traducir retos ambiguos de plataforma en planes estructurados con resultados medibles.",
+    now: [
+      { lbl: "Stack match",    lbl_es: "Stack",         val: "Multi-agent AI · LLM orchestration · TypeScript · Node.js · Distributed systems · AWS · Azure",                val_es: "IA multi-agente · Orquestación de LLMs · TypeScript · Node.js · Sistemas distribuidos · AWS · Azure" },
+      { lbl: "What I bring",   lbl_es: "Lo que aporto", val: "Research-to-production engineering leadership — AI systems shipped, reliability improved, teams grown",         val_es: "Liderazgo de ingeniería de investigación a producción — sistemas de IA entregados, fiabilidad mejorada, equipos desarrollados" },
+      { lbl: "Open to",        lbl_es: "Abierto a",     val: "Engineering Manager · Remote (Madrid)",                                                                         val_es: "Engineering Manager · Remoto (Madrid)" },
+      { lbl: "Available",      lbl_es: "Disponible",    val: "Immediate",                                                                                                     val_es: "Inmediata" },
+    ],
+  },
+
+  // s04 — Ably (Technical Lead, Developer Experience)
+  "e1c331fc-cdb7-4552-b854-a06e75d44636": {
+    ...baseProfile,
+    meta: {
+      ...baseProfile.meta,
+      headline: "Technical Lead, Developer Experience",
+    },
+    summary:
+      "Full-stack technical lead with 15 years of production JavaScript/TypeScript/React engineering and 7 years of engineering management — shipped AI systems, developer tooling, and growth-stage platforms at YC-backed companies. Built and deployed 'The Hive Mind,' an 8-agent Claude-based AI system in production that lifted team feature velocity from 3 to 15 per year. Combines hands-on full-stack ownership with genuine empathy for developer customers, treating technology as a direct engine for product and organisational impact.",
+    summaryEs:
+      "Technical Lead full-stack con 15 años de ingeniería JavaScript/TypeScript/React en producción y 7 años de engineering management — entregué sistemas de IA, herramientas para desarrolladores y plataformas en etapa de crecimiento en empresas respaldadas por YC. Construí y desplegué 'The Hive Mind', un sistema de 8 agentes basado en Claude que elevó la velocidad de entrega del equipo de 3 a 15 features por año.",
+    now: [
+      { lbl: "Stack match",    lbl_es: "Stack",         val: "TypeScript · JavaScript · React · Node.js · Developer tooling · SDK · Multi-agent AI (Claude API)",             val_es: "TypeScript · JavaScript · React · Node.js · Herramientas para desarrolladores · SDK · IA multi-agente (Claude API)" },
+      { lbl: "What I bring",   lbl_es: "Lo que aporto", val: "A technical lead who builds for developers — realtime systems, AI adoption at team scale, and DX as a product", val_es: "Un technical lead que construye para desarrolladores — sistemas en tiempo real, adopción de IA a escala de equipo y DX como producto" },
+      { lbl: "Open to",        lbl_es: "Abierto a",     val: "Technical Lead, Developer Experience · Remote (Madrid)",                                                        val_es: "Technical Lead, Developer Experience · Remoto (Madrid)" },
+      { lbl: "Available",      lbl_es: "Disponible",    val: "Immediate",                                                                                                     val_es: "Inmediata" },
+    ],
+  },
+
   // j028 — Huspy
   "f26931c9-279c-42f0-a591-ee70e3eaedcb": {
     ...baseProfile,
