@@ -452,9 +452,9 @@ const jobs = {
       headline: "Staff Engineer",
     },
     summary:
-      "Staff Engineer with 13+ years building distributed systems and a proven ability to lead transversal projects autonomously — from ideation to production. At Invofox (YC S22) I architected and shipped an 8-agent AI system, scaled infra 5×, and drove cross-functional delivery across architecture and app teams.",
+      "Staff Engineer with 15 years building distributed systems and a proven ability to lead transversal projects autonomously — from ideation to production. At Invofox (YC S22) I architected and shipped an 8-agent AI system, scaled infra 5×, and drove cross-functional delivery across architecture and app teams.",
     summaryEs:
-      "Staff Engineer con más de 13 años construyendo sistemas distribuidos y capacidad probada para liderar proyectos transversales de forma autónoma — desde la ideación hasta producción. En Invofox (YC S22) diseñé y entregué un sistema de 8 agentes de IA, escalé la infraestructura 5× y lideré la entrega cross-funcional entre equipos de arquitectura y aplicación.",
+      "Staff Engineer con 15 años construyendo sistemas distribuidos y capacidad probada para liderar proyectos transversales de forma autónoma — desde la ideación hasta producción. En Invofox (YC S22) diseñé y entregué un sistema de 8 agentes de IA, escalé la infraestructura 5× y lideré la entrega cross-funcional entre equipos de arquitectura y aplicación.",
     now: [
       { lbl: "Stack match",    lbl_es: "Stack",         val: "TypeScript · Node.js · Microservices · System design · Multi-agent AI (Claude API)",        val_es: "TypeScript · Node.js · Microservicios · Diseño de sistemas · IA multi-agente (Claude API)" },
       { lbl: "What I bring",   lbl_es: "Lo que aporto", val: "Staff-level technical leadership — autonomous project ownership, cross-team mentorship, and AI-powered system design", val_es: "Liderazgo técnico a nivel Staff — ownership autónomo de proyectos, mentoring cross-team y diseño de sistemas de IA" },
@@ -509,9 +509,9 @@ const jobs = {
       headline: "Staff Software Engineer",
     },
     summary:
-      "Staff Software Engineer with 13+ years of TypeScript depth and a proven ability to own backend systems end-to-end in high-growth startup environments. At Invofox (YC S22) I architected an 8-agent AI system using the Claude API, scaled infra 5×, and mentored four engineers from junior to senior — delivering production-grade work at pace.",
+      "Staff Software Engineer with 15 years of TypeScript depth and a proven ability to own backend systems end-to-end in high-growth startup environments. At Invofox (YC S22) I architected an 8-agent AI system using the Claude API, scaled infra 5×, and mentored four engineers from junior to senior — delivering production-grade work at pace.",
     summaryEs:
-      "Staff Software Engineer con más de 13 años de profundidad en TypeScript y capacidad probada para ser responsable de sistemas backend de extremo a extremo en entornos startup de alto crecimiento. En Invofox (YC S22) diseñé un sistema de 8 agentes de IA con Claude API, escalé la infraestructura 5× y mentorié a cuatro ingenieros de junior a senior.",
+      "Staff Software Engineer con 15 años de profundidad en TypeScript y capacidad probada para ser responsable de sistemas backend de extremo a extremo en entornos startup de alto crecimiento. En Invofox (YC S22) diseñé un sistema de 8 agentes de IA con Claude API, escalé la infraestructura 5× y mentorié a cuatro ingenieros de junior a senior.",
     now: [
       { lbl: "Stack match",    lbl_es: "Stack",         val: "TypeScript (9yr expert) · Node.js · AWS · Multi-agent AI (Claude API)",                 val_es: "TypeScript (9 años, experto) · Node.js · AWS · IA multi-agente (Claude API)" },
       { lbl: "What I bring",   lbl_es: "Lo que aporto", val: "Backend ownership at startup pace — systems that scale, AI-native from day one",         val_es: "Ownership backend a ritmo de startup — sistemas que escalan, AI-native desde el primer día" },
