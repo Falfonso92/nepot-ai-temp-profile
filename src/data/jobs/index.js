@@ -425,6 +425,120 @@ const jobs = {
     ],
   },
 
+  // r01 — Playbook
+  "a4e1f8a4-d4f8-4460-bee3-f06a95fee087": {
+    ...baseProfile,
+    meta: {
+      ...baseProfile.meta,
+      headline: "Team Lead (ReactJS / Node.js)",
+    },
+    summary:
+      "Team Lead with 7 years of hands-on engineering leadership and deep React, TypeScript, and Node.js expertise — the exact stack Playbook requires. At Invofox (YC S22) I led a player-coach role: shipped production features including an 8-agent AI system while accelerating team delivery from 3 to 15 features per year.",
+    summaryEs:
+      "Team Lead con 7 años de liderazgo técnico hands-on y profunda experiencia en React, TypeScript y Node.js — el stack exacto que Playbook necesita. En Invofox (YC S22) ejercí un rol player-coach: entregué features en producción incluyendo un sistema de 8 agentes de IA mientras aceleraba la entrega del equipo de 3 a 15 features por año.",
+    now: [
+      { lbl: "Stack match",    lbl_es: "Stack",         val: "React (7yr expert) · TypeScript (9yr expert) · Node.js · GraphQL · Claude API",           val_es: "React (7 años, experto) · TypeScript (9 años, experto) · Node.js · GraphQL · Claude API" },
+      { lbl: "What I bring",   lbl_es: "Lo que aporto", val: "Player-coach Team Lead — hands-on delivery and team acceleration simultaneously",          val_es: "Team Lead player-coach — entrega hands-on y aceleración del equipo de forma simultánea" },
+      { lbl: "Open to",        lbl_es: "Abierto a",     val: "Team Lead (ReactJS / Node.js) · Remote or Hybrid",                                         val_es: "Team Lead (ReactJS / Node.js) · Remoto o Híbrido" },
+      { lbl: "Available",      lbl_es: "Disponible",    val: "Immediate",                                                                                 val_es: "Inmediata" },
+    ],
+  },
+
+  // r02 — Aircall
+  "955d68be-c43d-42ac-bc2f-1ea1c638b49e": {
+    ...baseProfile,
+    meta: {
+      ...baseProfile.meta,
+      headline: "Staff Engineer",
+    },
+    summary:
+      "Staff Engineer with 13+ years building distributed systems and a proven ability to lead transversal projects autonomously — from ideation to production. At Invofox (YC S22) I architected and shipped an 8-agent AI system, scaled infra 5×, and drove cross-functional delivery across architecture and app teams.",
+    summaryEs:
+      "Staff Engineer con más de 13 años construyendo sistemas distribuidos y capacidad probada para liderar proyectos transversales de forma autónoma — desde la ideación hasta producción. En Invofox (YC S22) diseñé y entregué un sistema de 8 agentes de IA, escalé la infraestructura 5× y lideré la entrega cross-funcional entre equipos de arquitectura y aplicación.",
+    now: [
+      { lbl: "Stack match",    lbl_es: "Stack",         val: "TypeScript · Node.js · Microservices · System design · Multi-agent AI (Claude API)",        val_es: "TypeScript · Node.js · Microservicios · Diseño de sistemas · IA multi-agente (Claude API)" },
+      { lbl: "What I bring",   lbl_es: "Lo que aporto", val: "Staff-level technical leadership — autonomous project ownership, cross-team mentorship, and AI-powered system design", val_es: "Liderazgo técnico a nivel Staff — ownership autónomo de proyectos, mentoring cross-team y diseño de sistemas de IA" },
+      { lbl: "Open to",        lbl_es: "Abierto a",     val: "Staff Engineer · Remote or Hybrid Madrid",                                                  val_es: "Staff Engineer · Remoto o Híbrido Madrid" },
+      { lbl: "Available",      lbl_es: "Disponible",    val: "Immediate",                                                                                 val_es: "Inmediata" },
+    ],
+  },
+
+  // r03 — TechShack
+  "bf98476f-b1cf-49fb-b3bf-863a06306b2d": {
+    ...baseProfile,
+    meta: {
+      ...baseProfile.meta,
+      headline: "Senior Frontend Developer",
+    },
+    summary:
+      "Senior Frontend Developer with 7 years of React and 9 years of TypeScript at expert depth, and AI tooling in production beyond autocomplete. At Invofox (YC S22) I built a production 8-agent AI system using Claude API and cut UI load time from 7s to 3s; at Sygris I reduced portal load from 2 minutes to 10 seconds by redesigning the core data model.",
+    summaryEs:
+      "Desarrollador Frontend Senior con 7 años en React y 9 años en TypeScript a nivel experto, con herramientas de IA en producción más allá del autocompletado. En Invofox (YC S22) construí un sistema de 8 agentes de IA con Claude API y reduje el tiempo de carga de UI de 7s a 3s; en Sygris reduje la carga del portal de 2 minutos a 10 segundos rediseñando el modelo de datos central.",
+    now: [
+      { lbl: "Stack match",    lbl_es: "Stack",         val: "React (7yr expert) · TypeScript (9yr expert) · GraphQL · Claude API · CI/CD",               val_es: "React (7 años, experto) · TypeScript (9 años, experto) · GraphQL · Claude API · CI/CD" },
+      { lbl: "What I bring",   lbl_es: "Lo que aporto", val: "Frontend depth with quantified performance outcomes and AI-native production systems",       val_es: "Profundidad frontend con resultados de rendimiento cuantificados y sistemas de IA en producción" },
+      { lbl: "Open to",        lbl_es: "Abierto a",     val: "Senior Frontend Developer · Remote or Hybrid",                                              val_es: "Senior Frontend Developer · Remoto o Híbrido" },
+      { lbl: "Available",      lbl_es: "Disponible",    val: "Immediate",                                                                                 val_es: "Inmediata" },
+    ],
+  },
+
+  // r04 — Civislend
+  "cd6f1186-6968-4796-a1e0-c5eec2351c9b": {
+    ...baseProfile,
+    meta: {
+      ...baseProfile.meta,
+      headline: "Technical Lead",
+    },
+    summary:
+      "Technical Lead with a career-defining pattern of joining as the first in-house engineer, building the technical function from scratch, and scaling it into a high-output team — exactly what Civislend is looking for. At Invofox (YC S22) I owned architecture, roadmap, and engineering org, scaling delivery 5× and infra to match; my 5-year trajectory points directly to CTO.",
+    summaryEs:
+      "Technical Lead con un patrón de carrera definido: unirse como primer ingeniero interno, construir la función técnica desde cero y escalarla hasta un equipo de alto rendimiento — exactamente lo que Civislend busca. En Invofox (YC S22) fui responsable de la arquitectura, el roadmap y la organización de ingeniería, escalando la entrega 5× y la infraestructura al mismo ritmo; mi trayectoria a 5 años apunta directamente a CTO.",
+    now: [
+      { lbl: "Stack match",    lbl_es: "Stack",         val: "React · TypeScript · Node.js · PostgreSQL · Microservices · Architecture · CI/CD",           val_es: "React · TypeScript · Node.js · PostgreSQL · Microservicios · Arquitectura · CI/CD" },
+      { lbl: "What I bring",   lbl_es: "Lo que aporto", val: "First-TL pattern with a track record: hands-on delivery, team building, and CTO-track ownership", val_es: "Patrón de primer TL con historial probado: entrega hands-on, construcción de equipo y ownership en trayectoria hacia CTO" },
+      { lbl: "Open to",        lbl_es: "Abierto a",     val: "Technical Lead · Hybrid Madrid",                                                            val_es: "Technical Lead · Híbrido Madrid" },
+      { lbl: "Available",      lbl_es: "Disponible",    val: "Immediate",                                                                                 val_es: "Inmediata" },
+    ],
+  },
+
+  // r05 — nineDots.io
+  "2974887d-2856-41c3-bcde-d26f7c8ed7b4": {
+    ...baseProfile,
+    meta: {
+      ...baseProfile.meta,
+      headline: "Staff Software Engineer",
+    },
+    summary:
+      "Staff Software Engineer with 13+ years of TypeScript depth and a proven ability to own backend systems end-to-end in high-growth startup environments. At Invofox (YC S22) I architected an 8-agent AI system using the Claude API, scaled infra 5×, and mentored four engineers from junior to senior — delivering production-grade work at pace.",
+    summaryEs:
+      "Staff Software Engineer con más de 13 años de profundidad en TypeScript y capacidad probada para ser responsable de sistemas backend de extremo a extremo en entornos startup de alto crecimiento. En Invofox (YC S22) diseñé un sistema de 8 agentes de IA con Claude API, escalé la infraestructura 5× y mentorié a cuatro ingenieros de junior a senior.",
+    now: [
+      { lbl: "Stack match",    lbl_es: "Stack",         val: "TypeScript (9yr expert) · Node.js · AWS · Multi-agent AI (Claude API)",                 val_es: "TypeScript (9 años, experto) · Node.js · AWS · IA multi-agente (Claude API)" },
+      { lbl: "What I bring",   lbl_es: "Lo que aporto", val: "Backend ownership at startup pace — systems that scale, AI-native from day one",         val_es: "Ownership backend a ritmo de startup — sistemas que escalan, AI-native desde el primer día" },
+      { lbl: "Open to",        lbl_es: "Abierto a",     val: "Staff Software Engineer · Remote",                                                       val_es: "Staff Software Engineer · Remoto" },
+      { lbl: "Available",      lbl_es: "Disponible",    val: "Immediate",                                                                              val_es: "Inmediata" },
+    ],
+  },
+
+  // r07 — Kepler Search
+  "5778691b-1a7c-433d-8e75-64c4668b9527": {
+    ...baseProfile,
+    meta: {
+      ...baseProfile.meta,
+      headline: "Frontend Developer",
+    },
+    summary:
+      "Senior Frontend Developer with 9 years of TypeScript and 7 years of React at expert depth, bringing a strong bias toward production quality, proactive refactoring, and measurable performance outcomes. At Invofox (YC S22) I cut UI load time from 7s to 3s; at Sygris I reduced portal load from 2 minutes to 10 seconds by redesigning the core data model.",
+    summaryEs:
+      "Desarrollador Frontend Senior con 9 años en TypeScript y 7 años en React a nivel experto, con un fuerte sesgo hacia la calidad en producción, la refactorización proactiva y los resultados de rendimiento medibles. En Invofox (YC S22) reduje el tiempo de carga de UI de 7s a 3s; en Sygris reduje la carga del portal de 2 minutos a 10 segundos.",
+    now: [
+      { lbl: "Stack match",    lbl_es: "Stack",         val: "TypeScript (9yr expert) · React (7yr expert) · HTML/CSS · CI/CD · Git",                  val_es: "TypeScript (9 años, experto) · React (7 años, experto) · HTML/CSS · CI/CD · Git" },
+      { lbl: "What I bring",   lbl_es: "Lo que aporto", val: "Production-first frontend engineering — performance, code quality, and team guidance",    val_es: "Ingeniería frontend production-first — rendimiento, calidad de código y orientación al equipo" },
+      { lbl: "Open to",        lbl_es: "Abierto a",     val: "Frontend Developer · Remote or Hybrid",                                                  val_es: "Frontend Developer · Remoto o Híbrido" },
+      { lbl: "Available",      lbl_es: "Disponible",    val: "Immediate",                                                                              val_es: "Inmediata" },
+    ],
+  },
+
   // j028 — Huspy
   "f26931c9-279c-42f0-a591-ee70e3eaedcb": {
     ...baseProfile,

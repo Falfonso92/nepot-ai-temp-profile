@@ -159,6 +159,48 @@ const registry = [
     role: "Frontend Engineer",
     company: "Huspy",
   },
+  {
+    jobId: "r01-playbook",
+    guid: "a4e1f8a4-d4f8-4460-bee3-f06a95fee087",
+    url: `${BASE_URL}/a4e1f8a4-d4f8-4460-bee3-f06a95fee087`,
+    role: "Team Lead (ReactJS / Node.js)",
+    company: "Playbook",
+  },
+  {
+    jobId: "r02-aircall",
+    guid: "955d68be-c43d-42ac-bc2f-1ea1c638b49e",
+    url: `${BASE_URL}/955d68be-c43d-42ac-bc2f-1ea1c638b49e`,
+    role: "Staff Engineer",
+    company: "Aircall",
+  },
+  {
+    jobId: "r03-techshack",
+    guid: "bf98476f-b1cf-49fb-b3bf-863a06306b2d",
+    url: `${BASE_URL}/bf98476f-b1cf-49fb-b3bf-863a06306b2d`,
+    role: "Senior Frontend Developer",
+    company: "TechShack",
+  },
+  {
+    jobId: "r04-civislend",
+    guid: "cd6f1186-6968-4796-a1e0-c5eec2351c9b",
+    url: `${BASE_URL}/cd6f1186-6968-4796-a1e0-c5eec2351c9b`,
+    role: "Technical Lead",
+    company: "Civislend",
+  },
+  {
+    jobId: "r05-ninedots",
+    guid: "2974887d-2856-41c3-bcde-d26f7c8ed7b4",
+    url: `${BASE_URL}/2974887d-2856-41c3-bcde-d26f7c8ed7b4`,
+    role: "Staff Software Engineer",
+    company: "nineDots.io",
+  },
+  {
+    jobId: "r07-kepler",
+    guid: "5778691b-1a7c-433d-8e75-64c4668b9527",
+    url: `${BASE_URL}/5778691b-1a7c-433d-8e75-64c4668b9527`,
+    role: "Frontend Developer",
+    company: "Kepler Search",
+  },
 ];
 
 export default registry;
