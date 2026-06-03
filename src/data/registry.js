@@ -229,6 +229,27 @@ const registry = [
     role: "Staff Engineer",
     company: "Embat",
   },
+  {
+    jobId: "j035-maze",
+    guid: "6c622db3-b13c-46e3-8d7b-f369b43d9fda",
+    url: `${BASE_URL}/6c622db3-b13c-46e3-8d7b-f369b43d9fda`,
+    role: "Full Stack Engineer",
+    company: "Maze",
+  },
+  {
+    jobId: "j036-junction",
+    guid: "4d99cef4-c601-441c-b4d1-6da6995b42b2",
+    url: `${BASE_URL}/4d99cef4-c601-441c-b4d1-6da6995b42b2`,
+    role: "Product Engineer",
+    company: "Junction",
+  },
+  {
+    jobId: "j037-fonoa",
+    guid: "c876896e-b81e-4703-b156-5f29f95b1dee",
+    url: `${BASE_URL}/c876896e-b81e-4703-b156-5f29f95b1dee`,
+    role: "Staff Software Engineer, AI",
+    company: "Fonoa",
+  },
 ];
 
 export default registry;

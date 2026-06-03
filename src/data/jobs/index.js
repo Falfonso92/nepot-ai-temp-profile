@@ -633,6 +633,63 @@ const jobs = {
       { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
     ],
   },
+
+  // j035 — Maze
+  "6c622db3-b13c-46e3-8d7b-f369b43d9fda": {
+    ...baseProfile,
+    meta: {
+      ...baseProfile.meta,
+      headline: "Full Stack Engineer",
+    },
+    summary:
+      "Full-stack engineer with 15 years of production software experience across B2B SaaS startups — TypeScript and React expert who owns the complete stack from UI to API. Built The Hive Mind, an 8-agent AI system in production, and scaled a document processing pipeline 5× (100→500 docs/min). Ships without blockers, measures success by customer impact, not ticket count.",
+    summaryEs:
+      "Ingeniero full-stack con 15 años de experiencia en producción en startups B2B SaaS — experto en TypeScript y React que posee el stack completo de UI a API. Construí The Hive Mind, un sistema de 8 agentes IA en producción, y escalé un pipeline de procesamiento 5× (100→500 docs/min). Entrega sin bloqueadores, mide el éxito por impacto al cliente, no por tickets.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "TypeScript (9yr) · React (7yr) · Node.js · REST APIs · Python · PostgreSQL · CI/CD · AI agents",  val_es: "TypeScript (9 años) · React (7 años) · Node.js · REST APIs · Python · PostgreSQL · CI/CD · Agentes IA" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "End-to-end feature ownership and startup velocity — deliver from concept to production without hand-offs", val_es: "Propiedad total de features y velocidad de startup — entrega de concepto a producción sin traspasos" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Full Stack Engineer · Remote",   val_es: "Full Stack Engineer · Remoto" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate",                      val_es: "Inmediata" },
+    ],
+  },
+
+  // j036 — Junction
+  "4d99cef4-c601-441c-b4d1-6da6995b42b2": {
+    ...baseProfile,
+    meta: {
+      ...baseProfile.meta,
+      headline: "Product Engineer",
+    },
+    summary:
+      "Full-stack product engineer with 15 years of experience shipping end-to-end features at B2B SaaS startups — TypeScript, Next.js, and Python across the complete stack. I shape what gets built, not just how: co-designed product models that stabilised two companies financially and consistently join small teams to build from the ground up. I work remote-first, own my scope completely, and measure success by customer outcomes.",
+    summaryEs:
+      "Ingeniero de producto full-stack con 15 años de experiencia entregando features end-to-end en startups B2B SaaS — TypeScript, Next.js y Python en el stack completo. Defino qué se construye, no solo cómo: co-diseñé modelos de producto que estabilizaron dos empresas financieramente y consistentemente me uno a equipos pequeños para construir desde cero.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "TypeScript (9yr) · Next.js (5yr) · React · Python · Node.js · PostgreSQL · GCP/Azure · CI/CD",  val_es: "TypeScript (9 años) · Next.js (5 años) · React · Python · Node.js · PostgreSQL · GCP/Azure · CI/CD" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "Product instincts plus full-stack execution — I shape what to build and deliver it end-to-end", val_es: "Instinto de producto más ejecución full-stack — defino qué construir y lo entrego de principio a fin" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Product Engineer · Remote-first",   val_es: "Product Engineer · Remote-first" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate",                          val_es: "Inmediata" },
+    ],
+  },
+
+  // j037 — Fonoa
+  "c876896e-b81e-4703-b156-5f29f95b1dee": {
+    ...baseProfile,
+    meta: {
+      ...baseProfile.meta,
+      headline: "Staff Software Engineer, AI",
+    },
+    summary:
+      "Staff-level engineer with 15 years of full-stack production experience, specialising in LLM systems and multi-agent AI. Architected The Hive Mind — an 8-agent Claude-based system that gave a product team full operational self-service — and led LLM evaluation and hot-balancing strategies across multiple models in production. I build AI products end-to-end, argue for model choices in commercial terms, and thrive in domains where the playbook doesn't exist yet.",
+    summaryEs:
+      "Ingeniero de nivel Staff con 15 años de experiencia full-stack en producción, especializado en sistemas LLM y IA multi-agente. Arquitecté The Hive Mind — un sistema de 8 agentes basado en Claude que dio autonomía operacional total a un equipo de producto — y lideré estrategias de evaluación y hot-balancing de LLMs en producción. Construyo productos IA end-to-end y prospero en dominios donde el manual no existe.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "LLMs · Multi-agent systems · Prompt engineering · AI evaluation · Python · TypeScript · Node.js · Claude API",  val_es: "LLMs · Sistemas multi-agente · Prompt engineering · Evaluación de IA · Python · TypeScript · Node.js · Claude API" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "Production AI systems built from first principles — The Hive Mind is live evidence, not a side project", val_es: "Sistemas IA en producción construidos desde principios fundamentales — The Hive Mind es evidencia real, no un proyecto paralelo" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Staff Software Engineer, AI · Remote",   val_es: "Staff Software Engineer, AI · Remoto" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate",                               val_es: "Inmediata" },
+    ],
+  },
 };
 
 export default jobs;
