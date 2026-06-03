@@ -690,6 +690,24 @@ const jobs = {
       { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate",                               val_es: "Inmediata" },
     ],
   },
+  // j039 — Franciely / LATAM Freelance
+  "7954f5a9-fd35-4049-8345-bf50e505d85f": {
+    ...baseProfile,
+    meta: {
+      ...baseProfile.meta,
+      headline: "Senior Full Stack Engineer",
+    },
+    summary:
+      "Full-stack engineer with 15 years building and scaling production systems — TypeScript, Node.js, React, NestJS, .NET, Python, and cloud infrastructure across AWS, GCP, and Azure. Available immediately for long-term remote engagements. Built The Hive Mind, an 8-agent AI system in production at a YC-backed startup. Combines IC depth with 7 years of engineering leadership — ships fast, owns the architecture, and brings systems thinking to every engagement.",
+    summaryEs:
+      "Ingeniero full-stack con 15 años construyendo y escalando sistemas en producción — TypeScript, Node.js, React, NestJS, .NET, Python e infraestructura cloud en AWS, GCP y Azure. Disponible inmediatamente para proyectos remotos de largo plazo. Construí The Hive Mind, un sistema de 8 agentes IA en producción en una startup respaldada por YC.",
+    now: [
+      { lbl: "Stack",         lbl_es: "Stack",         val: "TypeScript · JavaScript · Node.js · NestJS · React · Angular · Vue · .NET/C# · Python · AWS · GCP · Azure",  val_es: "TypeScript · JavaScript · Node.js · NestJS · React · Angular · Vue · .NET/C# · Python · AWS · GCP · Azure" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "Full-stack depth across the entire modern web stack — backend systems, frontend architecture, cloud, and AI",  val_es: "Profundidad full-stack en todo el stack web moderno — sistemas backend, arquitectura frontend, cloud e IA" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Senior Full Stack Engineer · Remote · Long-term",  val_es: "Senior Full Stack Engineer · Remoto · Largo plazo" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate",                                         val_es: "Inmediata" },
+    ],
+  },
 };
 
 export default jobs;

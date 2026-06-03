@@ -250,6 +250,13 @@ const registry = [
     role: "Staff Software Engineer, AI",
     company: "Fonoa",
   },
+  {
+    jobId: "j039-franciely",
+    guid: "7954f5a9-fd35-4049-8345-bf50e505d85f",
+    url: `${BASE_URL}/7954f5a9-fd35-4049-8345-bf50e505d85f`,
+    role: "Senior Full Stack Engineer",
+    company: "LATAM Freelance",
+  },
 ];
 
 export default registry;
