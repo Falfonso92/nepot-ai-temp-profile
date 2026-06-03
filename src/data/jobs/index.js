@@ -766,6 +766,25 @@ const jobs = {
     ],
   },
 
+  // j052 — Nory / Staff Engineer
+  "30172151-5275-4cd6-bb3e-f7888a7e0f20": {
+    ...baseProfile,
+    meta: {
+      ...baseProfile.meta,
+      headline: "Staff Engineer",
+    },
+    summary:
+      "Full-stack engineer with 15 years designing and owning production backend systems, distributed services, and the teams that ship them. Specialises in backend systems design and distributed architecture — from microservices platforms processing 500 documents per minute to 8-agent AI systems running real-time operational monitoring at scale. Driven by engineering that moves commercial outcomes: throughput, cost, and delivery cadence are the metrics that matter.",
+    summaryEs:
+      "Ingeniero full-stack con 15 años diseñando y owning sistemas backend en producción, servicios distribuidos y los equipos que los despliegan. Especializado en diseño de sistemas backend y arquitectura distribuida — desde plataformas de microservicios a sistemas multi-agente de IA en tiempo real.",
+    now: [
+      { lbl: "Stack",          lbl_es: "Stack",         val: "TypeScript · Python · Node.js · Distributed Systems · Microservices · AWS/Azure · AI/Agentic",  val_es: "TypeScript · Python · Node.js · Sistemas distribuidos · Microservicios · AWS/Azure · IA agéntica" },
+      { lbl: "AI in prod",     lbl_es: "IA en prod",    val: "8-agent Claude-based system live — real-time DB reporting, infra monitoring, document failure detection",  val_es: "Sistema de 8 agentes en producción — reporting de BD, monitorización de infra, detección de fallos en documentos" },
+      { lbl: "Open to",        lbl_es: "Abierto a",     val: "Staff Engineer · Remote · Spain",  val_es: "Staff Engineer · Remoto · España" },
+      { lbl: "Available",      lbl_es: "Disponible",    val: "Immediate",  val_es: "Inmediata" },
+    ],
+  },
+
   // j039 — Franciely / LATAM Freelance
   "7954f5a9-fd35-4049-8345-bf50e505d85f": {
     ...baseProfile,
