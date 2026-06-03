@@ -690,6 +690,82 @@ const jobs = {
       { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate",                               val_es: "Inmediata" },
     ],
   },
+  // j041 — TechTree → Stealth Healthcare AI / Principal Software Engineer
+  "0bc78c15-2e6d-4b54-adfe-9d2b250ee62c": {
+    ...baseProfile,
+    meta: {
+      ...baseProfile.meta,
+      headline: "Principal Software Engineer",
+    },
+    summary:
+      "Full-stack engineering leader with 15 years building production-grade systems and the teams that ship them — from greenfield platforms to high-throughput AI pipelines. Architected and shipped a production multi-agent AI system (8 Claude-based agents) running real-time operational monitoring, data analysis, and document failure detection at scale. Translates ambiguous requirements into scalable solutions that move commercial outcomes: 5× throughput, 30% infrastructure cost reduction, onboarding time cut from 6 weeks to 2.",
+    summaryEs:
+      "Líder de ingeniería full-stack con 15 años construyendo sistemas en producción y los equipos que los despliegan — desde plataformas desde cero hasta pipelines de IA de alto rendimiento. Arquitecté y desplegué un sistema multi-agente en producción (8 agentes basados en Claude) con monitorización operacional en tiempo real a escala.",
+    now: [
+      { lbl: "Stack",          lbl_es: "Stack",         val: "TypeScript · Python · Node.js · LLMs/Agentic AI · React · Microservices · AWS/Azure",  val_es: "TypeScript · Python · Node.js · LLMs/IA agéntica · React · Microservicios · AWS/Azure" },
+      { lbl: "AI in prod",     lbl_es: "IA en prod",    val: "8-agent Claude-based system live — agentic orchestration, LLM benchmarking, multi-model hot-balancing",  val_es: "Sistema de 8 agentes en producción — orquestación agéntica, benchmarking de LLMs, hot-balancing multi-modelo" },
+      { lbl: "Open to",        lbl_es: "Abierto a",     val: "Principal Software Engineer · Remote · Spain",  val_es: "Principal Software Engineer · Remoto · España" },
+      { lbl: "Available",      lbl_es: "Disponible",    val: "Immediate",  val_es: "Inmediata" },
+    ],
+  },
+
+  // j043 — Client Server / Forward Deployed Engineer
+  "4584713c-cd12-4484-9296-1169155bc1a3": {
+    ...baseProfile,
+    meta: {
+      ...baseProfile.meta,
+      headline: "Forward Deployed Engineer",
+    },
+    summary:
+      "Full-stack engineering leader with 15 years building production systems and the teams that ship them — now operating at the intersection of client engagement, architecture, and AI. Proven track record entering client environments via pre-sales to diagnose technical problems, shape solutions, and drive measurable outcomes: 5× throughput, 30% cost reduction, onboarding from 6 weeks to 2. Proficient in TypeScript, Python, and modern AI tooling including Claude Code; architect of an 8-agent production AI system currently running real-time monitoring and data analysis at scale.",
+    summaryEs:
+      "Líder de ingeniería full-stack con 15 años construyendo sistemas en producción — ahora operando en la intersección de cliente, arquitectura e IA. Historial probado diagnosticando problemas técnicos en entornos de cliente y generando resultados medibles: 5× throughput, 30% reducción de costes.",
+    now: [
+      { lbl: "Stack",          lbl_es: "Stack",         val: "TypeScript · Python · JavaScript · Node.js · React · AI tools (Claude Code, Cursor) · OOP/CS fundamentals",  val_es: "TypeScript · Python · JavaScript · Node.js · React · Herramientas IA · Fundamentos de CS" },
+      { lbl: "What I bring",   lbl_es: "Lo que aporto", val: "Client-facing engineering + architecture depth — pre-sales to production, hands-on throughout",  val_es: "Ingeniería orientada a cliente + profundidad de arquitectura — de pre-venta a producción" },
+      { lbl: "Open to",        lbl_es: "Abierto a",     val: "Forward Deployed Engineer · Hybrid Madrid",  val_es: "Forward Deployed Engineer · Híbrido Madrid" },
+      { lbl: "Available",      lbl_es: "Disponible",    val: "Immediate",  val_es: "Inmediata" },
+    ],
+  },
+
+  // j046 — Epassi / Engineering Manager
+  "b5fc52ed-aa00-4e27-b222-0cc1d5a47d0e": {
+    ...baseProfile,
+    meta: {
+      ...baseProfile.meta,
+      headline: "Engineering Manager",
+    },
+    summary:
+      "Engineering Manager with 15 years building production systems and the cross-functional engineering teams that ship them — from individual contributor to manager across three companies. Strong technical foundation in full-stack architecture (React, Node.js, microservices, cloud infrastructure, CI/CD) combined with a player-coach leadership style that keeps engineers growing while keeping the product moving. Proven at connecting engineering decisions to commercial outcomes: 5× throughput gains, 30% infrastructure cost reduction, and feature delivery scaled from 3 to 15 per year.",
+    summaryEs:
+      "Engineering Manager con 15 años construyendo sistemas en producción y equipos de ingeniería — de IC a manager en tres empresas. Fundamentos técnicos sólidos en arquitectura full-stack combinados con un liderazgo player-coach que mantiene a los ingenieros creciendo sin perder velocidad de entrega.",
+    now: [
+      { lbl: "Stack",          lbl_es: "Stack",         val: "React · Node.js · Microservices · Cloud (AWS/GCP/Azure) · CI/CD · TypeScript",  val_es: "React · Node.js · Microservicios · Cloud (AWS/GCP/Azure) · CI/CD · TypeScript" },
+      { lbl: "What I bring",   lbl_es: "Lo que aporto", val: "7 years EM experience — team growth, roadmap ownership, commercial outcomes. Player-coach who stays technical",  val_es: "7 años de experiencia EM — crecimiento de equipo, ownership del roadmap, resultados comerciales" },
+      { lbl: "Open to",        lbl_es: "Abierto a",     val: "Engineering Manager · Remote · Spain or EU",  val_es: "Engineering Manager · Remoto · España o UE" },
+      { lbl: "Available",      lbl_es: "Disponible",    val: "Immediate",  val_es: "Inmediata" },
+    ],
+  },
+
+  // j049 — micro1 / Senior Full-Stack Engineer (TypeScript)
+  "0c897e72-c4a5-45fe-a7b3-9f8603e4dd29": {
+    ...baseProfile,
+    meta: {
+      ...baseProfile.meta,
+      headline: "Senior Full-Stack Engineer",
+    },
+    summary:
+      "Full-stack TypeScript engineer with 15 years building production systems — expert in TypeScript, Node.js, and React, with deep microservices architecture and CI/CD experience across multiple product-stage companies. Designed and led system-level architecture decisions that scaled document processing 5× and cut load times by more than half. Brings hands-on experience with multi-agent AI systems and LLM orchestration, and a consistent track record of mentoring engineers and elevating team standards.",
+    summaryEs:
+      "Ingeniero full-stack TypeScript con 15 años construyendo sistemas en producción — experto en TypeScript, Node.js y React, con profunda experiencia en arquitectura de microservicios y CI/CD. Decisiones de arquitectura que escalaron el procesamiento de documentos 5× y redujeron tiempos de carga a la mitad.",
+    now: [
+      { lbl: "Stack",          lbl_es: "Stack",         val: "TypeScript (9yr expert) · Node.js · React · Microservices · PostgreSQL · MongoDB · CI/CD · AWS/GCP/Azure",  val_es: "TypeScript (9 años, experto) · Node.js · React · Microservicios · PostgreSQL · MongoDB · CI/CD" },
+      { lbl: "AI differentiator", lbl_es: "IA en prod", val: "Production multi-agent AI system — LLM orchestration, benchmarking, real-time monitoring at scale",  val_es: "Sistema multi-agente en producción — orquestación de LLMs, benchmarking, monitorización en tiempo real" },
+      { lbl: "Open to",        lbl_es: "Abierto a",     val: "Senior Full-Stack Engineer · Remote",  val_es: "Senior Full-Stack Engineer · Remoto" },
+      { lbl: "Available",      lbl_es: "Disponible",    val: "Immediate",  val_es: "Inmediata" },
+    ],
+  },
+
   // j039 — Franciely / LATAM Freelance
   "7954f5a9-fd35-4049-8345-bf50e505d85f": {
     ...baseProfile,
