@@ -222,6 +222,13 @@ const registry = [
     role: "Frontend Developer",
     company: "Kepler Search",
   },
+  {
+    jobId: "j034-embat",
+    guid: "789e335b-3102-4e0e-aef3-d41f1ff279e2",
+    url: `${BASE_URL}/789e335b-3102-4e0e-aef3-d41f1ff279e2`,
+    role: "Staff Engineer",
+    company: "Embat",
+  },
 ];
 
 export default registry;

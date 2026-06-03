@@ -596,6 +596,25 @@ const jobs = {
     ],
   },
 
+  // j034 — Embat
+  "789e335b-3102-4e0e-aef3-d41f1ff279e2": {
+    ...baseProfile,
+    meta: {
+      ...baseProfile.meta,
+      headline: "Staff Engineer",
+    },
+    summary:
+      "Full-stack engineer with 13 years of JavaScript/TypeScript production experience and 8 years building distributed systems at scale — scaled a document processing pipeline 5× (100→500 docs/min), cut infrastructure costs 30% on Google Cloud, and built The Hive Mind, an 8-agent AI system that gave the product team full operational self-service. Brings deep Node.js and ReactJS ownership alongside software architecture design patterns and quality culture to make systems robust, scalable, and defensible.",
+    summaryEs:
+      "Ingeniero full-stack con 13 años de experiencia en JavaScript/TypeScript en producción y 8 años construyendo sistemas distribuidos a escala — escalé un pipeline de procesamiento de documentos 5× (100→500 docs/min), reduje costes de infraestructura un 30% en Google Cloud y construí The Hive Mind, un sistema de 8 agentes de IA que dio al equipo de producto autonomía operacional total. Aporto dominio profundo de Node.js y ReactJS junto con patrones de arquitectura y cultura de calidad.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "TypeScript (9yr) · JavaScript · Node.JS (8yr) · ReactJS · Python · GCP · Distributed systems · CI/CD",  val_es: "TypeScript (9 años) · JavaScript · Node.JS (8 años) · ReactJS · Python · GCP · Sistemas distribuidos · CI/CD" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "Scalable backend systems, quality engineering culture, and the technical ownership to build without bureaucracy", val_es: "Sistemas backend escalables, cultura de ingeniería de calidad y la propiedad técnica para construir sin burocracia" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Staff Engineer · Hybrid Madrid",   val_es: "Staff Engineer · Híbrido Madrid" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate",                        val_es: "Inmediata" },
+    ],
+  },
+
   // j028 — Huspy
   "f26931c9-279c-42f0-a591-ee70e3eaedcb": {
     ...baseProfile,
