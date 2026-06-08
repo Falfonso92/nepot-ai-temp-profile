@@ -1047,13 +1047,13 @@ const jobs = {
   // j083 — Invopop (Staff, Backend focus)
   "9726a8ec-8036-4bb6-839d-4489a1e0442a": {
     ...baseProfile,
-    meta: { ...baseProfile.meta, headline: "Staff Product Engineer (Backend focus)" },
+    meta: { ...baseProfile.meta, headline: "Staff Product Engineer" },
     summary: "Backend-oriented engineering leader with a 15-year career designing distributed systems, REST APIs, and event-driven microservices at production scale. Proven track record of end-to-end integrations ownership — 12 years building, scaling, and operating API-first platforms across multiple product companies. Currently closing the Go gap via a dedicated sprint; TypeScript/Node.js and C#/.NET provide the statically-typed, compiled-language foundation that makes the paradigm shift concrete.",
     summaryEs: "Líder de ingeniería orientado al backend con 15 años diseñando sistemas distribuidos, APIs REST y microservicios event-driven a escala de producción. Historial demostrado de 12 años en propiedad end-to-end de integraciones. Actualmente cerrando el gap de Go mediante un sprint dedicado.",
     now: [
       { lbl: "Stack match",   lbl_es: "Stack",         val: "Node.js (8yr) · NestJS · REST APIs (12yr expert) · EDA · CQRS · distributed systems · .NET/C# · TypeScript",   val_es: "Node.js · NestJS · APIs REST (experto 12 años) · EDA · CQRS · sistemas distribuidos · .NET/C#" },
       { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "Backend-oriented Staff engineer — 12yr integrations ownership, distributed systems depth, Go gap closing actively", val_es: "Staff engineer orientado al backend — 12 años propiedad de integraciones, sistemas distribuidos, cerrando gap Go" },
-      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Staff Product Engineer (Backend focus) · Remote",                                                                val_es: "Staff Product Engineer (Backend) · Remoto" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Staff Product Engineer · Remote",                                                                val_es: "Staff Product Engineer (Backend) · Remoto" },
       { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate",                                                                                                      val_es: "Inmediata" },
     ],
   },

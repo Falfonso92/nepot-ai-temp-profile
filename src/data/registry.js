@@ -275,7 +275,7 @@ const registry = [
   { jobId: "j080-interactiveai-fde",  guid: "f6d6ed00-7cb1-4051-86d1-850e00e94ef1", url: `${BASE_URL}/f6d6ed00-7cb1-4051-86d1-850e00e94ef1`, role: "Forward Deployed Engineer",                        company: "InteractiveAI" },
   { jobId: "j081-praktikaai",         guid: "dac447de-841c-44d1-977f-182481561657", url: `${BASE_URL}/dac447de-841c-44d1-977f-182481561657`, role: "Lead/Senior Full-Stack Engineer",                  company: "Praktika.ai" },
   { jobId: "j082-toptal",             guid: "f7db6508-13bd-4997-a004-ccf87d72f4a8", url: `${BASE_URL}/f7db6508-13bd-4997-a004-ccf87d72f4a8`, role: "Senior Frontend Engineer",                         company: "Toptal" },
-  { jobId: "j083-invopop-staff",      guid: "9726a8ec-8036-4bb6-839d-4489a1e0442a", url: `${BASE_URL}/9726a8ec-8036-4bb6-839d-4489a1e0442a`, role: "Staff Product Engineer (Backend focus)",           company: "Invopop" },
+  { jobId: "j083-invopop-staff",      guid: "9726a8ec-8036-4bb6-839d-4489a1e0442a", url: `${BASE_URL}/9726a8ec-8036-4bb6-839d-4489a1e0442a`, role: "Staff Product Engineer",           company: "Invopop" },
   { jobId: "j084-pubgenius",          guid: "fc9c9adc-660d-4064-9c7a-080a55fbed85", url: `${BASE_URL}/fc9c9adc-660d-4064-9c7a-080a55fbed85`, role: "Principal Software Engineer (React + Node)",       company: "pubGENIUS" },
 ];
 
