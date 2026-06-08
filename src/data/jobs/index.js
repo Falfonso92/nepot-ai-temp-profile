@@ -890,16 +890,16 @@ const jobs = {
     ],
   },
 
-  // j072 — Proxify reviewer
+  // j072 — Proxify
   "fc7305bd-4a0e-4ef1-abaa-59706b0e3350": {
     ...baseProfile,
-    meta: { ...baseProfile.meta, headline: "Senior React.js & Next.js Assessment Reviewer" },
-    summary: "Engineering leader with a 15-year career spanning frontend architecture, React.js and Next.js production systems, and technical team development. Evaluated engineering proficiency across code review, hiring, and corporate instruction at staff seniority — with direct, traceable outcomes in component architecture, state management, and frontend optimization. Brings the evaluator's eye of someone who has built, led, and taught these systems, not just used them.",
-    summaryEs: "Líder de ingeniería con 15 años en arquitectura frontend, sistemas React.js y Next.js en producción. Evaluó la competencia de ingeniería en revisiones de código, contratación e instrucción corporativa a nivel staff.",
+    meta: { ...baseProfile.meta, headline: "Senior React.js & Next.js Engineer" },
+    summary: "Senior frontend engineer with a 15-year career building production React.js and Next.js systems — from greenfield low-code platforms to high-throughput microfrontend architectures. Expert in component architecture, state management, and frontend performance optimisation, with a track record of measurable delivery outcomes and a standards-setting mindset developed through IC work, code review, and technical mentorship.",
+    summaryEs: "Ingeniero frontend senior con 15 años construyendo sistemas React.js y Next.js en producción. Experto en arquitectura de componentes, gestión de estado y optimización de rendimiento, con historial de resultados medibles y mentoría técnica.",
     now: [
       { lbl: "Stack match",   lbl_es: "Stack",         val: "React.js (7yr expert) · Next.js (5yr) · TypeScript (9yr) · component architecture · state management",          val_es: "React.js (experto) · Next.js · TypeScript · arquitectura de componentes" },
-      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "Evaluator's authority — 15yr frontend depth applied to code review, levelling, and assessment design",          val_es: "Autoridad de evaluador — 15 años de profundidad frontend aplicada a revisión de código y evaluación" },
-      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Senior React.js & Next.js Assessment Reviewer · Remote",                                                         val_es: "Revisor Senior React.js & Next.js · Remoto" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "15yr React/TS frontend depth — production systems, performance wins, and IC standards-setting",                 val_es: "15 años de profundidad React/TS — sistemas en producción, mejoras de rendimiento y estándares IC" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Senior React.js & Next.js Engineer · Remote",                                                                    val_es: "Senior React.js & Next.js Engineer · Remoto" },
       { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate",                                                                                                      val_es: "Inmediata" },
     ],
   },
