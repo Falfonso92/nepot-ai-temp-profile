@@ -803,6 +803,274 @@ const jobs = {
       { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate",                                         val_es: "Inmediata" },
     ],
   },
+
+  // ── batch p2x5 + f4n8 — j066–j084 ──────────────────────────────────────────
+
+  // j066 — Ansys
+  "99d55b88-76d3-45cf-9132-a8d8a7a71a4a": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "R&D Engineering, Staff Engineer — Front-end" },
+    summary: "Frontend engineering leader with a 15-year career architecting complex, customer-facing web applications — from greenfield low-code platforms to multi-tenant SaaS products at scale. Deep proficiency across JavaScript, TypeScript, React, and Angular, with a track record of establishing codebase maintainability standards, driving rendering optimisation, and mentoring engineers from junior to lead level. Applies rigorous software design patterns and state management discipline to performance-critical systems, and brings the architectural authority and collaborative standards-setting skills the Staff Engineer scope demands.",
+    summaryEs: "Líder de ingeniería frontend con 15 años de carrera construyendo aplicaciones web complejas — desde plataformas low-code hasta productos SaaS multi-tenant a escala. Profundidad experta en JavaScript, TypeScript, React y Angular, con historial de establecer estándares de mantenibilidad, optimización de rendering y mentoría de ingenieros.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "JavaScript (11yr) · TypeScript (9yr) · React (7yr) · Angular (10yr) · Vue.js · Next.js · Preact · SolidJS",     val_es: "JavaScript · TypeScript · React · Angular · Vue.js · Next.js" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "Staff-level frontend architecture — rendering optimisation, design patterns, and engineering standards at scale", val_es: "Arquitectura frontend Staff — optimización de rendering, patrones de diseño y estándares de ingeniería a escala" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Staff Engineer Front-end · Hybrid or Remote",                                                                    val_es: "Staff Engineer Front-end · Híbrido o Remoto" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate",                                                                                                      val_es: "Inmediata" },
+    ],
+  },
+
+  // j067 — Luzia
+  "19683e99-abb2-4420-9528-df2b8f6c53ee": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Senior Software Engineer (Fullstack)" },
+    summary: "Fullstack engineer with a 15-year career building production systems and the teams that ship them — from greenfield platforms to real-time AI infrastructure at startup scale. Expert in TypeScript and Next.js with hands-on production AI agent experience: architected an 8-agent multi-agent system for real-time operational monitoring, LLM orchestration, and process health evaluation. Thrives in high-ambiguity, rapid-iteration environments where product intuition and end-to-end ownership drive outcomes.",
+    summaryEs: "Ingeniero fullstack con 15 años construyendo sistemas de producción — desde plataformas greenfield hasta infraestructura de IA en tiempo real. Experto en TypeScript y Next.js con experiencia en sistemas multi-agente de producción: arquitecté un sistema de 8 agentes para monitorización operativa en tiempo real.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "TypeScript (9yr) · Next.js · Node.js · Python · AI systems in production (Claude API, multi-agent)",             val_es: "TypeScript · Next.js · Node.js · Python · Sistemas de IA en producción" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "AI-native fullstack — production multi-agent systems, LLM orchestration, startup-speed delivery",               val_es: "Fullstack AI-native — sistemas multi-agente en producción, orquestación LLM, velocidad startup" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Senior Software Engineer · Fullstack · Remote",                                                                  val_es: "Senior Software Engineer · Fullstack · Remoto" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate",                                                                                                      val_es: "Inmediata" },
+    ],
+  },
+
+  // j068 — Trivelta
+  "bb0d6f73-1d30-455b-887e-46b0953ad5bf": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Senior Frontend Software Engineer" },
+    summary: "Senior frontend engineer with a 15-year career building high-performance, scalable product platforms — from greenfield low-code systems to microfrontend architectures powering document-processing pipelines. Expert in React and TypeScript with demonstrated ownership across the full feature lifecycle in startup environments, driving measurable results: UI load time halved, portal response cut from 2 minutes to 10 seconds, feature cadence scaled 5×.",
+    summaryEs: "Ingeniero frontend senior con 15 años construyendo plataformas de producto escalables. Experto en React y TypeScript con resultados medibles: tiempo de carga UI reducido a la mitad, respuesta de portal de 2 min a 10 seg, cadencia de features multiplicada por 5.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "React.js (7yr) · TypeScript (9yr) · Next.js · Angular (10yr) · Vue.js · JavaScript (11yr)",                     val_es: "React.js · TypeScript · Next.js · Angular · Vue.js" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "Full feature lifecycle ownership — greenfield architecture to performance wins and team-scale delivery",          val_es: "Propiedad del ciclo de feature completo — arquitectura greenfield, mejoras de rendimiento y entrega en equipo" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Senior Frontend Software Engineer · Remote",                                                                     val_es: "Senior Frontend Software Engineer · Remoto" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate",                                                                                                      val_es: "Inmediata" },
+    ],
+  },
+
+  // j069 — P2 Recruitment
+  "6f05a16e-5ae3-478b-adc0-4ea0edc1808f": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Senior Front-end (Angular) Developer" },
+    summary: "Senior front-end developer with a 15-year career building production Angular applications, component architectures, and the cross-functional teams that ship them. Expert in Angular, TypeScript, JavaScript, Webpack, and CSS3 — all used continuously to 2026. Brings a track record of measurable UI performance wins (7s→3s, 1–2min→10s), RESTful API design and testing across 12 years, and a principled approach to responsive, usable interfaces.",
+    summaryEs: "Desarrollador front-end senior con 15 años construyendo aplicaciones Angular de producción. Experto en Angular, TypeScript, JavaScript, Webpack y CSS3 — todos activos hasta 2026. Historial de mejoras de rendimiento UI medibles y diseño de API RESTful en 12 años.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "Angular (10yr expert) · TypeScript · JavaScript · Webpack · CSS3 · RESTful APIs (12yr)",                        val_es: "Angular (10 años, experto) · TypeScript · JavaScript · Webpack · CSS3 · APIs RESTful" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "10 years of Angular production depth — component architecture, API design, responsive interfaces",               val_es: "10 años de profundidad Angular en producción — arquitectura de componentes, diseño de API, interfaces responsivas" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Senior Front-end Angular Developer · Remote",                                                                    val_es: "Senior Desarrollador Front-end Angular · Remoto" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate",                                                                                                      val_es: "Inmediata" },
+    ],
+  },
+
+  // j070 — Starbridge
+  "ecaa83a2-03e3-4b09-858b-4232000a09eb": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Senior Product Engineer · TypeScript/React" },
+    summary: "Generalist product engineer with a 15-year career building and shipping production systems at startups and high-growth companies — from greenfield platform architecture through performance optimisation and team-scale delivery. Expert in TypeScript, React, JavaScript, RESTful APIs, and CSS, with a track record of raising engineering and UX quality standards across the full stack. Brings startup-native instincts: shipping fast, measuring impact, and staying close to product and design.",
+    summaryEs: "Ingeniero de producto generalista con 15 años construyendo sistemas de producción en startups — desde arquitectura greenfield hasta optimización de rendimiento. Experto en TypeScript, React, JavaScript, APIs RESTful y CSS.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "TypeScript (9yr) · React (7yr) · JavaScript (11yr) · REST APIs (12yr) · CSS3/HTML (11yr)",                      val_es: "TypeScript · React · JavaScript · APIs REST · CSS3" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "Startup-native product engineer — greenfield to scale, full-stack depth, AI systems in production",              val_es: "Ingeniero de producto startup-native — de greenfield a escala, profundidad full-stack, IA en producción" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Senior Product Engineer · Remote",                                                                               val_es: "Senior Product Engineer · Remoto" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate",                                                                                                      val_es: "Inmediata" },
+    ],
+  },
+
+  // j071 — epilot
+  "89f53161-bf26-487d-b546-3240b24477be": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Senior/Staff Product Engineer (Frontend)" },
+    summary: "Engineering leader with a 15-year career spanning frontend architecture, product delivery, and team leadership at B2B SaaS companies — including a YC-backed startup where I owned the technical roadmap, drove 5× throughput gains, and reduced infrastructure costs by 30%. Expert in JavaScript, TypeScript, React, and Webpack; demonstrated across a decade of continuous production use, with the multi-framework breadth (Angular, Vue, Preact, SolidJS) and cloud security mindset that a Staff-level product engineer role demands.",
+    summaryEs: "Líder de ingeniería con 15 años en arquitectura frontend y B2B SaaS — incluyendo una startup YC donde lideré el roadmap técnico, logré 5× de throughput y reduje costes de infraestructura un 30%. Experto en JavaScript, TypeScript, React y Webpack.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "JavaScript (11yr) · TypeScript (9yr) · React · Webpack · Angular · Vue · Preact · SolidJS · cloud security",    val_es: "JavaScript · TypeScript · React · Webpack · Angular · Vue · cloud security" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "Staff-level B2B SaaS frontend — multi-framework depth, cloud security mindset, platform thinking",              val_es: "Frontend Staff B2B SaaS — profundidad multi-framework, seguridad cloud, pensamiento de plataforma" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Senior/Staff Product Engineer (Frontend) · Remote",                                                              val_es: "Senior/Staff Product Engineer (Frontend) · Remoto" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate",                                                                                                      val_es: "Inmediata" },
+    ],
+  },
+
+  // j072 — Proxify reviewer
+  "fc7305bd-4a0e-4ef1-abaa-59706b0e3350": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Senior React.js & Next.js Assessment Reviewer" },
+    summary: "Engineering leader with a 15-year career spanning frontend architecture, React.js and Next.js production systems, and technical team development. Evaluated engineering proficiency across code review, hiring, and corporate instruction at staff seniority — with direct, traceable outcomes in component architecture, state management, and frontend optimization. Brings the evaluator's eye of someone who has built, led, and taught these systems, not just used them.",
+    summaryEs: "Líder de ingeniería con 15 años en arquitectura frontend, sistemas React.js y Next.js en producción. Evaluó la competencia de ingeniería en revisiones de código, contratación e instrucción corporativa a nivel staff.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "React.js (7yr expert) · Next.js (5yr) · TypeScript (9yr) · component architecture · state management",          val_es: "React.js (experto) · Next.js · TypeScript · arquitectura de componentes" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "Evaluator's authority — 15yr frontend depth applied to code review, levelling, and assessment design",          val_es: "Autoridad de evaluador — 15 años de profundidad frontend aplicada a revisión de código y evaluación" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Senior React.js & Next.js Assessment Reviewer · Remote",                                                         val_es: "Revisor Senior React.js & Next.js · Remoto" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate",                                                                                                      val_es: "Inmediata" },
+    ],
+  },
+
+  // j073 — FINN
+  "e7560c82-2e30-4db8-96cc-3ef1756c79f4": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Frontend Lead (Product Engineering)" },
+    summary: "Frontend engineer and team lead with a 15-year career building and shipping complex web products — from greenfield low-code platforms to AI-powered pipelines. Deep TypeScript and Angular expertise combined with hands-on engineering management: 10 years leading teams while staying in the code. Treats AI as a force multiplier — designed and shipped an 8-agent production AI system at scale. Ready to own the full frontend surface and raise the bar on quality, speed, and ownership.",
+    summaryEs: "Ingeniero frontend y team lead con 15 años construyendo productos web complejos. Experto en TypeScript y Angular con gestión de equipos manos-a-la-obra: 10 años liderando equipos mientras seguía en el código. IA como multiplicador de fuerza — sistema de 8 agentes en producción.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "TypeScript (9yr) · Angular (10yr) · React.js (7yr) · JavaScript (11yr) · Next.js · Vue.js · AI systems",        val_es: "TypeScript · Angular · React.js · JavaScript · Next.js · Sistemas de IA" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "Frontend lead who stays in the code — IC depth + team leadership + AI force multiplication",                    val_es: "Frontend lead que sigue en el código — profundidad IC + liderazgo de equipo + IA como multiplicador" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Frontend Lead (Product Engineering) · Remote",                                                                   val_es: "Frontend Lead (Product Engineering) · Remoto" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate",                                                                                                      val_es: "Inmediata" },
+    ],
+  },
+
+  // j074 — Exoticca
+  "cb09d594-e5da-4170-94e9-6efaf98e31af": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Senior Software Engineer" },
+    summary: "Full-stack engineer with a 15-year career building production systems and the teams that ship them. Specialised in RESTful API design, event-driven architecture, and AI-powered product development — including production multi-agent systems that eliminated manual operational friction at scale. Brings a product-oriented perspective grounded in data-informed decision-making and a track record of translating customer pain into measurable business outcomes.",
+    summaryEs: "Ingeniero full-stack con 15 años construyendo sistemas de producción. Especializado en diseño de API RESTful, arquitectura event-driven e IA — incluyendo sistemas multi-agente en producción que eliminaron fricción operativa manual a escala.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "REST APIs (12yr) · EDA · DDD · multi-agent AI · Node.js · TypeScript · React · full-stack",                     val_es: "APIs REST · EDA · DDD · IA multi-agente · Node.js · TypeScript · React" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "AI-native full-stack — event-driven architecture, multi-agent production systems, customer-journey thinking",    val_es: "Full-stack AI-native — arquitectura event-driven, sistemas multi-agente en producción" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Senior Software Engineer · Remote",                                                                              val_es: "Senior Software Engineer · Remoto" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate",                                                                                                      val_es: "Inmediata" },
+    ],
+  },
+
+  // j075 — Sporty Group
+  "c97f24f4-8f2a-4673-a6c0-a798338200d3": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Frontend Engineering Team Lead" },
+    summary: "Frontend engineering leader with a 15-year career spanning IC, tech lead, and engineering manager roles — building production systems and the teams that ship them. Expert in TypeScript, Vue, React, and Angular with deep ownership of Webpack-based build pipelines, state management architecture, and frontend delivery standards across multiple product companies. Drives measurable outcomes: 5× throughput gains, 30% infrastructure cost reduction, feature delivery from 3 to 15 per year.",
+    summaryEs: "Líder de ingeniería frontend con 15 años en roles de IC, tech lead y engineering manager. Experto en TypeScript, Vue, React y Angular con dominio de pipelines Webpack, arquitectura de state management y estándares de entrega frontend.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "TypeScript (9yr) · Vue.js/Vuex (6yr) · React (7yr) · Angular (10yr) · Webpack · AWS · Kubernetes · Playwright", val_es: "TypeScript · Vue.js/Vuex · React · Angular · Webpack · AWS · Kubernetes" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "Frontend team lead — IC + management, Webpack ownership, 5× throughput, multi-framework depth across Vue/React/Angular", val_es: "Frontend team lead — IC + gestión, Webpack, 5× throughput, profundidad multi-framework" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Frontend Engineering Team Lead · Remote",                                                                        val_es: "Frontend Engineering Team Lead · Remoto" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate",                                                                                                      val_es: "Inmediata" },
+    ],
+  },
+
+  // j076 — SNI
+  "c696a08f-4f83-4f2a-afbb-e7d17feaf179": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Senior React Developer" },
+    summary: "Senior React developer with a 15-year career building production frontend systems and the engineering teams that ship them. Expert-depth React, TypeScript, Next.js, and CSS3 across startup and scale-up environments, paired with hands-on LLM integration experience — multi-agent AI systems, Claude API orchestration, and real-time data pipelines in production. Brings architectural and Agile leadership alongside IC delivery, with a consistent record of connecting frontend quality to measurable business outcomes.",
+    summaryEs: "Desarrollador React senior con 15 años construyendo sistemas frontend de producción. Profundidad experta en React, TypeScript, Next.js y CSS3, combinada con experiencia práctica en integración LLM — sistemas multi-agente, orquestación Claude API y pipelines en tiempo real.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "React.js (7yr expert) · TypeScript (9yr) · Next.js · JavaScript · CSS3 · Webpack · LLM integration",            val_es: "React.js (experto) · TypeScript · Next.js · JavaScript · CSS3 · integración LLM" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "Expert React/TS depth with production AI/LLM integration — multi-agent systems, Claude API, real-time pipelines", val_es: "Profundidad experta React/TS con integración LLM en producción — sistemas multi-agente, Claude API" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Senior React Developer · Contract · Remote",                                                                     val_es: "Senior React Developer · Contrato · Remoto" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate",                                                                                                      val_es: "Inmediata" },
+    ],
+  },
+
+  // j077 — CloudLinux
+  "868471e2-c7ad-4cd1-aba9-429c2c231f43": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Product Engineer" },
+    summary: "Full-stack engineer with a 15-year career spanning production systems, distributed architecture, and hands-on team leadership. Expert daily user of LLM-based dev tools — built and shipped an 8-agent Claude-based system running real-time observability, data analysis, and incident detection in production at an active YC-backed company. Takes full end-to-end ownership of product domains: from roadmap through CI/CD pipeline, infrastructure, and measurable business outcomes.",
+    summaryEs: "Ingeniero full-stack con 15 años en sistemas de producción y arquitectura distribuida. Usuario experto de herramientas LLM — construí y entregué un sistema de 8 agentes Claude ejecutando observabilidad en tiempo real, análisis de datos y detección de incidentes en producción.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "Claude API · multi-agent systems · LLM tooling · Node.js · TypeScript · React · full-stack · CI/CD",            val_es: "Claude API · sistemas multi-agente · LLM tooling · Node.js · TypeScript · React" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "LLM power user who shipped a production 8-agent system — end-to-end product ownership, observability mindset",  val_es: "Usuario LLM que entregó un sistema de 8 agentes en producción — propiedad de producto end-to-end" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Product Engineer · Remote",                                                                                      val_es: "Product Engineer · Remoto" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate",                                                                                                      val_es: "Inmediata" },
+    ],
+  },
+
+  // j078 — Foundever
+  "4dafda25-b9eb-44fe-bac1-2454345eafc7": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Frontend Software Engineer" },
+    summary: "Frontend engineer with a 15-year career delivering responsive, production-grade web applications across React, Vue.js, and the full JavaScript/TypeScript stack. Proven track record closing performance gaps — UI load time cut from 7s to 3s, document throughput scaled 5×, feature delivery lifted from 3 to 15 per year — with the hands-on AI systems experience to contribute directly to an AI-focused product team from day one. Works distributed across European timezones; English C1; Spanish native.",
+    summaryEs: "Ingeniero frontend con 15 años entregando aplicaciones web de producción en React, Vue.js y JavaScript/TypeScript. Historial de mejoras de rendimiento: carga UI de 7s a 3s, throughput 5×, entrega de features de 3 a 15 por año. Experiencia práctica en sistemas de IA.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "Vue.js · React · Angular · TypeScript · JavaScript · CSS3 · Webpack · AI product team experience",              val_es: "Vue.js · React · Angular · TypeScript · JavaScript · CSS3 · Webpack" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "Multi-framework frontend depth — Vue, React, Angular all production; AI product team ready; European timezones", val_es: "Profundidad multi-framework — Vue, React, Angular en producción; listo para equipo de producto IA" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Frontend Software Engineer · Remote · European timezones",                                                       val_es: "Frontend Software Engineer · Remoto · zonas horarias europeas" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate",                                                                                                      val_es: "Inmediata" },
+    ],
+  },
+
+  // j079 — HartleyCo
+  "66a5c798-9cce-4d75-bdcc-56e4e4bb8bd2": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Full Stack AI Engineer" },
+    summary: "Full-stack engineer with a 15-year career building production systems and the AI architectures that power them. Shipped a production 8-agent Claude-based system for real-time process monitoring, LLM orchestration, and document analysis — directly applicable to LLM API integration and streaming-first AI products. Experienced across the Node.js ecosystem (NestJS in production, Express patterns) and the full React/Next.js stack; brings architectural depth to AI-native legal-tech products that require precision, reliability, and structured extraction from complex documents.",
+    summaryEs: "Ingeniero full-stack con 15 años construyendo sistemas de producción y arquitecturas de IA. Entregué un sistema de 8 agentes Claude para monitorización de procesos en tiempo real, orquestación LLM y análisis de documentos. Experiencia en Node.js/NestJS y React/Next.js.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "Claude API · OpenAI API · LLM orchestration · Node.js/NestJS · React · Next.js · WebSockets/SSE · streaming",   val_es: "Claude API · OpenAI API · orquestación LLM · Node.js/NestJS · React · Next.js · streaming" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "Production AI systems engineer — 8-agent Claude system, LLM streaming, document analysis at precision scale",    val_es: "Ingeniero de sistemas IA en producción — 8 agentes Claude, streaming LLM, análisis de documentos" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Full Stack AI Engineer · Remote",                                                                                val_es: "Full Stack AI Engineer · Remoto" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate",                                                                                                      val_es: "Inmediata" },
+    ],
+  },
+
+  // j080 — InteractiveAI (Forward Deployed Engineer)
+  "f6d6ed00-7cb1-4051-86d1-850e00e94ef1": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Forward Deployed Engineer" },
+    summary: "Full-stack engineering leader with a 15-year career building production systems and the teams that ship them — spanning multi-agent AI architecture, cloud infrastructure, and REST/GraphQL API integration. Architected and deployed an 8-agent Claude-based AI system running real-time data analysis, AWS infrastructure monitoring, and process health evaluation at scale. Brings the technical depth of a senior IC and the customer-impact orientation of a leader who has repeatedly connected engineering output to measurable business results.",
+    summaryEs: "Líder de ingeniería full-stack con 15 años construyendo sistemas de producción. Arquitecté y desplegué un sistema de 8 agentes Claude ejecutando análisis de datos en tiempo real, monitorización de infraestructura AWS y evaluación de procesos a escala.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "Multi-agent AI · Claude API · AWS (EC2/Lambda/serverless) · Docker (~6yr) · Kubernetes (~5yr) · REST/GraphQL",  val_es: "IA multi-agente · Claude API · AWS · Docker · Kubernetes · REST/GraphQL" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "Technical depth + customer impact orientation — 8-agent AI system, cloud infra, API integration, FDE mindset",   val_es: "Profundidad técnica + orientación al impacto — sistema de 8 agentes IA, infra cloud, integración de APIs" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Forward Deployed Engineer · Remote or Hybrid",                                                                   val_es: "Forward Deployed Engineer · Remoto o Híbrido" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate",                                                                                                      val_es: "Inmediata" },
+    ],
+  },
+
+  // j081 — Praktika.ai
+  "dac447de-841c-44d1-977f-182481561657": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Lead/Senior Full-Stack Engineer" },
+    summary: "Full-stack engineering leader with a 15-year career building production systems and the teams that ship them — from React and Next.js frontends to Node.js and microservices backends. Currently shipping a production multi-agent AI system at a YC-backed startup; bringing that same AI-native, product-outcome mindset to Praktika.ai's 2M MAU language learning platform. Proven lead on TypeScript stacks across multiple growth-stage companies, with deep expertise in auth integrations, analytics pipelines, and A/B-driven product delivery.",
+    summaryEs: "Líder de ingeniería full-stack con 15 años. Actualmente entregando un sistema multi-agente de IA en producción en una startup YC; aplicando ese mismo enfoque AI-native a la plataforma de aprendizaje de idiomas de Praktika.ai con 2M MAU.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "TypeScript (9yr) · React · Next.js · Node.js · auth integrations · analytics · A/B testing · AI systems",       val_es: "TypeScript · React · Next.js · Node.js · integraciones auth · analytics · sistemas IA" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "Full-stack lead with AI-native product experience — 2M MAU scale mindset, growth-stage startup delivery",        val_es: "Full-stack lead con experiencia en producto AI-native — escala 2M MAU, entrega en startup de crecimiento" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Lead/Senior Full-Stack Engineer · Remote",                                                                       val_es: "Lead/Senior Full-Stack Engineer · Remoto" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate",                                                                                                      val_es: "Inmediata" },
+    ],
+  },
+
+  // j082 — Toptal
+  "f7db6508-13bd-4997-a004-ccf87d72f4a8": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Senior Frontend Engineer" },
+    summary: "Senior frontend engineer with a 15-year career building production systems with React, TypeScript, Apollo GraphQL, and Jest — from greenfield platforms to high-throughput distributed architectures. Architect of a custom state management engine for a low-code ESG platform and an 8-agent AI monitoring system in production. Operates independently, delivers asynchronously, and connects technical work directly to measurable business outcomes.",
+    summaryEs: "Ingeniero frontend senior con 15 años construyendo sistemas de producción con React, TypeScript, Apollo GraphQL y Jest. Arquitecto de un motor de state management personalizado para una plataforma low-code y un sistema de monitorización IA de 8 agentes en producción.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "React (7yr expert) · TypeScript (9yr) · Apollo GraphQL (5yr) · Jest (7yr expert) · Next.js · Node.js",          val_es: "React (experto) · TypeScript · Apollo GraphQL · Jest (experto) · Next.js" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "Expert React/TS/Apollo/Jest depth — custom state engine, AI systems in production, async independent delivery",  val_es: "Profundidad experta React/TS/Apollo/Jest — motor de estado personalizado, IA en producción, entrega asíncrona" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Senior Frontend Engineer · Contract · Remote",                                                                   val_es: "Senior Frontend Engineer · Contrato · Remoto" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate",                                                                                                      val_es: "Inmediata" },
+    ],
+  },
+
+  // j083 — Invopop (Staff, Backend focus)
+  "9726a8ec-8036-4bb6-839d-4489a1e0442a": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Staff Product Engineer (Backend focus)" },
+    summary: "Backend-oriented engineering leader with a 15-year career designing distributed systems, REST APIs, and event-driven microservices at production scale. Proven track record of end-to-end integrations ownership — 12 years building, scaling, and operating API-first platforms across multiple product companies. Currently closing the Go gap via a dedicated sprint; TypeScript/Node.js and C#/.NET provide the statically-typed, compiled-language foundation that makes the paradigm shift concrete.",
+    summaryEs: "Líder de ingeniería orientado al backend con 15 años diseñando sistemas distribuidos, APIs REST y microservicios event-driven a escala de producción. Historial demostrado de 12 años en propiedad end-to-end de integraciones. Actualmente cerrando el gap de Go mediante un sprint dedicado.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "Node.js (8yr) · NestJS · REST APIs (12yr expert) · EDA · CQRS · distributed systems · .NET/C# · TypeScript",   val_es: "Node.js · NestJS · APIs REST (experto 12 años) · EDA · CQRS · sistemas distribuidos · .NET/C#" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "Backend-oriented Staff engineer — 12yr integrations ownership, distributed systems depth, Go gap closing actively", val_es: "Staff engineer orientado al backend — 12 años propiedad de integraciones, sistemas distribuidos, cerrando gap Go" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Staff Product Engineer (Backend focus) · Remote",                                                                val_es: "Staff Product Engineer (Backend) · Remoto" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate",                                                                                                      val_es: "Inmediata" },
+    ],
+  },
+
+  // j084 — pubGENIUS
+  "fc9c9adc-660d-4064-9c7a-080a55fbed85": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Principal Software Engineer (React + Node)" },
+    summary: "Full-stack engineering leader with a 15-year career building production systems — from high-throughput data pipelines to React SSR frontends — and the teams that ship them. Expert in TypeScript, React, and Node.js, with a track record of scaling throughput 5×, cutting infrastructure costs 30%, and turning engineering into a measurable commercial engine. Brings production Node.js/NestJS API depth, MySQL expertise, and GCP-transferable multi-cloud experience to a Principal IC role where output quality and latency matter at scale.",
+    summaryEs: "Líder de ingeniería full-stack con 15 años construyendo sistemas de producción — desde pipelines de alto throughput hasta frontends React SSR. Experto en TypeScript, React y Node.js. Historial de 5× throughput, 30% reducción de costes, MySQL y GCP multi-cloud.",
+    now: [
+      { lbl: "Stack match",   lbl_es: "Stack",         val: "TypeScript (9yr) · React (7yr) · Node.js/NestJS (8yr) · MySQL · BigQuery · GCP · Cloud Run · Fastify",          val_es: "TypeScript · React · Node.js/NestJS · MySQL · BigQuery · GCP · Cloud Run" },
+      { lbl: "What I bring",  lbl_es: "Lo que aporto", val: "Full-stack Principal IC — ad-serving latency mindset, Node/React/MySQL depth, 5× throughput track record",      val_es: "Principal IC full-stack — mentalidad de latencia, profundidad Node/React/MySQL, historial 5× throughput" },
+      { lbl: "Open to",       lbl_es: "Abierto a",     val: "Principal Software Engineer · Remote",                                                                           val_es: "Principal Software Engineer · Remoto" },
+      { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate",                                                                                                      val_es: "Inmediata" },
+    ],
+  },
 };
 
 export default jobs;

@@ -257,6 +257,26 @@ const registry = [
     role: "Senior Full Stack Engineer",
     company: "LATAM Freelance",
   },
+  // batch p2x5 + f4n8 — j066–j084
+  { jobId: "j066-ansys",              guid: "99d55b88-76d3-45cf-9132-a8d8a7a71a4a", url: `${BASE_URL}/99d55b88-76d3-45cf-9132-a8d8a7a71a4a`, role: "R&D Engineering, Staff Engineer - Front-end",        company: "Ansys" },
+  { jobId: "j067-luzia",              guid: "19683e99-abb2-4420-9528-df2b8f6c53ee", url: `${BASE_URL}/19683e99-abb2-4420-9528-df2b8f6c53ee`, role: "Senior Software Engineer (Fullstack)",              company: "Luzia" },
+  { jobId: "j068-trivelta",           guid: "bb0d6f73-1d30-455b-887e-46b0953ad5bf", url: `${BASE_URL}/bb0d6f73-1d30-455b-887e-46b0953ad5bf`, role: "Senior Frontend Software Engineer",                 company: "Trivelta" },
+  { jobId: "j069-p2recruitment",      guid: "6f05a16e-5ae3-478b-adc0-4ea0edc1808f", url: `${BASE_URL}/6f05a16e-5ae3-478b-adc0-4ea0edc1808f`, role: "Senior Front-end (Angular) Developer",             company: "P2 Recruitment" },
+  { jobId: "j070-starbridge",         guid: "ecaa83a2-03e3-4b09-858b-4232000a09eb", url: `${BASE_URL}/ecaa83a2-03e3-4b09-858b-4232000a09eb`, role: "Senior Product Engineer · TypeScript/React",       company: "Starbridge" },
+  { jobId: "j071-epilot",             guid: "89f53161-bf26-487d-b546-3240b24477be", url: `${BASE_URL}/89f53161-bf26-487d-b546-3240b24477be`, role: "Senior/Staff Product Engineer (Frontend)",          company: "epilot GmbH" },
+  { jobId: "j072-proxify-reviewer",   guid: "fc7305bd-4a0e-4ef1-abaa-59706b0e3350", url: `${BASE_URL}/fc7305bd-4a0e-4ef1-abaa-59706b0e3350`, role: "Senior React.js & Next.js Assessment Reviewer",    company: "Proxify" },
+  { jobId: "j073-finn",               guid: "e7560c82-2e30-4db8-96cc-3ef1756c79f4", url: `${BASE_URL}/e7560c82-2e30-4db8-96cc-3ef1756c79f4`, role: "Frontend Lead (Product Engineering)",              company: "FINN" },
+  { jobId: "j074-exoticca",           guid: "cb09d594-e5da-4170-94e9-6efaf98e31af", url: `${BASE_URL}/cb09d594-e5da-4170-94e9-6efaf98e31af`, role: "Senior Software Engineer",                         company: "Exoticca" },
+  { jobId: "j075-sportygroup",        guid: "c97f24f4-8f2a-4673-a6c0-a798338200d3", url: `${BASE_URL}/c97f24f4-8f2a-4673-a6c0-a798338200d3`, role: "Frontend Engineering Team Lead",                   company: "Sporty Group" },
+  { jobId: "j076-sni",                guid: "c696a08f-4f83-4f2a-afbb-e7d17feaf179", url: `${BASE_URL}/c696a08f-4f83-4f2a-afbb-e7d17feaf179`, role: "Senior React Developer",                           company: "SNI" },
+  { jobId: "j077-cloudlinux",         guid: "868471e2-c7ad-4cd1-aba9-429c2c231f43", url: `${BASE_URL}/868471e2-c7ad-4cd1-aba9-429c2c231f43`, role: "Product Engineer",                                  company: "CloudLinux" },
+  { jobId: "j078-foundever",          guid: "4dafda25-b9eb-44fe-bac1-2454345eafc7", url: `${BASE_URL}/4dafda25-b9eb-44fe-bac1-2454345eafc7`, role: "Frontend Software Engineer",                       company: "Foundever" },
+  { jobId: "j079-hartleyco",          guid: "66a5c798-9cce-4d75-bdcc-56e4e4bb8bd2", url: `${BASE_URL}/66a5c798-9cce-4d75-bdcc-56e4e4bb8bd2`, role: "Full Stack AI Engineer",                           company: "HartleyCo" },
+  { jobId: "j080-interactiveai-fde",  guid: "f6d6ed00-7cb1-4051-86d1-850e00e94ef1", url: `${BASE_URL}/f6d6ed00-7cb1-4051-86d1-850e00e94ef1`, role: "Forward Deployed Engineer",                        company: "InteractiveAI" },
+  { jobId: "j081-praktikaai",         guid: "dac447de-841c-44d1-977f-182481561657", url: `${BASE_URL}/dac447de-841c-44d1-977f-182481561657`, role: "Lead/Senior Full-Stack Engineer",                  company: "Praktika.ai" },
+  { jobId: "j082-toptal",             guid: "f7db6508-13bd-4997-a004-ccf87d72f4a8", url: `${BASE_URL}/f7db6508-13bd-4997-a004-ccf87d72f4a8`, role: "Senior Frontend Engineer",                         company: "Toptal" },
+  { jobId: "j083-invopop-staff",      guid: "9726a8ec-8036-4bb6-839d-4489a1e0442a", url: `${BASE_URL}/9726a8ec-8036-4bb6-839d-4489a1e0442a`, role: "Staff Product Engineer (Backend focus)",           company: "Invopop" },
+  { jobId: "j084-pubgenius",          guid: "fc9c9adc-660d-4064-9c7a-080a55fbed85", url: `${BASE_URL}/fc9c9adc-660d-4064-9c7a-080a55fbed85`, role: "Principal Software Engineer (React + Node)",       company: "pubGENIUS" },
 ];
 
 export default registry;
