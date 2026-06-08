@@ -277,6 +277,7 @@ const registry = [
   { jobId: "j082-toptal",             guid: "f7db6508-13bd-4997-a004-ccf87d72f4a8", url: `${BASE_URL}/f7db6508-13bd-4997-a004-ccf87d72f4a8`, role: "Senior Frontend Engineer",                         company: "Toptal" },
   { jobId: "j083-invopop-staff",      guid: "9726a8ec-8036-4bb6-839d-4489a1e0442a", url: `${BASE_URL}/9726a8ec-8036-4bb6-839d-4489a1e0442a`, role: "Staff Product Engineer",           company: "Invopop" },
   { jobId: "j084-pubgenius",          guid: "fc9c9adc-660d-4064-9c7a-080a55fbed85", url: `${BASE_URL}/fc9c9adc-660d-4064-9c7a-080a55fbed85`, role: "Principal Software Engineer (React + Node)",       company: "pubGENIUS" },
+  { jobId: "j085-joko", guid: "39ffb375-c291-4b6f-8d07-494c90203478", url: `${BASE_URL}/39ffb375-c291-4b6f-8d07-494c90203478`, role: "Software Engineer (Senior/Staff Level)", company: "Joko" },
 ];
 
 export default registry;

@@ -1071,6 +1071,20 @@ const jobs = {
       { lbl: "Available",     lbl_es: "Disponible",    val: "Immediate",                                                                                                      val_es: "Inmediata" },
     ],
   },
+
+  // j085 — Joko
+  "39ffb375-c291-4b6f-8d07-494c90203478": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Software Engineer (Senior/Staff Level)" },
+    summary: "Full-stack engineering leader with 15-year career of end-to-end ownership across complex, ambitious production systems — from document-processing pipelines to multi-agent AI architectures. Brings staff-level technical direction and mentoring to product-driven teams, connecting engineering decisions directly to commercial outcomes: 5× throughput increase, 30% cost reduction, onboarding from 6 weeks to 2. Currently building and operating production AI systems (Claude-based, 8-agent) that run real-time data analysis, infrastructure monitoring, and process health evaluation — the same analytical, extraction-driven AI challenges Joko is tackling at scale.",
+    summaryEs: "Líder de ingeniería full-stack con 15 años de ownership end-to-end en sistemas en producción — desde pipelines de procesamiento de documentos hasta arquitecturas de IA multi-agente. Conecta decisiones técnicas con resultados comerciales: 5× throughput, 30% reducción de costes, onboarding de 6 semanas a 2. Actualmente construye y opera sistemas de IA en producción (8 agentes, Claude) que ejecutan análisis de datos en tiempo real, monitoreo de infraestructura y evaluación de salud de procesos.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "JavaScript (expert) · TypeScript (expert) · Python · C# · Node.js · React · Multi-agent AI (Claude API)", val_es: "JavaScript (experto) · TypeScript (experto) · Python · C# · Node.js · React · IA multi-agente (Claude API)" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Staff-level IC + leadership — end-to-end ownership, AI systems in production, analytical extraction at scale", val_es: "IC + liderazgo a nivel Staff — ownership end-to-end, sistemas de IA en producción, extracción analítica a escala" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Software Engineer (Senior/Staff Level) · Remote", val_es: "Software Engineer (Senior/Staff Level) · Remoto" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
 };
 
 export default jobs;
