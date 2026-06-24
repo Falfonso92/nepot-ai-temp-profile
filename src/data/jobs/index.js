@@ -1085,6 +1085,20 @@ const jobs = {
       { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
     ],
   },
+
+  // j086 — Factorial (Engineering Manager)
+  "311c1250-3971-4874-9549-098715474a64": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Engineering Manager" },
+    summary: "Engineering Manager with 15 years of full-stack experience and 7 years leading engineering teams — most recently at a YC-backed company where I built and shipped an 8-agent AI system in production, reduced infrastructure costs by 30%, and grew feature delivery from 2–3 to 10–15 releases per year. I bring hands-on AI-native credentials (Claude API, multi-agent orchestration, LLM evaluation and hot-balancing in production) alongside a track record of growing teams from scratch, designing REST/GraphQL APIs at scale, and connecting technical decisions directly to customer and business outcomes. I work best in fast-paced, ownership-driven environments where shipping and learning happen together.",
+    summaryEs: "Engineering Manager con 15 años de experiencia full-stack y 7 años liderando equipos de ingeniería — más recientemente en una empresa respaldada por YC donde construí y lancé un sistema de 8 agentes de IA en producción, reduje costes de infraestructura un 30% y crecí la entrega de features de 2–3 a 10–15 por año. Aporto credenciales AI-native reales (Claude API, orquestación multi-agente, evaluación y hot-balancing de LLMs en producción) junto con un historial de construcción de equipos, diseño de APIs REST/GraphQL a escala y conexión de decisiones técnicas con resultados de negocio.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "Engineering management · AI-native (Claude API, 8-agent prod) · React (7yr) · TypeScript (9yr) · Node.js/NestJS · REST/GraphQL · AWS · Microservices",  val_es: "Gestión de ingeniería · AI-native (Claude API, 8 agentes en prod) · React · TypeScript · Node.js/NestJS · REST/GraphQL · AWS · Microservicios" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "EM with hands-on AI production depth — 7yr team leadership, 5× throughput, 30% cost reduction, feature delivery 5×", val_es: "EM con profundidad de IA en producción — 7 años liderazgo de equipos, 5× throughput, 30% reducción de costes, entrega 5×" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Engineering Manager · Madrid (hybrid)", val_es: "Engineering Manager · Madrid (híbrido)" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
 };
 
 export default jobs;
