@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useAuth, useCurrentUser } from '../../../infrastructure/auth/auth.repository.jsx';
 import { usePermissions } from '../../../infrastructure/permissions/usePermissions.js';
 import { getUserProfile, upsertUserProfile, getBioUrl } from '../../../infrastructure/storage/user-profiles.repository.js';
+import BioSection from '../../shared/BioSection.jsx';
 
 const FIELDS = [
   { key: 'full_name',    label: 'FULL NAME', placeholder: 'Jane Smith' },
@@ -118,36 +119,15 @@ export default function MyProfilePage() {
               )}
             </div>
 
-            {/* Bio */}
-            <div style={{ background: '#fff', border: '1px solid #E7E5E0', borderRadius: 8, padding: 24 }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
-                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: '#A8A29E', letterSpacing: 2 }}>BIO</div>
-                {profile?.bio_updated_at && (
-                  <span style={{ fontSize: 11, color: '#A8A29E' }}>
-                    Updated {new Date(profile.bio_updated_at).toLocaleDateString()}
-                  </span>
-                )}
-              </div>
-
-              {bioUrl ? (
-                <a href={bioUrl} target="_blank" rel="noreferrer"
-                  style={{ fontSize: 12, color: '#1C1917', background: '#F5F4F1', padding: '6px 12px', borderRadius: 5, textDecoration: 'none', display: 'inline-block' }}>
-                  View bio.md ↗
-                </a>
-              ) : (
-                <div style={{ fontSize: 13, color: '#A8A29E', fontStyle: 'italic' }}>
-                  No bio yet. The SCOUT agent will generate it after onboarding.
-                </div>
-              )}
-
-              {canEditBio && (
-                <div style={{ marginTop: 12 }}>
-                  <button disabled style={{ ...BTN_OUTLINE, opacity: 0.45, cursor: 'not-allowed' }}>
-                    Edit Bio (coming soon)
-                  </button>
-                </div>
-              )}
-            </div>
+            <BioSection
+              bioUrl={bioUrl}
+              updatedAt={profile?.bio_updated_at}
+              extraActions={canEditBio ? (
+                <button disabled style={{ ...BTN_OUTLINE, opacity: 0.45, cursor: 'not-allowed' }}>
+                  Edit Bio (coming soon)
+                </button>
+              ) : null}
+            />
           </>
         )}
       </div>
