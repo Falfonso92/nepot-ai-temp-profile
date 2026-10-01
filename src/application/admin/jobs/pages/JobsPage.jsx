@@ -486,7 +486,15 @@ export default function JobsPage({ ownerId, backLink = '/admin', backLabel = '�
                         {job.job_id}
                       </td>
                       <td style={TD}>
-                        <div style={{ fontWeight: 600, fontSize: 13 }}>{job.company ?? '—'}</div>
+                        {job.offer_url ? (
+                          <a href={job.offer_url} target="_blank" rel="noreferrer"
+                            style={{ fontWeight: 600, fontSize: 13, color: '#1C1917', textDecoration: 'none' }}
+                            title={job.offer_url}>
+                            {job.company ?? '—'} ↗
+                          </a>
+                        ) : (
+                          <div style={{ fontWeight: 600, fontSize: 13 }}>{job.company ?? '—'}</div>
+                        )}
                         <div style={{ fontSize: 12, color: '#78716C', marginTop: 2 }}>{job.role}</div>
                       </td>
                       <td style={TD}><StatusBadge value={job.status} /></td>
