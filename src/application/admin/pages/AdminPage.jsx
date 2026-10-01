@@ -7,17 +7,17 @@ const MODULES = [
     path: '/admin/jobs',
     label: 'Jobs',
     desc: 'Pipeline, status, CVs and profile links',
-    perm: 'backoffice:read',
+    requireAny: ['user:jobs:read', 'backoffice:read'],
     bg: '#EDE9FE',
-    accent: '#6D28D9',
+    emoji: '📋',
   },
   {
     path: '/admin/backoffice',
     label: 'Access Control',
     desc: 'Roles, actions and permission assignments',
-    perm: 'backoffice:read',
+    require: 'backoffice:read',
     bg: '#DBEAFE',
-    accent: '#1E40AF',
+    emoji: '🔑',
   },
 ];
 
@@ -32,7 +32,7 @@ export default function AdminPage() {
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
           {MODULES.map(m => (
-            <PermissionGate key={m.path} require={m.perm}>
+            <PermissionGate key={m.path} require={m.require} requireAny={m.requireAny}>
               <Link to={m.path} style={{ textDecoration: 'none' }}>
                 <div style={{
                   padding: '20px 24px', background: '#fff', border: '1px solid #E7E5E0',
@@ -43,7 +43,7 @@ export default function AdminPage() {
                   onMouseLeave={e => { e.currentTarget.style.borderColor = '#E7E5E0'; e.currentTarget.style.boxShadow = 'none'; }}
                 >
                   <div style={{ width: 40, height: 40, borderRadius: 8, background: m.bg, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                    <span style={{ fontSize: 18 }}>{m.label === 'Jobs' ? '📋' : '🔑'}</span>
+                    <span style={{ fontSize: 18 }}>{m.emoji}</span>
                   </div>
                   <div>
                     <div style={{ fontWeight: 600, color: '#1C1917', marginBottom: 3 }}>{m.label}</div>

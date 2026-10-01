@@ -19,18 +19,19 @@ const STATUS_PRIORITY = Object.fromEntries(
     .map((s, i) => [s, i])
 );
 
-export async function listJobs({ page = 0, search = '', status = '' } = {}) {
+export async function listJobs({ page = 0, search = '', status = '', ownerId = null } = {}) {
   if (!supabase) return { jobs: [], total: 0 };
 
   let q = supabase
     .from('profiles')
     .select(
-      'job_id, guid, role, company, is_active, status, offer_url, salary, notes, cv_path, cv_uploaded_at, updated_at',
+      'job_id, guid, role, company, is_active, status, offer_url, salary, notes, cv_path, cv_uploaded_at, owner_id, updated_at',
       { count: 'exact' }
     )
     .neq('job_id', 'general')
     .order('updated_at', { ascending: false });
 
+  if (ownerId) q = q.eq('owner_id', ownerId);
   if (search.trim()) {
     q = q.or(`company.ilike.%${search.trim()}%,role.ilike.%${search.trim()}%`);
   }
@@ -83,6 +84,40 @@ export async function uploadCV(jobId, file) {
 }
 
 export const CV_RETENTION_DAYS = 90;
+
+export async function archiveJob(jobId) {
+  return updateJob(jobId, { status: 'archived', is_active: false });
+}
+
+export async function deleteJob(jobId) {
+  const { data } = await supabase
+    .from('profiles')
+    .select('cv_path')
+    .eq('job_id', jobId)
+    .maybeSingle();
+  if (data?.cv_path) {
+    await supabase.storage.from('cvs').remove([data.cv_path]);
+  }
+  const { error } = await supabase.from('profiles').delete().eq('job_id', jobId);
+  if (error) throw error;
+}
+
+export async function deleteCV(jobId, cvPath) {
+  const { error } = await supabase.storage.from('cvs').remove([cvPath]);
+  if (error) throw error;
+  await updateJob(jobId, { cv_path: null, cv_uploaded_at: null });
+}
+
+export async function getJobOwners() {
+  if (!supabase) return [];
+  const { data } = await supabase
+    .from('profiles')
+    .select('owner_id')
+    .not('owner_id', 'is', null)
+    .neq('job_id', 'general');
+  if (!data) return [];
+  return [...new Set(data.map(r => r.owner_id).filter(Boolean))];
+}
 
 export function getCVUrl(cvPath) {
   if (!cvPath || !supabase) return null;

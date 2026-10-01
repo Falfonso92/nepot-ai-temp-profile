@@ -13,10 +13,10 @@ import ActionsPage from './application/admin/backoffice/pages/ActionsPage.jsx';
 import PermissionsPage from './application/admin/backoffice/pages/PermissionsPage.jsx';
 import NotFoundPage from './packages/ui/NotFoundPage.jsx';
 
-function AdminRoute({ require: perm, element }) {
+function AdminRoute({ require: perm, requireAny, element }) {
   return (
     <ProtectedRoute>
-      <PermissionGate require={perm}>{element}</PermissionGate>
+      <PermissionGate require={perm} requireAny={requireAny}>{element}</PermissionGate>
     </ProtectedRoute>
   );
 }
@@ -31,7 +31,7 @@ export default function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/logout" element={<LogoutPage />} />
           <Route path="/admin" element={<ProtectedRoute><AdminPage /></ProtectedRoute>} />
-          <Route path="/admin/jobs" element={<AdminRoute require="backoffice:read" element={<JobsPage />} />} />
+          <Route path="/admin/jobs" element={<AdminRoute requireAny={['user:jobs:read', 'backoffice:read']} element={<JobsPage />} />} />
           <Route path="/admin/backoffice" element={<AdminRoute require="backoffice:read" element={<BackofficePage />} />} />
           <Route path="/admin/backoffice/roles" element={<AdminRoute require="backoffice:permissions:read" element={<RolesPage />} />} />
           <Route path="/admin/backoffice/actions" element={<AdminRoute require="backoffice:permissions:read" element={<ActionsPage />} />} />
