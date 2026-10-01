@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { usePermissions } from '../../../../infrastructure/permissions/usePermissions.js';
 import {
   listJobs, getStatusCounts, updateJob, uploadCV, getCVUrl,
-  STATUSES, PAGE_SIZE,
+  STATUSES, PAGE_SIZE, CV_RETENTION_DAYS,
 } from '../../../../infrastructure/storage/jobs.repository.js';
 
 // ─── helpers ────────────────────────────────────────────────────────────────
@@ -59,6 +59,14 @@ function EditPanel({ job, onSave, onCancel, canEdit }) {
   const fileRef = useRef(null);
 
   const cvUrl = getCVUrl(job.cv_path);
+
+  const cvExpiresIn = (() => {
+    if (!job.cv_uploaded_at) return null;
+    const uploaded = new Date(job.cv_uploaded_at);
+    const expiresAt = new Date(uploaded.getTime() + CV_RETENTION_DAYS * 86400_000);
+    const days = Math.ceil((expiresAt - Date.now()) / 86400_000);
+    return days;
+  })();
 
   async function save() {
     setSaving(true);
@@ -135,6 +143,15 @@ function EditPanel({ job, onSave, onCancel, canEdit }) {
                 {uploading ? 'Uploading…' : job.cv_path ? 'Replace PDF' : 'Upload PDF'}
               </button>
             </>
+          )}
+          {cvExpiresIn !== null && (
+            <span style={{
+              fontSize: 10, fontFamily: "'JetBrains Mono', monospace",
+              color: cvExpiresIn <= 14 ? '#DC2626' : cvExpiresIn <= 30 ? '#B45309' : '#A8A29E',
+              alignSelf: 'center',
+            }}>
+              {cvExpiresIn > 0 ? `expires in ${cvExpiresIn}d` : 'expired'}
+            </span>
           )}
         </div>
       </div>

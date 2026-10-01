@@ -25,7 +25,7 @@ export async function listJobs({ page = 0, search = '', status = '' } = {}) {
   let q = supabase
     .from('profiles')
     .select(
-      'job_id, guid, role, company, is_active, status, offer_url, salary, notes, cv_path, updated_at',
+      'job_id, guid, role, company, is_active, status, offer_url, salary, notes, cv_path, cv_uploaded_at, updated_at',
       { count: 'exact' }
     )
     .neq('job_id', 'general')
@@ -78,9 +78,11 @@ export async function uploadCV(jobId, file) {
     .from('cvs')
     .upload(path, file, { contentType: 'application/pdf', upsert: true });
   if (error) throw error;
-  await updateJob(jobId, { cv_path: path });
+  await updateJob(jobId, { cv_path: path, cv_uploaded_at: new Date().toISOString() });
   return path;
 }
+
+export const CV_RETENTION_DAYS = 90;
 
 export function getCVUrl(cvPath) {
   if (!cvPath || !supabase) return null;
