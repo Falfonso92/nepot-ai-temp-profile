@@ -4,19 +4,27 @@ import PermissionGate from '../../../infrastructure/permissions/PermissionGate.j
 
 const MODULES = [
   {
-    path: '/admin/jobs',
-    label: 'Jobs',
-    desc: 'Pipeline, status, CVs and profile links',
-    requireAny: ['user:jobs:read', 'backoffice:read'],
+    path: '/profile',
+    label: 'My Profile',
+    desc: 'Profile info, bio and your job pipeline',
+    requireAny: ['user:edit', 'user:jobs:read', 'user:bio:edit'],
+    bg: '#DBEAFE',
+    emoji: '👤',
+  },
+  {
+    path: '/admin/users',
+    label: 'Users',
+    desc: 'All registered users, profiles and their jobs',
+    require: 'backoffice:read',
     bg: '#EDE9FE',
-    emoji: '📋',
+    emoji: '👥',
   },
   {
     path: '/admin/backoffice',
     label: 'Access Control',
     desc: 'Roles, actions and permission assignments',
     require: 'backoffice:read',
-    bg: '#DBEAFE',
+    bg: '#FEF3C7',
     emoji: '🔑',
   },
 ];
@@ -34,11 +42,8 @@ export default function AdminPage() {
           {MODULES.map(m => (
             <PermissionGate key={m.path} require={m.require} requireAny={m.requireAny}>
               <Link to={m.path} style={{ textDecoration: 'none' }}>
-                <div style={{
-                  padding: '20px 24px', background: '#fff', border: '1px solid #E7E5E0',
-                  borderRadius: 10, display: 'flex', alignItems: 'center', gap: 16,
-                  transition: 'border-color 0.15s, box-shadow 0.15s',
-                }}
+                <div
+                  style={{ padding: '20px 24px', background: '#fff', border: '1px solid #E7E5E0', borderRadius: 10, display: 'flex', alignItems: 'center', gap: 16, transition: 'border-color 0.15s, box-shadow 0.15s' }}
                   onMouseEnter={e => { e.currentTarget.style.borderColor = '#C4B5A0'; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)'; }}
                   onMouseLeave={e => { e.currentTarget.style.borderColor = '#E7E5E0'; e.currentTarget.style.boxShadow = 'none'; }}
                 >

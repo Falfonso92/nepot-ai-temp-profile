@@ -19,23 +19,19 @@ const STATUS_PRIORITY = Object.fromEntries(
     .map((s, i) => [s, i])
 );
 
+// ─── reads (via view) ─────────────────────────────────────────────────────────
+
 export async function listJobs({ page = 0, search = '', status = '', ownerId = null } = {}) {
   if (!supabase) return { jobs: [], total: 0 };
 
   let q = supabase
-    .from('profiles')
-    .select(
-      'job_id, guid, role, company, is_active, status, offer_url, salary, notes, cv_path, cv_uploaded_at, owner_id, updated_at',
-      { count: 'exact' }
-    )
-    .neq('job_id', 'general')
+    .from('job_profile_view')
+    .select('*', { count: 'exact' })
     .order('updated_at', { ascending: false });
 
-  if (ownerId) q = q.eq('owner_id', ownerId);
-  if (search.trim()) {
-    q = q.or(`company.ilike.%${search.trim()}%,role.ilike.%${search.trim()}%`);
-  }
-  if (status) q = q.eq('status', status);
+  if (ownerId)        q = q.eq('owner_id', ownerId);
+  if (search.trim())  q = q.or(`company.ilike.%${search.trim()}%,role.ilike.%${search.trim()}%`);
+  if (status)         q = q.eq('status', status);
 
   const from = page * PAGE_SIZE;
   q = q.range(from, from + PAGE_SIZE - 1);
@@ -53,70 +49,75 @@ export async function listJobs({ page = 0, search = '', status = '', ownerId = n
   return { jobs, total: count ?? 0 };
 }
 
-export async function getStatusCounts() {
+export async function getStatusCounts(ownerId = null) {
   if (!supabase) return {};
-  const { data } = await supabase
-    .from('profiles')
-    .select('status')
-    .neq('job_id', 'general');
+  let q = supabase.from('job_profiles').select('status');
+  if (ownerId) q = q.eq('user_id', ownerId);
+  const { data } = await q;
   if (!data) return {};
   const counts = {};
   data.forEach(r => { counts[r.status] = (counts[r.status] || 0) + 1; });
   return counts;
 }
 
-export async function updateJob(jobId, fields) {
-  const { error } = await supabase
-    .from('profiles')
-    .update({ ...fields, updated_at: new Date().toISOString() })
-    .eq('job_id', jobId);
-  if (error) throw error;
+// ─── writes (via underlying tables) ──────────────────────────────────────────
+
+export async function updateJob(jpId, fields) {
+  if (!supabase) return;
+  const { offer_url, status, salary, notes } = fields;
+
+  const profileUpdate = {
+    updated_at: new Date().toISOString(),
+    ...(status !== undefined && { status }),
+    ...(salary !== undefined && { salary }),
+    ...(notes  !== undefined && { notes }),
+  };
+  await supabase.from('job_profiles').update(profileUpdate).eq('id', jpId);
+
+  if (offer_url !== undefined) {
+    const { data: jp } = await supabase.from('job_profiles').select('job_id').eq('id', jpId).single();
+    if (jp) await supabase.from('jobs').update({ offer_url, updated_at: new Date().toISOString() }).eq('id', jp.job_id);
+  }
 }
 
-export async function uploadCV(jobId, file) {
-  const path = `${jobId}.pdf`;
+export async function uploadCV(jpId, file) {
+  if (!supabase) throw new Error('No Supabase client');
+  const { data: jp } = await supabase.from('job_profiles').select('job_id, user_id').eq('id', jpId).single();
+  const { data: job } = await supabase.from('jobs').select('job_id').eq('id', jp.job_id).single();
+  const path = `${jp.user_id}/${job.job_id}.pdf`;
   const { error } = await supabase.storage
     .from('cvs')
     .upload(path, file, { contentType: 'application/pdf', upsert: true });
   if (error) throw error;
-  await updateJob(jobId, { cv_path: path, cv_uploaded_at: new Date().toISOString() });
+  await supabase.from('job_profiles').update({ cv_pdf_path: path, cv_pdf_uploaded_at: new Date().toISOString() }).eq('id', jpId);
   return path;
 }
 
 export const CV_RETENTION_DAYS = 90;
 
-export async function archiveJob(jobId) {
-  return updateJob(jobId, { status: 'archived', is_active: false });
+export async function archiveJob(jpId) {
+  if (!supabase) return;
+  await supabase.from('job_profiles').update({ status: 'archived', updated_at: new Date().toISOString() }).eq('id', jpId);
 }
 
-export async function deleteJob(jobId) {
-  const { data } = await supabase
-    .from('profiles')
-    .select('cv_path')
-    .eq('job_id', jobId)
-    .maybeSingle();
-  if (data?.cv_path) {
-    await supabase.storage.from('cvs').remove([data.cv_path]);
+export async function deleteJob(jpId) {
+  if (!supabase) return;
+  const { data: jp } = await supabase.from('job_profiles').select('cv_pdf_path, job_id').eq('id', jpId).maybeSingle();
+  if (jp?.cv_pdf_path) {
+    await supabase.storage.from('cvs').remove([jp.cv_pdf_path]);
   }
-  const { error } = await supabase.from('profiles').delete().eq('job_id', jobId);
-  if (error) throw error;
+  await supabase.from('job_profiles').delete().eq('id', jpId);
+  // Remove orphaned job definition
+  if (jp?.job_id) {
+    const { count } = await supabase.from('job_profiles').select('id', { count: 'exact', head: true }).eq('job_id', jp.job_id);
+    if (count === 0) await supabase.from('jobs').delete().eq('id', jp.job_id);
+  }
 }
 
-export async function deleteCV(jobId, cvPath) {
-  const { error } = await supabase.storage.from('cvs').remove([cvPath]);
-  if (error) throw error;
-  await updateJob(jobId, { cv_path: null, cv_uploaded_at: null });
-}
-
-export async function getJobOwners() {
-  if (!supabase) return [];
-  const { data } = await supabase
-    .from('profiles')
-    .select('owner_id')
-    .not('owner_id', 'is', null)
-    .neq('job_id', 'general');
-  if (!data) return [];
-  return [...new Set(data.map(r => r.owner_id).filter(Boolean))];
+export async function deleteCV(jpId, cvPath) {
+  if (!supabase) return;
+  await supabase.storage.from('cvs').remove([cvPath]);
+  await supabase.from('job_profiles').update({ cv_pdf_path: null, cv_pdf_uploaded_at: null }).eq('id', jpId);
 }
 
 export function getCVUrl(cvPath) {

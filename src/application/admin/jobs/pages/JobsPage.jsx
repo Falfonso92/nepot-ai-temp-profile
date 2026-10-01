@@ -1,9 +1,8 @@
-import { useState, useEffect, useRef, useCallback, useId } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { usePermissions } from '../../../../infrastructure/permissions/usePermissions.js';
-import { useAuth, useCurrentUser } from '../../../../infrastructure/auth/auth.repository.jsx';
 import {
-  listJobs, getStatusCounts, getJobOwners,
+  listJobs, getStatusCounts,
   updateJob, archiveJob, deleteJob, uploadCV, deleteCV, getCVUrl,
   STATUSES, PAGE_SIZE, CV_RETENTION_DAYS,
 } from '../../../../infrastructure/storage/jobs.repository.js';
@@ -55,24 +54,23 @@ function EditPanel({ job, canEdit, canDeleteCV, onSave, onCancel, onRefresh }) {
     salary: job.salary ?? '',
     notes: job.notes ?? '',
   });
-  const [uploading, setUploading] = useState(false);
+  const [uploading, setUploading]   = useState(false);
   const [deletingCV, setDeletingCV] = useState(false);
-  const [saving, setSaving] = useState(false);
+  const [saving, setSaving]         = useState(false);
   const [showGenerate, setShowGenerate] = useState(false);
   const fileRef = useRef(null);
 
   const cvUrl = getCVUrl(job.cv_path);
   const cvExpiresIn = (() => {
     if (!job.cv_uploaded_at) return null;
-    const days = Math.ceil(
+    return Math.ceil(
       (new Date(job.cv_uploaded_at).getTime() + CV_RETENTION_DAYS * 86400_000 - Date.now()) / 86400_000
     );
-    return days;
   })();
 
   async function save() {
     setSaving(true);
-    try { await onSave(job.job_id, form); }
+    try { await onSave(job.jp_id, form); }
     finally { setSaving(false); }
   }
 
@@ -80,7 +78,7 @@ function EditPanel({ job, canEdit, canDeleteCV, onSave, onCancel, onRefresh }) {
     const file = e.target.files?.[0];
     if (!file) return;
     setUploading(true);
-    try { await uploadCV(job.job_id, file); onRefresh(); }
+    try { await uploadCV(job.jp_id, file); onRefresh(); }
     catch (err) { alert('Upload failed: ' + err.message); }
     finally { setUploading(false); }
   }
@@ -88,7 +86,7 @@ function EditPanel({ job, canEdit, canDeleteCV, onSave, onCancel, onRefresh }) {
   async function handleDeleteCV() {
     if (!job.cv_path) return;
     setDeletingCV(true);
-    try { await deleteCV(job.job_id, job.cv_path); onRefresh(); }
+    try { await deleteCV(job.jp_id, job.cv_path); onRefresh(); }
     catch (err) { alert('Delete failed: ' + err.message); }
     finally { setDeletingCV(false); }
   }
@@ -184,7 +182,7 @@ function EditPanel({ job, canEdit, canDeleteCV, onSave, onCancel, onRefresh }) {
         </div>
       </div>
 
-      {canEdit && (
+      {canEdit ? (
         <div style={{ display: 'flex', gap: 8, marginTop: 12 }}>
           <button onClick={save} disabled={saving}
             style={{ padding: '6px 16px', borderRadius: 6, border: 'none', background: saving ? '#E7E5E0' : '#1C1917', color: '#fff', fontSize: 12, fontWeight: 600, cursor: saving ? 'default' : 'pointer' }}>
@@ -195,8 +193,7 @@ function EditPanel({ job, canEdit, canDeleteCV, onSave, onCancel, onRefresh }) {
             Cancel
           </button>
         </div>
-      )}
-      {!canEdit && (
+      ) : (
         <div style={{ marginTop: 12 }}>
           <button onClick={onCancel}
             style={{ padding: '6px 12px', borderRadius: 6, border: '1px solid #E7E5E0', background: '#fff', fontSize: 12, cursor: 'pointer' }}>
@@ -210,17 +207,13 @@ function EditPanel({ job, canEdit, canDeleteCV, onSave, onCancel, onRefresh }) {
 
 // ─── actions menu (popover) ───────────────────────────────────────────────────
 
-const MENU_ITEM = {
-  display: 'block', width: '100%', padding: '9px 14px', border: 'none',
-  background: 'transparent', textAlign: 'left', fontSize: 13, cursor: 'pointer',
-  color: '#1C1917', borderBottom: '1px solid #F5F4F1',
-};
+const MENU_ITEM   = { display: 'block', width: '100%', padding: '9px 14px', border: 'none', background: 'transparent', textAlign: 'left', fontSize: 13, cursor: 'pointer', color: '#1C1917', borderBottom: '1px solid #F5F4F1' };
 const MENU_DANGER = { ...MENU_ITEM, color: '#DC2626', borderBottom: 'none' };
 const MENU_MUTED  = { ...MENU_ITEM, color: '#78716C' };
 
 function ActionsMenu({ job, isEditing, canEdit, onEdit, onArchive, onDelete }) {
-  const [open, setOpen] = useState(false);
-  const [confirm, setConfirm] = useState(null); // 'archive' | 'delete'
+  const [open, setOpen]       = useState(false);
+  const [confirm, setConfirm] = useState(null);
   const ref = useRef(null);
 
   useEffect(() => {
@@ -241,8 +234,7 @@ function ActionsMenu({ job, isEditing, canEdit, onEdit, onArchive, onDelete }) {
         style={{
           padding: '5px 10px', borderRadius: 6, border: '1px solid #E7E5E0',
           background: open ? '#1C1917' : '#fff', color: open ? '#fff' : '#57534E',
-          fontSize: 13, cursor: 'pointer', lineHeight: 1, fontWeight: 700,
-          letterSpacing: 1,
+          fontSize: 13, cursor: 'pointer', lineHeight: 1, fontWeight: 700, letterSpacing: 1,
         }}
         title="Actions"
       >
@@ -253,42 +245,31 @@ function ActionsMenu({ job, isEditing, canEdit, onEdit, onArchive, onDelete }) {
         <div style={{
           position: 'absolute', right: 0, top: 'calc(100% + 4px)',
           background: '#fff', border: '1px solid #E7E5E0', borderRadius: 8,
-          boxShadow: '0 4px 16px rgba(0,0,0,0.10)', zIndex: 200, minWidth: 160,
-          overflow: 'hidden',
+          boxShadow: '0 4px 16px rgba(0,0,0,0.10)', zIndex: 200, minWidth: 160, overflow: 'hidden',
         }}>
           {confirm === null && (
             <>
-              <button
-                onClick={() => { onEdit(); close(); }}
-                style={MENU_ITEM}
+              <button onClick={() => { onEdit(); close(); }} style={MENU_ITEM}
                 onMouseEnter={e => e.currentTarget.style.background = '#FAFAF7'}
-                onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
-              >
+                onMouseLeave={e => e.currentTarget.style.background = 'transparent'}>
                 {isEditing ? 'Close edit' : 'Edit'}
               </button>
               {canEdit && job.status !== 'archived' && (
-                <button
-                  onClick={() => setConfirm('archive')}
-                  style={MENU_MUTED}
+                <button onClick={() => setConfirm('archive')} style={MENU_MUTED}
                   onMouseEnter={e => e.currentTarget.style.background = '#FAFAF7'}
-                  onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
-                >
+                  onMouseLeave={e => e.currentTarget.style.background = 'transparent'}>
                   Archive
                 </button>
               )}
               {canEdit && (
-                <button
-                  onClick={() => setConfirm('delete')}
-                  style={MENU_DANGER}
+                <button onClick={() => setConfirm('delete')} style={MENU_DANGER}
                   onMouseEnter={e => e.currentTarget.style.background = '#FEF2F2'}
-                  onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
-                >
+                  onMouseLeave={e => e.currentTarget.style.background = 'transparent'}>
                   Delete
                 </button>
               )}
             </>
           )}
-
           {confirm === 'archive' && (
             <div style={{ padding: '10px 14px' }}>
               <div style={{ fontSize: 12, color: '#57534E', marginBottom: 10 }}>Archive this job?</div>
@@ -304,7 +285,6 @@ function ActionsMenu({ job, isEditing, canEdit, onEdit, onArchive, onDelete }) {
               </div>
             </div>
           )}
-
           {confirm === 'delete' && (
             <div style={{ padding: '10px 14px' }}>
               <div style={{ fontSize: 12, color: '#DC2626', fontWeight: 600, marginBottom: 4 }}>Delete permanently?</div>
@@ -345,31 +325,23 @@ const FILTER_TABS = [
 
 // ─── main page ────────────────────────────────────────────────────────────────
 
-export default function JobsPage() {
+export default function JobsPage({ ownerId, backLink = '/admin', backLabel = '← ADMIN', secondCrumb, secondCrumbLink }) {
   const { can } = usePermissions();
-  const { userId } = useAuth();
-  const { email: currentEmail } = useCurrentUser();
+  const canRead     = can('backoffice:read') || can('user:jobs:read');
+  const canEdit     = can('backoffice:edit') || can('user:jobs:edit');
+  const canDeleteCV = can('backoffice:edit');
 
-  const isBackoffice  = can('backoffice:read');
-  const canRead       = isBackoffice || can('user:jobs:read');
-  const canEdit       = can('backoffice:edit') || can('user:jobs:edit');
-  const canDeleteCV   = can('backoffice:edit');
-
-  const [jobs, setJobs]               = useState([]);
-  const [total, setTotal]             = useState(0);
-  const [counts, setCounts]           = useState({});
-  const [owners, setOwners]           = useState([]);
-  const [ownerFilter, setOwnerFilter] = useState('');
-  const [page, setPage]               = useState(0);
-  const [search, setSearch]           = useState('');
+  const [jobs, setJobs]         = useState([]);
+  const [total, setTotal]       = useState(0);
+  const [counts, setCounts]     = useState({});
+  const [page, setPage]         = useState(0);
+  const [search, setSearch]     = useState('');
   const [filterStatus, setFilterStatus] = useState('');
-  const [editingId, setEditingId] = useState(null);
-  const [loading, setLoading]     = useState(true);
+  const [editingId, setEditingId]       = useState(null);
+  const [loading, setLoading]           = useState(true);
   const [countsLoaded, setCountsLoaded] = useState(false);
 
   const debouncedSearch = useDebounce(search, 300);
-
-  const ownerId = isBackoffice ? (ownerFilter || null) : userId;
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -382,46 +354,41 @@ export default function JobsPage() {
     }
   }, [page, debouncedSearch, filterStatus, ownerId]);
 
-  // Load counts + owners once
   useEffect(() => {
     if (countsLoaded) return;
-    Promise.all([
-      getStatusCounts(),
-      isBackoffice ? getJobOwners() : Promise.resolve([]),
-    ]).then(([c, o]) => {
+    getStatusCounts(ownerId).then(c => {
       setCounts(c);
-      setOwners(o);
       setCountsLoaded(true);
     });
-  }, [isBackoffice, countsLoaded]);
+  }, [ownerId, countsLoaded]);
 
   useEffect(() => { load(); }, [load]);
 
   useEffect(() => {
     setPage(0);
     setEditingId(null);
-  }, [debouncedSearch, filterStatus, ownerFilter]);
+  }, [debouncedSearch, filterStatus]);
 
-  async function handleSave(jobId, fields) {
-    await updateJob(jobId, fields);
+  async function handleSave(jpId, fields) {
+    await updateJob(jpId, fields);
     refresh();
     setEditingId(null);
   }
 
-  async function handleArchive(jobId) {
-    await archiveJob(jobId);
+  async function handleArchive(jpId) {
+    await archiveJob(jpId);
     refresh();
   }
 
-  async function handleDelete(jobId) {
-    await deleteJob(jobId);
+  async function handleDelete(jpId) {
+    await deleteJob(jpId);
     refresh();
   }
 
   async function refresh() {
     const [result, c] = await Promise.all([
       listJobs({ page, search: debouncedSearch, status: filterStatus, ownerId }),
-      getStatusCounts(),
+      getStatusCounts(ownerId),
     ]);
     setJobs(result.jobs);
     setTotal(result.total);
@@ -439,7 +406,17 @@ export default function JobsPage() {
       {/* Header */}
       <div style={{ borderBottom: '1px solid #E7E5E0', background: '#fff', padding: '0 32px' }}>
         <div style={{ maxWidth: 1240, margin: '0 auto', display: 'flex', alignItems: 'center', gap: 16, padding: '14px 0' }}>
-          <Link to="/admin" style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: '#A8A29E', letterSpacing: 2, textDecoration: 'none' }}>← ADMIN</Link>
+          <Link to={backLink} style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: '#A8A29E', letterSpacing: 2, textDecoration: 'none' }}>
+            {backLabel}
+          </Link>
+          {secondCrumb && secondCrumbLink && (
+            <>
+              <span style={{ color: '#D6D3D1' }}>/</span>
+              <Link to={secondCrumbLink} style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: '#A8A29E', letterSpacing: 2, textDecoration: 'none' }}>
+                {secondCrumb}
+              </Link>
+            </>
+          )}
           <span style={{ color: '#D6D3D1' }}>/</span>
           <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: '#1C1917', letterSpacing: 2 }}>JOBS</span>
         </div>
@@ -449,9 +426,6 @@ export default function JobsPage() {
 
         {/* Status chips */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 20, flexWrap: 'wrap' }}>
-          <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: '#A8A29E', letterSpacing: 1, marginRight: 4 }}>
-            {isBackoffice ? 'ALL JOBS' : 'MY JOBS'}
-          </span>
           {STATUSES.filter(s => counts[s.value]).map(s => (
             <button key={s.value} onClick={() => setFilterStatus(f => f === s.value ? '' : s.value)}
               style={{
@@ -466,32 +440,6 @@ export default function JobsPage() {
 
         {/* Search + filter tabs */}
         <div style={{ display: 'flex', gap: 10, marginBottom: 14, flexWrap: 'wrap', alignItems: 'center' }}>
-          {/* Backoffice user selector */}
-          {isBackoffice && (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
-              <label style={{ fontSize: 10, color: '#A8A29E', fontFamily: "'JetBrains Mono', monospace", letterSpacing: 1 }}>VIEWING</label>
-              <select
-                value={ownerFilter}
-                onChange={e => setOwnerFilter(e.target.value)}
-                style={{
-                  padding: '7px 30px 7px 10px', borderRadius: 7, border: '1px solid #E7E5E0',
-                  fontSize: 13, background: '#fff', color: '#1C1917', outline: 'none',
-                  minWidth: 200, cursor: 'pointer',
-                  appearance: 'none',
-                  backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2378716C' d='M6 8L1 3h10z'/%3E%3C/svg%3E")`,
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: 'right 10px center',
-                }}
-              >
-                <option value="">All users</option>
-                {owners.map(o => (
-                  <option key={o} value={o}>
-                    {o === userId && currentEmail ? currentEmail : o}
-                  </option>
-                ))}
-              </select>
-            </div>
-          )}
           <div style={{ position: 'relative', flex: 1, minWidth: 180 }}>
             <input value={search} onChange={e => setSearch(e.target.value)}
               placeholder="Search company or role…"
@@ -533,7 +481,7 @@ export default function JobsPage() {
                 )}
                 {jobs.map(job => (
                   <>
-                    <tr key={job.job_id} style={{ background: editingId === job.job_id ? '#FAFAF7' : 'transparent' }}>
+                    <tr key={job.jp_id} style={{ background: editingId === job.jp_id ? '#FAFAF7' : 'transparent' }}>
                       <td style={{ ...TD, fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: '#A8A29E' }}>
                         {job.job_id}
                       </td>
@@ -549,15 +497,15 @@ export default function JobsPage() {
                         <div style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
                           {job.offer_url && <ExternalLink href={job.offer_url} label="Offer" />}
                           {job.guid && (
-                            <Link to={`/profile/${job.guid}`} target="_blank"
+                            <Link to={`/cvs/${job.guid}`} target="_blank"
                               style={{ fontSize: 11, color: '#1C1917', background: '#EDE9FE', padding: '2px 7px', borderRadius: 4, textDecoration: 'none', display: 'inline-block' }}>
-                              Profile ↗
+                              CV ↗
                             </Link>
                           )}
                           {job.cv_path && (
                             <a href={getCVUrl(job.cv_path)} target="_blank" rel="noreferrer"
                               style={{ fontSize: 11, color: '#1C1917', background: '#DCFCE7', padding: '2px 7px', borderRadius: 4, textDecoration: 'none', display: 'inline-block' }}>
-                              CV ↓
+                              PDF ↓
                             </a>
                           )}
                         </div>
@@ -565,17 +513,17 @@ export default function JobsPage() {
                       <td style={{ ...TD, textAlign: 'right' }}>
                         <ActionsMenu
                           job={job}
-                          isEditing={editingId === job.job_id}
+                          isEditing={editingId === job.jp_id}
                           canEdit={canEdit}
-                          onEdit={() => setEditingId(id => id === job.job_id ? null : job.job_id)}
-                          onArchive={() => handleArchive(job.job_id)}
-                          onDelete={() => handleDelete(job.job_id)}
+                          onEdit={() => setEditingId(id => id === job.jp_id ? null : job.jp_id)}
+                          onArchive={() => handleArchive(job.jp_id)}
+                          onDelete={() => handleDelete(job.jp_id)}
                         />
                       </td>
                     </tr>
 
-                    {editingId === job.job_id && (
-                      <tr key={`${job.job_id}-edit`}>
+                    {editingId === job.jp_id && (
+                      <tr key={`${job.jp_id}-edit`}>
                         <td colSpan={6} style={{ padding: 0 }}>
                           <EditPanel
                             job={job}
