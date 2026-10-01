@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback, useId } from 'react';
 import { Link } from 'react-router-dom';
 import { usePermissions } from '../../../../infrastructure/permissions/usePermissions.js';
-import { useAuth } from '../../../../infrastructure/auth/auth.repository.jsx';
+import { useAuth, useCurrentUser } from '../../../../infrastructure/auth/auth.repository.jsx';
 import {
   listJobs, getStatusCounts, getJobOwners,
   updateJob, archiveJob, deleteJob, uploadCV, deleteCV, getCVUrl,
@@ -348,6 +348,7 @@ const FILTER_TABS = [
 export default function JobsPage() {
   const { can } = usePermissions();
   const { userId } = useAuth();
+  const { email: currentEmail } = useCurrentUser();
 
   const isBackoffice  = can('backoffice:read');
   const canRead       = isBackoffice || can('user:jobs:read');
@@ -441,16 +442,6 @@ export default function JobsPage() {
           <Link to="/admin" style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: '#A8A29E', letterSpacing: 2, textDecoration: 'none' }}>← ADMIN</Link>
           <span style={{ color: '#D6D3D1' }}>/</span>
           <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: '#1C1917', letterSpacing: 2 }}>JOBS</span>
-          {isBackoffice && (
-            <>
-              <span style={{ color: '#D6D3D1' }}>/</span>
-              <select value={ownerFilter} onChange={e => setOwnerFilter(e.target.value)}
-                style={{ padding: '4px 8px', borderRadius: 5, border: '1px solid #E7E5E0', fontSize: 11, fontFamily: "'JetBrains Mono', monospace", background: '#fff', color: '#57534E', outline: 'none' }}>
-                <option value="">All users</option>
-                {owners.map(o => <option key={o} value={o}>{o.slice(0, 20)}…</option>)}
-              </select>
-            </>
-          )}
         </div>
       </div>
 
@@ -475,6 +466,32 @@ export default function JobsPage() {
 
         {/* Search + filter tabs */}
         <div style={{ display: 'flex', gap: 10, marginBottom: 14, flexWrap: 'wrap', alignItems: 'center' }}>
+          {/* Backoffice user selector */}
+          {isBackoffice && (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+              <label style={{ fontSize: 10, color: '#A8A29E', fontFamily: "'JetBrains Mono', monospace", letterSpacing: 1 }}>VIEWING</label>
+              <select
+                value={ownerFilter}
+                onChange={e => setOwnerFilter(e.target.value)}
+                style={{
+                  padding: '7px 30px 7px 10px', borderRadius: 7, border: '1px solid #E7E5E0',
+                  fontSize: 13, background: '#fff', color: '#1C1917', outline: 'none',
+                  minWidth: 200, cursor: 'pointer',
+                  appearance: 'none',
+                  backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2378716C' d='M6 8L1 3h10z'/%3E%3C/svg%3E")`,
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'right 10px center',
+                }}
+              >
+                <option value="">All users</option>
+                {owners.map(o => (
+                  <option key={o} value={o}>
+                    {o === userId && currentEmail ? currentEmail : o}
+                  </option>
+                ))}
+              </select>
+            </div>
+          )}
           <div style={{ position: 'relative', flex: 1, minWidth: 180 }}>
             <input value={search} onChange={e => setSearch(e.target.value)}
               placeholder="Search company or role…"
