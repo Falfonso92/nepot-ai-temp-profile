@@ -1,21 +1,21 @@
 const profile = {
   meta: {
     name: "Francisco Alfonso",
-    headline: "Engineering Manager · Staff Engineer",
+    headline: "Staff Engineer · Software Architect",
     location: "Madrid, Spain",
     email: "fabuitrago92@gmail.com",
     linkedin: "https://www.linkedin.com/in/franciscoal/",
     status: "open",
     statusLabel: "Open to talk",
     statusLabelEs: "Disponible",
-    updatedLabel: "May 2026",
+    updatedLabel: "Oct 2026",
   },
 
   summary:
-    "I work across the full engineering spectrum — cloud architecture, distributed systems, infrastructure, APIs, and product interfaces — and I lead the teams that build it. Before writing a line of code or opening a planning doc, I need to know what the business is optimising for, how success gets measured, and what the team needs to move without bottlenecks.",
+    "Full-stack engineer with 15 years building production systems across the full stack — distributed backends, cloud infrastructure, data pipelines, and product interfaces. I own systems end-to-end: from API design and database modelling through infrastructure provisioning and observability. Currently working on critical banking connectivity infrastructure at Embat, building the ingestion pipelines and balance calculation systems that connect a treasury platform to the financial grid.",
 
   summaryEs:
-    "Trabajo en todo el espectro de la ingeniería — arquitectura cloud, sistemas distribuidos, infraestructura, APIs e interfaces de producto — y lidero los equipos que lo construyen. Antes de escribir una línea de código o abrir un documento de planificación, necesito saber qué está optimizando el negocio, cómo se mide el éxito y qué necesita el equipo para moverse sin fricciones.",
+    "Ingeniero full-stack con 15 años construyendo sistemas en producción — backends distribuidos, infraestructura cloud, pipelines de datos e interfaces de producto. Soy dueño de sistemas de extremo a extremo: desde diseño de APIs y modelado de datos hasta provisioning de infraestructura y observabilidad. Actualmente trabajo en infraestructura crítica de conectividad bancaria en Embat, construyendo los pipelines de ingesta y sistemas de cálculo de balances que conectan una plataforma de tesorería con el sistema financiero.",
 
   outcomes: [
     { lbl: "CAREER",    lblEs: "CARRERA",    val: "15yr" },
@@ -26,10 +26,9 @@ const profile = {
   ],
 
   now: [
-    { lbl: "Focused on", lbl_es: "Enfocado en",  val: "Job search — EM and Staff Engineer roles in product-led companies",                         val_es: "Búsqueda de empleo — roles de EM y Staff Engineer en empresas product-led" },
-    { lbl: "Building",   lbl_es: "Construyendo",  val: "Nepot.ai — AI-assisted job search and CV builder for engineers",                           val_es: "Nepot.ai — búsqueda de empleo con IA y generador de CVs para ingenieros" },
-    { lbl: "Open to",    lbl_es: "Abierto a",     val: "Engineering Manager · Staff / Principal Engineer · Tech Lead · Remote or Hybrid Madrid",   val_es: "Engineering Manager · Staff / Principal Engineer · Tech Lead · Remoto o Híbrido Madrid" },
-    { lbl: "Available",       lbl_es: "Disponible",  val: "Immediate",                                                                              val_es: "Inmediata" },
+    { lbl: "Focused on", lbl_es: "Enfocado en",  val: "Banking connectivity & data ingestion infrastructure at Embat (fintech)",                  val_es: "Infraestructura de conectividad bancaria e ingesta de datos en Embat (fintech)" },
+    { lbl: "Open to",    lbl_es: "Abierto a",     val: "Staff Engineer · Software Architect · FDE · Founding Engineer · Remote or Hybrid Madrid", val_es: "Staff Engineer · Arquitecto de Software · FDE · Founding Engineer · Remoto o Híbrido Madrid" },
+    { lbl: "Available",  lbl_es: "Disponible",    val: "Immediate",                                                                               val_es: "Inmediata" },
   ],
 
   timeline: {
@@ -42,7 +41,8 @@ const profile = {
       { y: 2016, t: "Lagash",                    sub: "Solutions Architect",  side: "bot" },
       { y: 2017, t: "Syntax Informática",        sub: "Engineering Manager",  side: "top" },
       { y: 2021, t: "Sygris",                    sub: "Tech Lead → Team Lead",side: "bot", active: true },
-      { y: 2024, t: "Invofox (YC S22)",          sub: "Engineering Manager",  side: "top", active: true },
+      { y: 2024, t: "Invofox (YC S22)",          sub: "Engineering Manager",  side: "top" },
+      { y: 2026, t: "Embat",                     sub: "Expert Backend Eng.",  side: "bot", active: true },
     ],
   },
 

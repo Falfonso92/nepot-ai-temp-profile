@@ -1099,6 +1099,400 @@ const jobs = {
       { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
     ],
   },
+
+  // ── Batch 20261001-b2k7 — IC Technical pivot ───────────────────────────────
+
+  // j088 — Ashby / Software Engineer
+  "5df4acff-43c1-4336-a41e-41b2595e0f98": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Software Engineer · TypeScript & React" },
+    summary: "Software engineer with 15 years of production TypeScript and React experience — currently building banking infrastructure at Embat and previously Staff Engineer at Invofox (YC S22). I own complex product surfaces end-to-end, from React component architecture and GraphQL API design through to backend services and infrastructure. I've shipped an 8-agent production AI system and 5× pipeline throughput improvements. I write production-quality TypeScript at expert depth.",
+    summaryEs: "Ingeniero de software con 15 años en TypeScript y React en producción — actualmente en infraestructura bancaria en Embat y anteriormente Staff Engineer en Invofox (YC S22). Entrego superficies de producto complejas de extremo a extremo: arquitectura React, APIs GraphQL, servicios backend e infraestructura.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "TypeScript (9yr expert) · React (7yr expert) · Node.js (8yr) · GraphQL · GCP · CI/CD", val_es: "TypeScript (9 años, experto) · React · Node.js · GraphQL · GCP · CI/CD" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Expert TypeScript/React + production AI systems (8-agent Claude API) + 15yr IC track record", val_es: "TypeScript/React experto + sistemas de IA en producción (8 agentes) + 15 años de IC" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Software Engineer · Staff Engineer · Remote or Hybrid", val_es: "Software Engineer · Staff Engineer · Remoto o Híbrido" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j089 — Triple / Senior Software Engineer
+  "5c1d11ab-fa57-48e8-8296-c24be0db72a8": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Senior Software Engineer · Fintech" },
+    summary: "Senior software engineer with 15 years of production experience in fintech and financial infrastructure — currently building banking connectivity services at Embat (treasury management & banking platform) and previously at Invofox (YC S22) where I 5×-ed pipeline throughput and built an 8-agent production AI system. Strong Node.js/NestJS backend, React/Next.js frontend, GCP cloud infrastructure, and deep fintech domain context.",
+    summaryEs: "Ingeniero senior con 15 años en fintech e infraestructura financiera — actualmente en Embat (gestión de tesorería y plataforma bancaria) y anteriormente en Invofox (YC S22). Backend Node.js/NestJS sólido, frontend React/Next.js, GCP y profundo contexto de dominio fintech.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "Node.js · NestJS · React · Next.js · TypeScript · GCP · PostgreSQL · Fintech domain", val_es: "Node.js · NestJS · React · Next.js · TypeScript · GCP · PostgreSQL · Fintech" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Banking infrastructure depth + 5× pipeline throughput + production AI orchestration", val_es: "Infraestructura bancaria + 5× throughput de pipeline + orquestación de IA en producción" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Senior Software Engineer · Fintech · Remote", val_es: "Senior Software Engineer · Fintech · Remoto" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j090 — Checkly / Senior Software Engineer
+  "c876862c-74cb-4667-b6e8-28cdc6783347": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Senior Software Engineer · DevTools & AI" },
+    summary: "Senior software engineer with 15 years of production experience, currently building infrastructure services at Embat and previously leading engineering at Invofox (YC S22) — where I designed and built 'The Hive Mind', an 8-agent AI system for production reliability monitoring, failure detection, and operational intelligence. I bring deep Node.js/TypeScript backend expertise, React frontend depth, and hands-on experience shipping AI-powered developer tooling. I've worked in developer-first product environments and understand what makes a great DX.",
+    summaryEs: "Ingeniero senior con 15 años en producción, construyendo servicios de infraestructura en Embat y anteriormente en Invofox donde diseñé y construí un sistema de 8 agentes de IA para monitorización de fiabilidad y detección de fallos.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "Node.js · TypeScript · React · GCP · AI reliability systems · Claude API · CI/CD", val_es: "Node.js · TypeScript · React · GCP · Sistemas de fiabilidad con IA · Claude API · CI/CD" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Production AI reliability tooling (8-agent system) + Node.js/TypeScript expert + DevTools sensibility", val_es: "Herramientas de fiabilidad AI en producción (8 agentes) + Node.js/TypeScript experto + sensibilidad DevTools" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Senior Software Engineer · DevTools · Remote", val_es: "Senior Software Engineer · DevTools · Remoto" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j091 — OpenAI / Forward Deployed Engineer
+  "6474bb04-c59b-4519-9872-b8a8fe656295": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Forward Deployed Engineer · AI Systems" },
+    summary: "Engineer with 15 years of production experience deploying AI systems into real operational environments. At Invofox (YC S22) I designed, built, and shipped 'The Hive Mind' — an 8-agent production AI system using the Claude API that gave non-engineering teams full self-service operational intelligence. I write Python and TypeScript, lead complex end-to-end technical implementations, and communicate clearly to both engineering and executive audiences. Native Spanish, professional English — the right combination for a Madrid FDE role.",
+    summaryEs: "Ingeniero con 15 años desplegando sistemas de IA en entornos operativos reales. En Invofox diseñé y lancé un sistema de 8 agentes con Claude API que dio a equipos no técnicos autonomía operativa completa. Español nativo, inglés profesional.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "Python · TypeScript · LLMs in production · 8-agent Claude API system · end-to-end delivery · Spanish + English", val_es: "Python · TypeScript · LLMs en producción · Sistema 8 agentes · Entrega E2E · Español + Inglés" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Production AI deployment track record + customer-facing implementation experience + bilingual (ES/EN)", val_es: "Historial de despliegue de IA en producción + experiencia en implementación con clientes + bilingüe" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Forward Deployed Engineer · AI Systems · Madrid", val_es: "Forward Deployed Engineer · Sistemas de IA · Madrid" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j092 — Trading 212 / Staff Frontend Engineer
+  "21467264-6b1c-4077-9ca9-99bd3e7fa21b": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Staff Frontend Engineer · Monorepo & Design Systems" },
+    summary: "Staff-level frontend engineer with 15 years of production React and TypeScript experience, including hands-on architecture of monorepo-based frontend platforms, design systems, and shared component libraries. At Sygris I designed a proprietary state management system from scratch, reduced portal load time 83%, and cut deployment cycles by 95% through API contract redesign. At Embat I contribute to a Turborepo monorepo with shared tooling and DX. I work across platform-level frontend challenges while staying connected to product delivery.",
+    summaryEs: "Ingeniero frontend Staff con 15 años en React y TypeScript en producción — arquitectura de monorepos, sistemas de diseño y librerías de componentes compartidas. En Sygris diseñé un sistema de gestión de estado propietario desde cero y reduje los tiempos de carga en un 83%.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "React (7yr expert) · TypeScript (9yr expert) · Turborepo · monorepo · design systems · Jest · Playwright", val_es: "React (7 años, experto) · TypeScript · Turborepo · monorepo · sistemas de diseño · Jest · Playwright" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Custom state engine from scratch + 83% load time improvement + Turborepo monorepo experience (current)", val_es: "Motor de estado desde cero + mejora de carga 83% + experiencia en monorepo Turborepo (actual)" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Staff Frontend Engineer · Remote or Hybrid", val_es: "Staff Frontend Engineer · Remoto o Híbrido" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j093 — Mimica / Staff Fullstack Engineer
+  "130ca00d-4af5-409d-ac22-98671a483cd7": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Staff Fullstack Engineer · React & AI Systems" },
+    summary: "Staff-level fullstack engineer with 15 years of production experience including the design and implementation of a custom state management system from scratch for a complex data-visualization-heavy domain — direct prior art for Mimica's Mapper Team. At Sygris I owned the entire frontend architecture: custom state engine, entity model redesign (1–2min → 10s load times), and real-time collaborative data management interfaces. At Invofox I built AI systems using Claude API in production.",
+    summaryEs: "Ingeniero fullstack Staff con 15 años, incluyendo el diseño e implementación de un sistema de gestión de estado personalizado desde cero para un dominio intensivo en visualización de datos — prior art directo para el equipo Mapper de Mimica.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "React · TypeScript · custom state management · Node.js · AI systems (Claude API) · data visualization", val_es: "React · TypeScript · gestión de estado personalizada · Node.js · Sistemas de IA · visualización de datos" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Custom state engine from scratch + complex domain visualization experience + production AI systems", val_es: "Motor de estado desde cero + visualización de dominios complejos + sistemas de IA en producción" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Staff Fullstack Engineer · Remote or Hybrid", val_es: "Staff Fullstack Engineer · Remoto o Híbrido" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j094 — bunch / Staff Frontend Engineer
+  "73a52be7-92b2-43ca-840a-5dcecb660abf": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Staff Frontend Engineer · React Architecture" },
+    summary: "Staff-level frontend engineer with 15 years of production React and TypeScript experience — including leading framework migrations, owning design systems, and driving architectural improvements across teams. At Sygris I led the frontend architecture of a greenfield low-code platform: custom state management system from scratch, 83% load time improvement, design system standards across the team. I bring React depth, NestJS/Node.js backend familiarity, and AI-augmented engineering experience.",
+    summaryEs: "Ingeniero frontend Staff con 15 años en React y TypeScript en producción — incluyendo migraciones de frameworks, sistemas de diseño y mejoras arquitectónicas. En Sygris lideré la arquitectura frontend de una plataforma low-code desde cero.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "React (7yr expert) · TypeScript · NestJS · design systems · DX · monorepo (Turborepo) · AI-augmented eng", val_es: "React (7 años, experto) · TypeScript · NestJS · sistemas de diseño · DX · monorepo · ingeniería aumentada con IA" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "React architecture depth + framework migration leadership + design system ownership + AI engineering", val_es: "Profundidad en arquitectura React + liderazgo de migración de frameworks + ownership de sistema de diseño" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Staff Frontend Engineer · Remote or Hybrid", val_es: "Staff Frontend Engineer · Remoto o Híbrido" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j095 — Elastic / Senior Software Engineer - SSC
+  "4d79ea87-f4eb-4ec7-b0cc-3bb2dc86a85b": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Senior Software Engineer · Self-Service & AI" },
+    summary: "Full-stack engineer with 15 years of production experience building self-service product flows, onboarding experiences, and agentic interfaces in React, TypeScript, and Node.js. At Invofox (YC S22) I built AI-native tooling — including an 8-agent agentic system — that gave non-technical users complete self-service operational intelligence with no engineering involvement. Strong RESTful API, NoSQL, and cloud integration experience across GCP and AWS-equivalent patterns.",
+    summaryEs: "Ingeniero full-stack con 15 años construyendo flujos de autoservicio, experiencias de onboarding e interfaces agénticas en React, TypeScript y Node.js. En Invofox construí un sistema de 8 agentes que dio a usuarios no técnicos autonomía operativa completa.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "React · TypeScript · Node.js · REST APIs · NoSQL · agentic interfaces · cloud integrations · GCP", val_es: "React · TypeScript · Node.js · REST APIs · NoSQL · interfaces agénticas · integraciones cloud · GCP" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Self-service onboarding UX + 8-agent production AI system + cloud integration depth", val_es: "UX de onboarding en autoservicio + sistema de 8 agentes en producción + profundidad en integraciones cloud" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Senior Software Engineer · Remote", val_es: "Senior Software Engineer · Remoto" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j096 — Dwelly / Staff Software Engineer
+  "2a0f1342-1f0c-4eb1-93e6-91427b710022": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Staff Software Engineer · AI & Agentic Systems" },
+    summary: "Staff-level engineer with 15 years building full-stack production systems in TypeScript, React, and Node.js — with hands-on experience shipping agentic AI systems. At Invofox I designed 'The Hive Mind': an 8-agent production AI system automating operational intelligence for an AI-first platform. At Embat I work on AI-assisted banking connectivity services. I bring startup mentality, full-stack depth, and the architectural judgment to build for scale from day one.",
+    summaryEs: "Ingeniero Staff con 15 años construyendo sistemas full-stack en TypeScript, React y Node.js — con experiencia desplegando sistemas de IA agénticos. En Invofox diseñé un sistema de 8 agentes y en Embat trabajo en conectividad bancaria asistida por IA.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "TypeScript · React · Node.js · tRPC (paradigm) · PostgreSQL · AI/agentic workflows · startup mentality", val_es: "TypeScript · React · Node.js · tRPC (paradigma) · PostgreSQL · Flujos agénticos con IA · mentalidad startup" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "AI-native + full-stack + startup pace — 8-agent production system + 5× pipeline throughput", val_es: "AI-native + full-stack + ritmo startup — sistema de 8 agentes en producción + 5× throughput de pipeline" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Staff Software Engineer · Remote (Spain)", val_es: "Staff Software Engineer · Remoto (España)" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j097 — Toggl / Senior Full Stack Engineer
+  "1a3c804d-b0e2-4fd7-a954-6df564b49cb6": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Senior Full Stack Engineer · Async & Results-Based" },
+    summary: "Full-stack engineer with 15 years of production experience owning product domains end-to-end — dashboards, planning tools, reporting interfaces, backend pipelines, and infrastructure. At Invofox I owned the full stack for a financial automation platform with real-time dashboards, Node.js/NestJS backend, PostgreSQL, and an 8-agent AI system. I work results-first in async environments with genuine AI fluency. Backend is Node.js rather than Go, but the patterns are directly transferable.",
+    summaryEs: "Ingeniero full-stack con 15 años de experiencia en dominios de producto de extremo a extremo — dashboards, herramientas de planificación, pipelines backend e infraestructura. Trabajo primero en resultados en entornos async.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "React · TypeScript · Node.js · PostgreSQL · AI fluency (8-agent prod) · async · end-to-end ownership", val_es: "React · TypeScript · Node.js · PostgreSQL · Fluidez en IA (8 agentes en prod) · async · ownership E2E" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Full-stack depth + AI-native + async-first work ethic + production dashboards and reporting", val_es: "Profundidad full-stack + AI-native + ética de trabajo async-first + dashboards y reporting en producción" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Senior Full Stack Engineer · Remote", val_es: "Senior Full Stack Engineer · Remoto" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j098 — MarsBased / Full Stack TypeScript Engineer
+  "e152c279-6685-4229-bb13-f532393bdce4": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Full Stack TypeScript Engineer · AI-Augmented Dev" },
+    summary: "Full-stack TypeScript engineer with 15 years of production experience and genuine hands-on depth in multi-agent AI workflows — as a builder, not just a user. At Invofox I designed and built an 8-agent agentic system (Claude API) for automated testing, analysis, monitoring, and failure detection. I design prompting strategies, build multi-agent workflows, and work daily with AI coding agents. Strong Node.js/TypeScript backend + React/Next.js frontend + Docker + Jest. Native Spanish, professional English.",
+    summaryEs: "Ingeniero TypeScript full-stack con 15 años en producción y profundidad real en flujos de trabajo multi-agente de IA — como constructor, no solo usuario. En Invofox diseñé un sistema de 8 agentes. Español nativo, inglés profesional.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "TypeScript · Node.js · React · Next.js · Docker · Jest · multi-agent AI · prompt engineering · Spanish + EN", val_es: "TypeScript · Node.js · React · Next.js · Docker · Jest · IA multi-agente · Español + Inglés" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "AI workflow builder (not just user) + full-stack TypeScript expert + bilingual + agency-compatible", val_es: "Constructor de flujos de trabajo de IA + experto TypeScript full-stack + bilingüe + compatible con agencia" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Full Stack TypeScript Engineer · Remote (Europe)", val_es: "Ingeniero TypeScript Full Stack · Remoto (Europa)" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j099 — ZeinCrew / Forward Deployed Engineer
+  "e8140b65-82af-4c36-8bd0-1058c0d142cc": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Forward Deployed Engineer · AI & Integrations" },
+    summary: "Engineer with 15 years of production experience leading end-to-end implementations in customer-facing environments — system design to org adoption. I write production-quality TypeScript and Python, build integrations, debug production AI systems under pressure, and communicate clearly to non-technical stakeholders. At Invofox I led customer integration implementations and built a production 8-agent AI system with full observability. High autonomy and travel are features.",
+    summaryEs: "Ingeniero con 15 años liderando implementaciones E2E en entornos de cara al cliente — desde el diseño del sistema hasta la adopción organizacional. Escribo Python y TypeScript en producción, construyo integraciones y me comunico con stakeholders no técnicos.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "TypeScript · Python · LLMs · AI agents · integrations · production debugging · customer-facing", val_es: "TypeScript · Python · LLMs · Agentes de IA · Integraciones · Debugging en producción · Cara al cliente" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "FDE instinct — end-to-end ownership, customer empathy, production AI deployment, and autonomous execution", val_es: "Instinto FDE — ownership E2E, empatía con clientes, despliegue de IA en producción y ejecución autónoma" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Forward Deployed Engineer · AI · Madrid + travel", val_es: "Forward Deployed Engineer · IA · Madrid + viajes" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j100 — Alan / Fullstack Software Engineer - Global Architecture
+  "04d14806-71c6-4dfd-be82-b0053e503a19": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Fullstack Engineer · Cross-Cutting Architecture" },
+    summary: "Fullstack engineer with 15 years of cross-cutting architecture experience — harmonizing data models, designing shared modules, and removing technical blockers that slow the whole organisation. At Sygris I rebuilt the core entity model and data schema for a complex multi-tenant SaaS platform, cutting load times 83% and deployment cycles 95%. I bring Python, Node.js/NestJS (OOP), React, and PostgreSQL depth alongside a self-starting entrepreneurial mindset. Fluent English; Spanish native.",
+    summaryEs: "Ingeniero fullstack con 15 años en arquitectura transversal — armonizando modelos de datos, diseñando módulos compartidos y eliminando bloqueos técnicos. En Sygris reconstruí el modelo de entidad central reduciendo tiempos de carga en un 83%.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "Python · Node.js/NestJS (OOP) · React · PostgreSQL · cross-cutting architecture · data model design", val_es: "Python · Node.js/NestJS (OOP) · React · PostgreSQL · Arquitectura transversal · Diseño de modelos de datos" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Cross-cutting architecture track record + entity model redesign expertise + entrepreneurial IC mindset", val_es: "Historial en arquitectura transversal + experiencia en rediseño de modelos de entidad + mentalidad IC emprendedora" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Fullstack Software Engineer · Madrid (flexible)", val_es: "Ingeniero Fullstack · Madrid (flexible)" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j101 — NAIIAN / Founding Software Engineer
+  "2ddc749a-2659-4b53-8f6b-3d29028a26bd": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Founding Software Engineer · Full-Stack & AI" },
+    summary: "Full-stack generalist with 15 years of production B2B/B2G SaaS experience — the 'depth plus breadth' profile a founding engineer role demands. I've built data ingestion and normalization pipelines, complex multi-dimensional data platforms, and production AI agent systems (8-agent Claude API orchestration). Strong judgment on APIs, data models, permissions, and observability. TypeScript/Node.js/NestJS backend, React/Next.js frontend, PostgreSQL/Aurora-compatible, Terraform on GCP.",
+    summaryEs: "Generalista full-stack con 15 años en SaaS B2B/B2G en producción — el perfil de 'profundidad más amplitud' que demanda un rol de ingeniero fundador. Pipelines de ingesta y normalización de datos, plataformas de datos multidimensionales y sistemas de agentes de IA en producción.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "TypeScript · Node.js · NestJS · React · Next.js · PostgreSQL · Python · Terraform · AI agents (LangGraph-equiv)", val_es: "TypeScript · Node.js · NestJS · React · Next.js · PostgreSQL · Python · Terraform · Agentes de IA" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Founding engineer instinct — full-stack, data pipelines, AI agents, infrastructure, production SaaS from zero", val_es: "Instinto de ingeniero fundador — full-stack, pipelines de datos, agentes de IA, infraestructura, SaaS en producción desde cero" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Founding Software Engineer · Madrid (onsite)", val_es: "Ingeniero Fundador · Madrid (presencial)" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j102 — Accenture España / Forward Deployed Engineer - AI Platforms
+  "0aafbc18-0ab5-4788-8df3-584930d5cd7a": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Forward Deployed Engineer · AI Platform Deployment" },
+    summary: "Engineer with 15 years of production experience deploying and operationalizing AI systems — specifically on the Anthropic/Claude API stack, one of the platforms Accenture's FDE team works with. I designed and built a production 8-agent agentic system that delivered measurable business outcomes. I bring cloud-native expertise (GCP, Terraform, Docker, Kubernetes), production CI/CD and monitoring, and the ability to communicate business impact clearly to executive stakeholders.",
+    summaryEs: "Ingeniero con 15 años desplegando y operacionalizando sistemas de IA — específicamente en el stack Anthropic/Claude API. Diseñé y construí un sistema de 8 agentes en producción con resultados de negocio medibles. Experto en cloud-native (GCP, Terraform, Docker, Kubernetes).",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "Anthropic API · cloud-native · microservices · Terraform · Docker · Kubernetes · CI/CD · Grafana · Sentry", val_es: "Anthropic API · cloud-native · microservicios · Terraform · Docker · Kubernetes · CI/CD · Grafana · Sentry" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Anthropic production deployment depth + business impact quantification + enterprise technical communication", val_es: "Profundidad en despliegue Anthropic en producción + cuantificación de impacto de negocio + comunicación técnica empresarial" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Forward Deployed Engineer · AI Platforms · Madrid", val_es: "Forward Deployed Engineer · Plataformas de IA · Madrid" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j103 — Mercedes-Benz / Software Architect / Tech Lead
+  "1ca9a0df-ae2c-450e-9bc5-4e0e669e8bcf": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Software Architect / Tech Lead · TypeScript & React" },
+    summary: "Software architect and tech lead with 15 years as the technical reference for engineering teams — designing system architecture, driving code quality, and mentoring engineers. At Sygris I was the sole architectural decision-maker for a greenfield SaaS platform built on React, TypeScript, Node.js, REST APIs, and PostgreSQL — the exact stack Mercedes-Benz uses. I bring full-stack depth and team leadership experience for a hybrid, Agile technical reference role.",
+    summaryEs: "Arquitecto de software y tech lead con 15 años como referencia técnica para equipos de ingeniería — diseño de arquitectura, calidad de código y mentoría. En Sygris fui el único tomador de decisiones arquitectónicas para una plataforma SaaS desde cero.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "TypeScript · React · Node.js/NestJS · REST APIs · PostgreSQL · Redis · Docker · CI/CD", val_es: "TypeScript · React · Node.js/NestJS · REST APIs · PostgreSQL · Redis · Docker · CI/CD" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Greenfield SaaS architecture track record + full-stack depth + technical reference leadership + code review", val_es: "Historial de arquitectura SaaS desde cero + profundidad full-stack + liderazgo técnico de referencia + revisión de código" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Software Architect / Tech Lead · Madrid (hybrid)", val_es: "Arquitecto de Software / Tech Lead · Madrid (híbrido)" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j104 — Palantir Technologies / Forward Deployed Software Engineer
+  "d87df9f8-923e-467d-a6e6-fc1bce116541": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Forward Deployed Software Engineer" },
+    summary: "Engineer with 15 years of production experience owning end-to-end technical execution in customer-facing environments — architecture discussions through production custom applications and executive strategy. I write TypeScript and Python, build custom web applications on demand, and communicate technical system design clearly to both engineering and non-technical audiences. Complex data problems — transaction systems, document pipelines, financial analytics — are my domain. Native Spanish.",
+    summaryEs: "Ingeniero con 15 años de ejecución técnica E2E en entornos de cara al cliente — desde discusiones de arquitectura hasta aplicaciones web personalizadas y estrategia ejecutiva. Escribo TypeScript y Python, construyo apps web a medida y comunico diseño de sistemas a audiencias técnicas y no técnicas. Español nativo.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "TypeScript · Python · React · complex data systems · end-to-end delivery · executive communication · Spanish", val_es: "TypeScript · Python · React · sistemas de datos complejos · entrega E2E · comunicación ejecutiva · Español" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "FDE execution track record + complex data problem ownership + bilingual (ES/EN) + custom app delivery speed", val_es: "Historial de ejecución FDE + ownership de problemas de datos complejos + bilingüe + velocidad de entrega de apps a medida" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Forward Deployed Software Engineer · Madrid + travel", val_es: "Forward Deployed Software Engineer · Madrid + viajes" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j105 — Indra Group / Front-End Architecture Lead
+  "6ff8b6ed-7fd8-4e9f-9b44-bda910be0bdb": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Front-End Architecture Lead · Angular & TypeScript" },
+    summary: "Frontend architect with 15 years of professional experience — including 10 years hands-on with Angular. I've served as the technical architecture lead for frontend teams at three consecutive companies: defining SPA architecture, Angular/RxJS patterns, code quality standards, and DX, while collaborating with backend, QA, and UX. At Sygris I designed the frontend architecture of a complex low-code ESG platform from scratch, built a proprietary state management system, and reduced portal load times 83%.",
+    summaryEs: "Arquitecto frontend con 15 años de experiencia profesional — incluyendo 10 años con Angular. He sido el líder de arquitectura técnica frontend en tres empresas consecutivas: definiendo arquitectura SPA, patrones Angular/RxJS, estándares de calidad y DX.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "Angular/AngularJS (10yr expert) · TypeScript · RxJS · SPA architecture · Angular CLI · REST APIs · HTML/CSS", val_es: "Angular/AngularJS (10 años, experto) · TypeScript · RxJS · Arquitectura SPA · Angular CLI · REST APIs" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "10yr Angular expertise + 3 companies as frontend architecture lead + custom state engine from scratch", val_es: "10 años de expertise en Angular + 3 empresas como líder de arquitectura frontend + motor de estado desde cero" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Front-End Architecture Lead · Madrid (hybrid)", val_es: "Líder de Arquitectura Front-End · Madrid (híbrido)" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j106 — Moove Cars / Senior SE Tech Lead
+  "6d17456b-48d7-48c1-b261-52cf486046ad": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Senior SE Tech Lead · Architecture & GenAI" },
+    summary: "Tech lead and senior engineer with 15 years of production experience in technical architecture, Agile team leadership, React/TypeScript frontend, and applied AI/GenAI. I've designed and built Kubernetes-orchestrated microservice architectures and shipped a production 8-agent GenAI system. Background includes 6 years of C# from earlier enterprise roles. Primary backend is Node.js/TypeScript; the Azure/.NET 8 stack is a gap but architecturally close.",
+    summaryEs: "Tech lead e ingeniero senior con 15 años en arquitectura técnica, liderazgo Agile, frontend React/TypeScript y GenAI aplicado. He diseñado arquitecturas de microservicios en Kubernetes y lanzado un sistema de 8 agentes GenAI en producción.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "React · TypeScript · Kubernetes · Docker · Terraform · GenAI (8-agent prod) · C# background · Agile leadership", val_es: "React · TypeScript · Kubernetes · Docker · Terraform · GenAI (8 agentes) · Background en C# · Liderazgo Agile" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "GenAI production system + tech architecture leadership + Kubernetes microservices + C# foundation for .NET onboarding", val_es: "Sistema GenAI en producción + liderazgo de arquitectura técnica + microservicios en Kubernetes + base en C# para .NET" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Senior SE Tech Lead · Madrid (hybrid)", val_es: "Senior SE Tech Lead · Madrid (híbrido)" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j107 — Aircall / Front End / Fullstack Engineer, Messaging Team
+  "d9f53b70-67ca-4c53-a5e5-9a471fe8a758": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Frontend / Fullstack Engineer · Event-Driven Systems" },
+    summary: "Fullstack engineer with 15 years of production experience in React, TypeScript, and Node.js — with event-driven, real-time architecture experience. At Invofox I designed event-driven document processing pipelines (GCP Pub/Sub) and built real-time operational dashboards. Strong Node.js/NestJS backend (8yr), React/TypeScript frontend, and cloud-native GCP experience equivalent to AWS Lambda/AppSync patterns. Fluent English.",
+    summaryEs: "Ingeniero fullstack con 15 años en React, TypeScript y Node.js — con experiencia en arquitecturas event-driven y en tiempo real. En Invofox diseñé pipelines de procesamiento event-driven y dashboards operacionales en tiempo real.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "React · TypeScript · Node.js · event-driven (GCP Pub/Sub) · PostgreSQL · real-time systems · CI/CD", val_es: "React · TypeScript · Node.js · Event-driven (GCP Pub/Sub) · PostgreSQL · Sistemas en tiempo real · CI/CD" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Event-driven architecture experience + React/TS/Node.js depth + real-time dashboard delivery + 8yr backend", val_es: "Experiencia en arquitectura event-driven + profundidad React/TS/Node.js + dashboards en tiempo real + 8 años de backend" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Frontend / Fullstack Engineer · Remote", val_es: "Ingeniero Frontend / Fullstack · Remoto" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j108 — Yuno / Staff Engineer - Client Experience
+  "d0142c51-7341-4c30-9fca-adcadc4105d1": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Staff Engineer · Fintech & Distributed Systems" },
+    summary: "Staff engineer with 15 years of production experience in fintech platforms, distributed systems, and scalable backend architecture — currently working on banking infrastructure at Embat. I bring staff-level system design judgment, Kubernetes microservices, PostgreSQL and Redis depth, and demonstrated leadership in complex financial domain engineering. Primary backend is Node.js/TypeScript; Go/Kotlin is a gap but distributed systems patterns transfer directly.",
+    summaryEs: "Ingeniero Staff con 15 años en plataformas fintech, sistemas distribuidos y arquitectura backend escalable — actualmente en infraestructura bancaria en Embat. Traigo juicio de diseño de sistemas a nivel Staff, microservicios en Kubernetes, PostgreSQL y Redis.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "Node.js/NestJS · TypeScript · Kubernetes · PostgreSQL · Redis · Docker · Terraform · fintech domain", val_es: "Node.js/NestJS · TypeScript · Kubernetes · PostgreSQL · Redis · Docker · Terraform · Dominio fintech" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Staff-level distributed systems + fintech domain depth + Kubernetes + current banking infrastructure experience", val_es: "Sistemas distribuidos a nivel Staff + profundidad en dominio fintech + Kubernetes + experiencia actual en infraestructura bancaria" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Staff Engineer · Fintech · Remote (Madrid)", val_es: "Staff Engineer · Fintech · Remoto (Madrid)" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j109 — Kraken / Senior Software Engineer - Agent Systems
+  "0791e634-e6d2-46af-b3c0-701ab3184494": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Senior Software Engineer · Agent Systems & LLMs" },
+    summary: "Engineer with 15 years of production experience who has built and shipped multi-agent AI systems from 0→1 in real operational environments. At Invofox (YC S22) I designed and built 'The Hive Mind': an 8-agent production system running LLMs in live inference pipelines — DB reporting, infrastructure monitoring, failure detection — with full orchestration, failure mode handling, and observability. I own the full systems-thinking dimension for agent architectures.",
+    summaryEs: "Ingeniero con 15 años que ha construido y lanzado sistemas multi-agente de IA desde 0→1 en entornos operativos reales. En Invofox diseñé un sistema de 8 agentes con LLMs en pipelines de inferencia en vivo, con orquestación completa y observabilidad.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "LLMs in production · multi-agent orchestration · inference pipelines · backend services · observability · 0→1", val_es: "LLMs en producción · Orquestación multi-agente · Pipelines de inferencia · Servicios backend · Observabilidad · 0→1" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "8-agent production system from 0→1 + orchestration + failure modes + LLM benchmarking + internal API integration", val_es: "Sistema de 8 agentes desde 0→1 + orquestación + modos de fallo + benchmarking de LLMs + integración de APIs internas" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Senior Software Engineer · Agent Systems · Madrid", val_es: "Senior Software Engineer · Sistemas de Agentes · Madrid" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j110 — Super / Staff Software Engineer
+  "44d7d358-2dd9-4aa3-a4f7-9fc342942653": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Staff Software Engineer · Distributed Systems" },
+    summary: "Staff engineer with 15 years of production experience in distributed systems and cross-team technical initiatives — with fintech background at Embat. I've led cross-cutting improvements affecting dozens of services: API contract redesigns, service decompositions, infrastructure cost reductions (30%). I work with senior engineering leadership on strategic platform planning. Primary backend is Node.js/TypeScript; Go/Erlang is a learning gap but distributed systems fundamentals are native.",
+    summaryEs: "Ingeniero Staff con 15 años en sistemas distribuidos e iniciativas técnicas transversales — con background fintech en Embat. He liderado mejoras transversales que afectan a docenas de servicios y trabajo con liderazgo de ingeniería senior.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "TypeScript · Node.js · Kubernetes · Docker · Terraform · GCP · distributed systems · cross-team initiatives", val_es: "TypeScript · Node.js · Kubernetes · Docker · Terraform · GCP · Sistemas distribuidos · Iniciativas transversales" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Staff distributed systems track record + cross-team initiative leadership + fintech context + Go willingness", val_es: "Historial Staff en sistemas distribuidos + liderazgo de iniciativas transversales + contexto fintech + disposición para Go" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Staff Software Engineer · Distributed Systems · Madrid", val_es: "Staff Software Engineer · Sistemas Distribuidos · Madrid" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j111 — Green Eagle Solutions / Staff Software Engineer
+  "5c5e3be9-52e5-41f0-ac17-f219c308461c": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Staff Software Engineer · Platform Architecture" },
+    summary: "Staff-level individual contributor with 15 years solving cross-cutting technical challenges, defining engineering standards, and guiding AI-assisted engineering. Deep Angular expertise (10yr), Kubernetes and Terraform hands-on, PostgreSQL and Redis depth, and a genuine track record as an AI-assisted engineering practitioner (8-agent production system). C# background from earlier roles (6yr) makes the .NET primary stack approachable despite Node.js being my current backend home.",
+    summaryEs: "Contribuidor individual Staff con 15 años resolviendo desafíos técnicos transversales, definiendo estándares de ingeniería y guiando la ingeniería asistida por IA. Experto en Angular (10 años), Kubernetes, Terraform, PostgreSQL y Redis.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "Angular (10yr expert) · TypeScript · Terraform · Kubernetes · PostgreSQL · Redis · AI-assisted eng · C# background", val_es: "Angular (10 años, experto) · TypeScript · Terraform · Kubernetes · PostgreSQL · Redis · Ingeniería asistida por IA" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Angular expert + platform architecture IC + AI-assisted engineering practitioner + engineering standards leadership", val_es: "Experto en Angular + IC en arquitectura de plataforma + practicante de ingeniería asistida por IA + liderazgo de estándares" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Staff Software Engineer · Madrid (hybrid)", val_es: "Staff Software Engineer · Madrid (híbrido)" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j112 — Xe.com / Team Lead Software Engineer
+  "54b93893-e61f-4d86-aa8b-14678abcb7ca": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Team Lead Software Engineer · Payments & API Platform" },
+    summary: "Technical team lead with 15 years of production experience in platform API layers, partner integrations, and end-to-end service delivery. Currently working in banking infrastructure and payment connectivity at Embat. I set technical direction, own delivery, mentor engineers, and lead cross-team initiatives. Backend is Node.js/TypeScript — C# background from earlier roles makes .NET/.NET onboarding realistic. React is primary frontend (equivalent to Vue).",
+    summaryEs: "Tech lead con 15 años en capas de API de plataforma, integraciones con socios y entrega de servicios E2E. Actualmente en infraestructura bancaria y conectividad de pagos en Embat. Definir dirección técnica, ownership de entrega y mentoría de ingenieros.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "Node.js · TypeScript · React · REST APIs · partner integrations · C# background · AWS-equivalent patterns", val_es: "Node.js · TypeScript · React · REST APIs · Integraciones con socios · Background C# · Patrones AWS-equivalentes" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Technical lead + partner API integration track record + payments domain + cross-team initiative leadership", val_es: "Tech lead + historial de integración de APIs de socios + dominio de pagos + liderazgo de iniciativas transversales" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Team Lead Software Engineer · Madrid (hybrid)", val_es: "Team Lead Software Engineer · Madrid (híbrido)" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j113 — Xe.com / Full Stack Software Engineer (Senior)
+  "abd15d0c-d78c-40db-b3e6-5004b2168932": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Senior Full Stack Software Engineer · Payments" },
+    summary: "Senior full-stack engineer with 15 years owning end-to-end technical solutions in payments-adjacent financial platforms. Currently building banking infrastructure at Embat; strong React frontend and Node.js/TypeScript backend. C# background from earlier enterprise roles (6yr). Regulated financial domain experience is current. Architecture decisions, end-to-end ownership, and mentoring are the core of how I work.",
+    summaryEs: "Ingeniero full-stack senior con 15 años en soluciones técnicas E2E en plataformas financieras adyacentes a pagos. Actualmente en infraestructura bancaria en Embat. Background en C# (6 años). Experiencia en dominio financiero regulado actual.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "React · Node.js · TypeScript · PostgreSQL · SQL · microservices · C# background · payments domain", val_es: "React · Node.js · TypeScript · PostgreSQL · SQL · Microservicios · Background C# · Dominio de pagos" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Current financial domain experience + end-to-end ownership + architecture decisions + C# foundation for .NET stack", val_es: "Experiencia actual en dominio financiero + ownership E2E + decisiones de arquitectura + base en C# para stack .NET" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Senior Full Stack Engineer · Madrid (hybrid)", val_es: "Ingeniero Full Stack Senior · Madrid (híbrido)" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j114 — Personio / Lead Full Stack Software Engineer
+  "b37f282e-a8d4-45f6-a08e-e41840fca3e3": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Lead Full Stack Software Engineer · SaaS Workflows" },
+    summary: "Lead full-stack engineer with 15 years building complex SaaS workflows end-to-end in React and Node.js — the exact stack Personio uses. I've built management interfaces for complex, multi-state business processes: financial document workflows, ESG data collection and approval flows, and banking transaction management. Genuine AI fluency: designed and built a production 8-agent AI system. Strong complex workflow experience, SaaS domain, and end-to-end delivery.",
+    summaryEs: "Ingeniero full-stack líder con 15 años construyendo flujos de trabajo SaaS complejos E2E en React y Node.js. He construido interfaces de gestión para procesos de negocio multi-estado: flujos de documentos financieros, aprobación de datos y gestión de transacciones bancarias.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "React · Node.js · TypeScript · NestJS · complex workflow UI · AI fluency (8-agent prod) · SaaS", val_es: "React · Node.js · TypeScript · NestJS · UI de flujos complejos · Fluidez en IA (8 agentes) · SaaS" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Complex SaaS workflow depth + React/Node.js expert + production AI + end-to-end payroll-adjacent delivery", val_es: "Profundidad en flujos de trabajo SaaS complejos + experto React/Node.js + IA en producción + entrega adyacente a nóminas" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Lead Full Stack Software Engineer · Madrid", val_es: "Lead Full Stack Software Engineer · Madrid" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j115 — Bending Spoons / Software Engineer
+  "4696b0f5-7d73-4442-a6d0-c669b4e4f311": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Software Engineer · Full-Stack Generalist & AI" },
+    summary: "Full-stack generalist with 15 years of production engineering across diverse stacks — TypeScript, JavaScript, Python, React, Node.js, Angular, GCP — with genuine end-to-end ownership and AI integrated throughout. At Invofox I worked in a small autonomous team with full ownership across backend, frontend, AI systems, and infrastructure. I've shipped 5× pipeline throughput, 30% cost reductions, and an 8-agent production AI system. High drive, strong reasoning, and professional English. Open to initial Milan onboarding.",
+    summaryEs: "Generalista full-stack con 15 años en producción a través de stacks diversos — TypeScript, JavaScript, Python, React, Node.js, Angular, GCP — con ownership E2E real e IA integrada. En Invofox trabajé en un equipo pequeño y autónomo con propiedad total.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "TypeScript · JavaScript · Python · React · Node.js · Angular · GCP · AI integrated · diverse stacks · autonomous teams", val_es: "TypeScript · JavaScript · Python · React · Node.js · Angular · GCP · IA integrada · stacks diversos · equipos autónomos" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Full-stack generalist + AI-native + 15yr track record of end-to-end ownership across diverse stacks and problem domains", val_es: "Generalista full-stack + AI-native + 15 años de ownership E2E a través de stacks y dominios de problema diversos" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Software Engineer · Remote (initial months Milan)", val_es: "Software Engineer · Remoto (meses iniciales en Milán)" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
 };
 
 export default jobs;
