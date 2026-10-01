@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback, useId } from 'react';
 import { Link } from 'react-router-dom';
 import { usePermissions } from '../../../../infrastructure/permissions/usePermissions.js';
 import { useAuth } from '../../../../infrastructure/auth/auth.repository.jsx';
@@ -208,6 +208,125 @@ function EditPanel({ job, canEdit, canDeleteCV, onSave, onCancel, onRefresh }) {
   );
 }
 
+// ─── actions menu (popover) ───────────────────────────────────────────────────
+
+const MENU_ITEM = {
+  display: 'block', width: '100%', padding: '9px 14px', border: 'none',
+  background: 'transparent', textAlign: 'left', fontSize: 13, cursor: 'pointer',
+  color: '#1C1917', borderBottom: '1px solid #F5F4F1',
+};
+const MENU_DANGER = { ...MENU_ITEM, color: '#DC2626', borderBottom: 'none' };
+const MENU_MUTED  = { ...MENU_ITEM, color: '#78716C' };
+
+function ActionsMenu({ job, isEditing, canEdit, onEdit, onArchive, onDelete }) {
+  const [open, setOpen] = useState(false);
+  const [confirm, setConfirm] = useState(null); // 'archive' | 'delete'
+  const ref = useRef(null);
+
+  useEffect(() => {
+    if (!open) return;
+    function handler(e) {
+      if (ref.current && !ref.current.contains(e.target)) { setOpen(false); setConfirm(null); }
+    }
+    document.addEventListener('mousedown', handler);
+    return () => document.removeEventListener('mousedown', handler);
+  }, [open]);
+
+  function close() { setOpen(false); setConfirm(null); }
+
+  return (
+    <div style={{ position: 'relative', display: 'inline-block' }} ref={ref}>
+      <button
+        onClick={() => { setOpen(o => !o); setConfirm(null); }}
+        style={{
+          padding: '5px 10px', borderRadius: 6, border: '1px solid #E7E5E0',
+          background: open ? '#1C1917' : '#fff', color: open ? '#fff' : '#57534E',
+          fontSize: 13, cursor: 'pointer', lineHeight: 1, fontWeight: 700,
+          letterSpacing: 1,
+        }}
+        title="Actions"
+      >
+        ···
+      </button>
+
+      {open && (
+        <div style={{
+          position: 'absolute', right: 0, top: 'calc(100% + 4px)',
+          background: '#fff', border: '1px solid #E7E5E0', borderRadius: 8,
+          boxShadow: '0 4px 16px rgba(0,0,0,0.10)', zIndex: 200, minWidth: 160,
+          overflow: 'hidden',
+        }}>
+          {confirm === null && (
+            <>
+              <button
+                onClick={() => { onEdit(); close(); }}
+                style={MENU_ITEM}
+                onMouseEnter={e => e.currentTarget.style.background = '#FAFAF7'}
+                onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
+              >
+                {isEditing ? 'Close edit' : 'Edit'}
+              </button>
+              {canEdit && job.status !== 'archived' && (
+                <button
+                  onClick={() => setConfirm('archive')}
+                  style={MENU_MUTED}
+                  onMouseEnter={e => e.currentTarget.style.background = '#FAFAF7'}
+                  onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
+                >
+                  Archive
+                </button>
+              )}
+              {canEdit && (
+                <button
+                  onClick={() => setConfirm('delete')}
+                  style={MENU_DANGER}
+                  onMouseEnter={e => e.currentTarget.style.background = '#FEF2F2'}
+                  onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
+                >
+                  Delete
+                </button>
+              )}
+            </>
+          )}
+
+          {confirm === 'archive' && (
+            <div style={{ padding: '10px 14px' }}>
+              <div style={{ fontSize: 12, color: '#57534E', marginBottom: 10 }}>Archive this job?</div>
+              <div style={{ display: 'flex', gap: 6 }}>
+                <button onClick={() => { onArchive(); close(); }}
+                  style={{ padding: '5px 12px', borderRadius: 5, border: 'none', background: '#FEF3C7', color: '#B45309', fontSize: 12, fontWeight: 600, cursor: 'pointer' }}>
+                  Archive
+                </button>
+                <button onClick={() => setConfirm(null)}
+                  style={{ padding: '5px 10px', borderRadius: 5, border: '1px solid #E7E5E0', background: '#fff', fontSize: 12, cursor: 'pointer' }}>
+                  Cancel
+                </button>
+              </div>
+            </div>
+          )}
+
+          {confirm === 'delete' && (
+            <div style={{ padding: '10px 14px' }}>
+              <div style={{ fontSize: 12, color: '#DC2626', fontWeight: 600, marginBottom: 4 }}>Delete permanently?</div>
+              <div style={{ fontSize: 11, color: '#78716C', marginBottom: 10 }}>This will also remove the CV from storage.</div>
+              <div style={{ display: 'flex', gap: 6 }}>
+                <button onClick={() => { onDelete(); close(); }}
+                  style={{ padding: '5px 12px', borderRadius: 5, border: 'none', background: '#DC2626', color: '#fff', fontSize: 12, fontWeight: 600, cursor: 'pointer' }}>
+                  Delete
+                </button>
+                <button onClick={() => setConfirm(null)}
+                  style={{ padding: '5px 10px', borderRadius: 5, border: '1px solid #E7E5E0', background: '#fff', fontSize: 12, cursor: 'pointer' }}>
+                  Cancel
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
 // ─── style constants ──────────────────────────────────────────────────────────
 
 const LBL = { fontSize: 10, color: '#A8A29E', fontFamily: "'JetBrains Mono', monospace", letterSpacing: 1 };
@@ -243,10 +362,8 @@ export default function JobsPage() {
   const [page, setPage]               = useState(0);
   const [search, setSearch]           = useState('');
   const [filterStatus, setFilterStatus] = useState('');
-  const [editingId, setEditingId]     = useState(null);
-  const [confirmArchive, setConfirmArchive] = useState(null);
-  const [confirmDelete, setConfirmDelete]   = useState(null);
-  const [loading, setLoading]         = useState(true);
+  const [editingId, setEditingId] = useState(null);
+  const [loading, setLoading]     = useState(true);
   const [countsLoaded, setCountsLoaded] = useState(false);
 
   const debouncedSearch = useDebounce(search, 300);
@@ -282,8 +399,6 @@ export default function JobsPage() {
   useEffect(() => {
     setPage(0);
     setEditingId(null);
-    setConfirmArchive(null);
-    setConfirmDelete(null);
   }, [debouncedSearch, filterStatus, ownerFilter]);
 
   async function handleSave(jobId, fields) {
@@ -294,13 +409,11 @@ export default function JobsPage() {
 
   async function handleArchive(jobId) {
     await archiveJob(jobId);
-    setConfirmArchive(null);
     refresh();
   }
 
   async function handleDelete(jobId) {
     await deleteJob(jobId);
-    setConfirmDelete(null);
     refresh();
   }
 
@@ -328,7 +441,7 @@ export default function JobsPage() {
           <Link to="/admin" style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: '#A8A29E', letterSpacing: 2, textDecoration: 'none' }}>← ADMIN</Link>
           <span style={{ color: '#D6D3D1' }}>/</span>
           <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: '#1C1917', letterSpacing: 2 }}>JOBS</span>
-          {isBackoffice && owners.length > 1 && (
+          {isBackoffice && (
             <>
               <span style={{ color: '#D6D3D1' }}>/</span>
               <select value={ownerFilter} onChange={e => setOwnerFilter(e.target.value)}
@@ -394,7 +507,7 @@ export default function JobsPage() {
                   <th style={{ ...TH, width: 110 }}>STATUS</th>
                   <th style={{ ...TH, width: 110 }}>SALARY</th>
                   <th style={{ ...TH, width: 140 }}>LINKS</th>
-                  <th style={{ ...TH, width: 180 }}>ACTIONS</th>
+                  <th style={{ ...TH, width: 52 }}></th>
                 </tr>
               </thead>
               <tbody>
@@ -432,56 +545,15 @@ export default function JobsPage() {
                           )}
                         </div>
                       </td>
-                      <td style={TD}>
-                        <div style={{ display: 'flex', gap: 5, flexWrap: 'wrap' }}>
-                          {/* Edit */}
-                          <button onClick={() => setEditingId(id => id === job.job_id ? null : job.job_id)}
-                            style={{ padding: '4px 9px', borderRadius: 5, border: '1px solid #E7E5E0', background: editingId === job.job_id ? '#1C1917' : '#fff', color: editingId === job.job_id ? '#fff' : '#57534E', fontSize: 11, cursor: 'pointer', fontWeight: editingId === job.job_id ? 600 : 400 }}>
-                            {editingId === job.job_id ? 'Close' : 'Edit'}
-                          </button>
-
-                          {/* Archive */}
-                          {canEdit && job.status !== 'archived' && (
-                            confirmArchive === job.job_id ? (
-                              <>
-                                <button onClick={() => handleArchive(job.job_id)}
-                                  style={{ padding: '4px 9px', borderRadius: 5, border: 'none', background: '#FEF3C7', color: '#B45309', fontSize: 11, fontWeight: 600, cursor: 'pointer' }}>
-                                  Archive?
-                                </button>
-                                <button onClick={() => setConfirmArchive(null)}
-                                  style={{ padding: '4px 7px', borderRadius: 5, border: '1px solid #E7E5E0', background: '#fff', fontSize: 11, cursor: 'pointer' }}>
-                                  ✕
-                                </button>
-                              </>
-                            ) : (
-                              <button onClick={() => setConfirmArchive(job.job_id)}
-                                style={{ padding: '4px 9px', borderRadius: 5, border: '1px solid #E7E5E0', background: '#fff', color: '#78716C', fontSize: 11, cursor: 'pointer' }}>
-                                Archive
-                              </button>
-                            )
-                          )}
-
-                          {/* Delete */}
-                          {canEdit && (
-                            confirmDelete === job.job_id ? (
-                              <>
-                                <button onClick={() => handleDelete(job.job_id)}
-                                  style={{ padding: '4px 9px', borderRadius: 5, border: 'none', background: '#DC2626', color: '#fff', fontSize: 11, fontWeight: 600, cursor: 'pointer' }}>
-                                  Delete?
-                                </button>
-                                <button onClick={() => setConfirmDelete(null)}
-                                  style={{ padding: '4px 7px', borderRadius: 5, border: '1px solid #E7E5E0', background: '#fff', fontSize: 11, cursor: 'pointer' }}>
-                                  ✕
-                                </button>
-                              </>
-                            ) : (
-                              <button onClick={() => setConfirmDelete(job.job_id)}
-                                style={{ padding: '4px 9px', borderRadius: 5, border: 'none', background: '#FEE2E2', color: '#DC2626', fontSize: 11, fontWeight: 600, cursor: 'pointer' }}>
-                                Delete
-                              </button>
-                            )
-                          )}
-                        </div>
+                      <td style={{ ...TD, textAlign: 'right' }}>
+                        <ActionsMenu
+                          job={job}
+                          isEditing={editingId === job.job_id}
+                          canEdit={canEdit}
+                          onEdit={() => setEditingId(id => id === job.job_id ? null : job.job_id)}
+                          onArchive={() => handleArchive(job.job_id)}
+                          onDelete={() => handleDelete(job.job_id)}
+                        />
                       </td>
                     </tr>
 
