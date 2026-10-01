@@ -2,7 +2,7 @@
 // Source of truth consumed by TAILOR when generating CV PDFs.
 // When a new job is added: generate a UUID, add to registry + jobs/index.js, push.
 
-const BASE_URL = "https://profile.nepot-ai.com";
+const BASE_URL = "https://profile.nepot-ai.com/profile";
 
 const registry = [
   {
