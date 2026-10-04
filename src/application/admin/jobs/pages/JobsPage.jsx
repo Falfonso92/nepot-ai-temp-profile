@@ -86,6 +86,56 @@ function IconDownload() {
   );
 }
 
+function IconUpload() {
+  return (
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+      <polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/>
+    </svg>
+  );
+}
+
+function UploadBtn({ jpId, onDone }) {
+  const [uploading, setUploading] = useState(false);
+  const [show, setShow] = useState(false);
+  const ref = useRef(null);
+
+  async function handleChange(e) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    setUploading(true);
+    try { await uploadCV(jpId, file); onDone(); }
+    catch (err) { alert('Upload failed: ' + err.message); }
+    finally { setUploading(false); e.target.value = ''; }
+  }
+
+  return (
+    <div style={{ position: 'relative', display: 'inline-flex' }}
+      onMouseEnter={() => setShow(true)} onMouseLeave={() => setShow(false)}>
+      <input type="file" accept=".pdf" ref={ref} style={{ display: 'none' }} onChange={handleChange} />
+      <button onClick={() => ref.current?.click()} disabled={uploading} style={{
+        display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+        width: 26, height: 26, borderRadius: 5, flexShrink: 0,
+        border: '1px dashed #C4B5A0', background: uploading ? '#E7E5E0' : '#FFFBF5',
+        color: '#A8A29E', cursor: uploading ? 'wait' : 'pointer',
+      }}>
+        {uploading ? 'â€¦' : <IconUpload />}
+      </button>
+      {show && !uploading && (
+        <div style={{
+          position: 'absolute', bottom: 'calc(100% + 5px)', left: '50%',
+          transform: 'translateX(-50%)', background: '#1C1917', color: '#F5F4F1',
+          fontSize: 10, fontFamily: "'Inter', sans-serif", fontWeight: 500,
+          padding: '3px 7px', borderRadius: 4, whiteSpace: 'nowrap',
+          pointerEvents: 'none', zIndex: 200, boxShadow: '0 2px 6px rgba(0,0,0,0.18)',
+        }}>
+          Upload CV (PDF)
+        </div>
+      )}
+    </div>
+  );
+}
+
 async function downloadFile(url, filename) {
   try {
     const res = await fetch(url);
@@ -569,17 +619,16 @@ export default function JobsPage({ ownerId, backLink = '/admin', backLabel = 'â†
                       </td>
                       <td style={TD}>
                         <div style={{ display: 'flex', flexDirection: 'row', gap: 4, alignItems: 'center' }}>
-                          {job.offer_url && (
-                            <IconBtn href={job.offer_url} icon={<IconLink />} bg="#F5F4F1" tooltip="Job offer" target="_blank" rel="noreferrer" />
-                          )}
                           {job.guid && (
                             <IconBtn href={`/cvs/${job.guid}`} icon={<IconCV />} bg="#EDE9FE" tooltip="View CV profile" target="_blank" rel="noreferrer" />
                           )}
-                          {job.cv_path && (
+                          {job.cv_path ? (
                             <IconBtn
                               onClick={() => downloadFile(getCVUrl(job.cv_path), `${job.company ?? 'cv'}-${job.job_id}.pdf`)}
                               icon={<IconDownload />} bg="#DCFCE7" tooltip="Download CV (PDF)"
                             />
+                          ) : canEdit && (
+                            <UploadBtn jpId={job.jp_id} onDone={refresh} />
                           )}
                         </div>
                       </td>
