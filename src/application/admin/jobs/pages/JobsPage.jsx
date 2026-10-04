@@ -23,17 +23,83 @@ function StatusBadge({ value }) {
   );
 }
 
-function ExternalLink({ href, label, bg }) {
-  if (!href) return null;
+function Tooltip({ text, children }) {
+  const [show, setShow] = useState(false);
   return (
-    <a href={href} target="_blank" rel="noreferrer" style={{
-      fontSize: 11, color: '#1C1917', background: bg ?? '#F5F4F1',
-      padding: '2px 7px', borderRadius: 4, textDecoration: 'none',
-      display: 'inline-block', whiteSpace: 'nowrap',
-    }}>
-      {label} ↗
-    </a>
+    <div style={{ position: 'relative', display: 'inline-flex' }}
+      onMouseEnter={() => setShow(true)} onMouseLeave={() => setShow(false)}>
+      {children}
+      {show && (
+        <div style={{
+          position: 'absolute', bottom: 'calc(100% + 5px)', left: '50%',
+          transform: 'translateX(-50%)', background: '#1C1917', color: '#F5F4F1',
+          fontSize: 10, fontFamily: "'Inter', sans-serif", fontWeight: 500,
+          padding: '3px 7px', borderRadius: 4, whiteSpace: 'nowrap',
+          pointerEvents: 'none', zIndex: 200,
+          boxShadow: '0 2px 6px rgba(0,0,0,0.18)',
+        }}>
+          {text}
+        </div>
+      )}
+    </div>
   );
+}
+
+function IconBtn({ href, onClick, icon, bg, tooltip, target, rel, download }) {
+  const s = {
+    display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+    width: 26, height: 26, borderRadius: 5, border: 'none', flexShrink: 0,
+    background: bg ?? '#F5F4F1', color: '#1C1917', cursor: 'pointer',
+    textDecoration: 'none', transition: 'opacity 0.1s',
+  };
+  const inner = href
+    ? <a href={href} target={target} rel={rel} style={s} download={download}>{icon}</a>
+    : <button onClick={onClick} style={s}>{icon}</button>;
+  return <Tooltip text={tooltip}>{inner}</Tooltip>;
+}
+
+function IconLink() {
+  return (
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+      <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+    </svg>
+  );
+}
+
+function IconCV() {
+  return (
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+      <polyline points="14 2 14 8 20 8"/>
+      <line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
+    </svg>
+  );
+}
+
+function IconDownload() {
+  return (
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+      <polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+    </svg>
+  );
+}
+
+async function downloadFile(url, filename) {
+  try {
+    const res = await fetch(url);
+    const blob = await res.blob();
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(a.href);
+  } catch {
+    window.open(url, '_blank');
+  }
 }
 
 function useDebounce(value, delay) {
@@ -139,10 +205,10 @@ function EditPanel({ job, canEdit, canDeleteCV, onSave, onCancel, onRefresh }) {
           <label style={LBL}>CV</label>
           <div style={{ display: 'flex', gap: 6, alignItems: 'center', flexWrap: 'wrap' }}>
             {cvUrl && (
-              <a href={cvUrl} target="_blank" rel="noreferrer"
-                style={{ fontSize: 12, color: '#1C1917', background: '#DCFCE7', padding: '5px 10px', borderRadius: 5, textDecoration: 'none', fontWeight: 600 }}>
-                Download ↓
-              </a>
+              <IconBtn
+                onClick={() => downloadFile(cvUrl, `${job.company ?? 'cv'}-${job.job_id}.pdf`)}
+                icon={<IconDownload />} bg="#DCFCE7" tooltip="Download CV (PDF)"
+              />
             )}
             {canEdit && (
               <>
@@ -502,19 +568,18 @@ export default function JobsPage({ ownerId, backLink = '/admin', backLabel = '�
                         {job.salary || '—'}
                       </td>
                       <td style={TD}>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
-                          {job.offer_url && <ExternalLink href={job.offer_url} label="Offer" />}
+                        <div style={{ display: 'flex', flexDirection: 'row', gap: 4, alignItems: 'center' }}>
+                          {job.offer_url && (
+                            <IconBtn href={job.offer_url} icon={<IconLink />} bg="#F5F4F1" tooltip="Job offer" target="_blank" rel="noreferrer" />
+                          )}
                           {job.guid && (
-                            <Link to={`/cvs/${job.guid}`} target="_blank"
-                              style={{ fontSize: 11, color: '#1C1917', background: '#EDE9FE', padding: '2px 7px', borderRadius: 4, textDecoration: 'none', display: 'inline-block' }}>
-                              CV ↗
-                            </Link>
+                            <IconBtn href={`/cvs/${job.guid}`} icon={<IconCV />} bg="#EDE9FE" tooltip="View CV profile" target="_blank" rel="noreferrer" />
                           )}
                           {job.cv_path && (
-                            <a href={getCVUrl(job.cv_path)} target="_blank" rel="noreferrer"
-                              style={{ fontSize: 11, color: '#1C1917', background: '#DCFCE7', padding: '2px 7px', borderRadius: 4, textDecoration: 'none', display: 'inline-block' }}>
-                              PDF ↓
-                            </a>
+                            <IconBtn
+                              onClick={() => downloadFile(getCVUrl(job.cv_path), `${job.company ?? 'cv'}-${job.job_id}.pdf`)}
+                              icon={<IconDownload />} bg="#DCFCE7" tooltip="Download CV (PDF)"
+                            />
                           )}
                         </div>
                       </td>
