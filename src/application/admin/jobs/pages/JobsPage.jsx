@@ -330,12 +330,17 @@ const MENU_MUTED  = { ...MENU_ITEM, color: '#78716C' };
 function ActionsMenu({ job, isEditing, canEdit, onEdit, onArchive, onDelete }) {
   const [open, setOpen]       = useState(false);
   const [confirm, setConfirm] = useState(null);
-  const ref = useRef(null);
+  const [pos, setPos]         = useState({ top: 0, right: 0 });
+  const btnRef  = useRef(null);
+  const menuRef = useRef(null);
 
   useEffect(() => {
     if (!open) return;
     function handler(e) {
-      if (ref.current && !ref.current.contains(e.target)) { setOpen(false); setConfirm(null); }
+      if (
+        menuRef.current && !menuRef.current.contains(e.target) &&
+        btnRef.current  && !btnRef.current.contains(e.target)
+      ) { setOpen(false); setConfirm(null); }
     }
     document.addEventListener('mousedown', handler);
     return () => document.removeEventListener('mousedown', handler);
@@ -343,10 +348,20 @@ function ActionsMenu({ job, isEditing, canEdit, onEdit, onArchive, onDelete }) {
 
   function close() { setOpen(false); setConfirm(null); }
 
+  function toggle() {
+    if (!open && btnRef.current) {
+      const r = btnRef.current.getBoundingClientRect();
+      setPos({ top: r.bottom + 4, right: window.innerWidth - r.right });
+    }
+    setOpen(o => !o);
+    setConfirm(null);
+  }
+
   return (
-    <div style={{ position: 'relative', display: 'inline-block' }} ref={ref}>
+    <>
       <button
-        onClick={() => { setOpen(o => !o); setConfirm(null); }}
+        ref={btnRef}
+        onClick={toggle}
         style={{
           padding: '5px 10px', borderRadius: 6, border: '1px solid #E7E5E0',
           background: open ? '#1C1917' : '#fff', color: open ? '#fff' : '#57534E',
@@ -358,10 +373,10 @@ function ActionsMenu({ job, isEditing, canEdit, onEdit, onArchive, onDelete }) {
       </button>
 
       {open && (
-        <div style={{
-          position: 'absolute', right: 0, top: 'calc(100% + 4px)',
+        <div ref={menuRef} style={{
+          position: 'fixed', top: pos.top, right: pos.right,
           background: '#fff', border: '1px solid #E7E5E0', borderRadius: 8,
-          boxShadow: '0 4px 16px rgba(0,0,0,0.10)', zIndex: 200, minWidth: 160, overflow: 'hidden',
+          boxShadow: '0 4px 16px rgba(0,0,0,0.10)', zIndex: 9999, minWidth: 160, overflow: 'hidden',
         }}>
           {confirm === null && (
             <>
@@ -419,7 +434,7 @@ function ActionsMenu({ job, isEditing, canEdit, onEdit, onArchive, onDelete }) {
           )}
         </div>
       )}
-    </div>
+    </>
   );
 }
 
