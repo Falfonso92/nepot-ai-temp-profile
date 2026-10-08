@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, useParams } from 'react-router-dom';
 import { AuthProvider, ProtectedRoute } from './infrastructure/auth/auth.repository.jsx';
 import PermissionGate from './infrastructure/permissions/PermissionGate.jsx';
 
@@ -17,6 +17,12 @@ import MyProfilePage  from './application/profile/pages/MyProfilePage.jsx';
 import MyJobsPage     from './application/profile/pages/MyJobsPage.jsx';
 import PublicCVPage   from './application/public/pages/PublicCVPage.jsx';
 import NotFoundPage   from './packages/ui/NotFoundPage.jsx';
+
+// Legacy redirect: old PDFs used /profile/{guid}, new route is /cvs/:id
+function LegacyCVRedirect() {
+  const { id } = useParams();
+  return <Navigate to={`/cvs/${id}`} replace />;
+}
 
 function AdminRoute({ require: perm, requireAny, element }) {
   return (
@@ -37,6 +43,9 @@ export default function App() {
           <Route path="/logout"    element={<LogoutPage />} />
           <Route path="/cvs/:id"   element={<PublicCVPage />} />
           <Route path="/cvs"       element={<NotFoundPage />} />
+
+          {/* Legacy redirect: /profile/{guid} → /cvs/{guid} (old PDFs used this path) */}
+          <Route path="/profile/:id"  element={<LegacyCVRedirect />} />
 
           {/* User portal */}
           <Route path="/profile"      element={<AdminRoute requireAny={['user:edit', 'user:jobs:read', 'user:bio:edit']} element={<MyProfilePage />} />} />
