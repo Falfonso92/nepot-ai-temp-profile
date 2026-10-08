@@ -12,9 +12,10 @@ export async function getProfileByGuid(guid) {
       .select('job_id, guid, role, company, data')
       .eq('guid', guid)
       .maybeSingle(),
+    // job_profile_view joins jobs+job_profiles, so guid and cv_path are both available
     supabase
-      .from('job_profiles')
-      .select('cv_pdf_path')
+      .from('job_profile_view')
+      .select('cv_path')
       .eq('guid', guid)
       .maybeSingle(),
   ]);
@@ -27,10 +28,10 @@ export async function getProfileByGuid(guid) {
 
   if (!profileData) return null;
 
-  // Inject the public CV PDF URL from storage if available
-  const cvPdfPath = jpRes.data?.cv_pdf_path ?? null;
-  if (cvPdfPath) {
-    const { data: urlData } = supabase.storage.from('cvs').getPublicUrl(cvPdfPath);
+  // Inject the public CV PDF URL from storage if a CV was uploaded for this profile
+  const cvPath = jpRes.data?.cv_path ?? null;
+  if (cvPath) {
+    const { data: urlData } = supabase.storage.from('cvs').getPublicUrl(cvPath);
     const cvPdfUrl = urlData?.publicUrl ?? null;
     if (cvPdfUrl) {
       return {
