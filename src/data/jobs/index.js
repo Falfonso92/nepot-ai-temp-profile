@@ -1493,6 +1493,120 @@ const jobs = {
       { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
     ],
   },
+
+  // ── Batch 20261008 — j116–j123 ─────────────────────────────────────────────
+
+  // j116 — MyInvestor / Engineering Manager
+  "c704b850-fbbd-4139-aabb-2c4b2f6ec833": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Engineering Manager · Fintech Platform" },
+    summary: "Engineering Manager with 15 years of production software experience — 8 of them building and leading engineering teams that ship at scale. Has scaled teams from 2 to 10 engineers, driven 5× pipeline throughput improvements, cut infrastructure costs 30%, and accelerated feature delivery from 3/year to 15. Combines hands-on technical depth across full-stack systems with the organisational skills to align engineering output to commercial outcomes. Has architected and shipped production AI systems — including an 8-agent Claude-based platform running real-time monitoring and data analysis.",
+    summaryEs: "Engineering Manager con 15 años de experiencia — 8 de ellos liderando equipos de ingeniería que entregan a escala. Ha escalado equipos de 2 a 10 ingenieros, mejorado el throughput 5×, reducido costes de infraestructura un 30% y acelerado la entrega de funcionalidades de 3/año a 15.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "Engineering org design · Technical roadmap · AI systems · TypeScript · React · Node.js · GCP", val_es: "Diseño de organización · Roadmap técnico · Sistemas de IA · TypeScript · React · Node.js · GCP" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Track record of building coherent, high-output engineering teams aligned to product and commercial goals", val_es: "Historial de construcción de equipos de ingeniería coherentes y de alto rendimiento alineados con producto y objetivos comerciales" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Engineering Manager · Hybrid Madrid", val_es: "Engineering Manager · Híbrido Madrid" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j117 — Experis / PropTech Coliving / Senior Backend Engineer
+  "20f11dc4-e481-4406-a432-432749bae978": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Senior Backend Engineer · Distributed Systems" },
+    summary: "Full-stack engineer with 15 years of production software experience — 8 of them building distributed backend systems at scale. Scaled a Node.js/Python document processing pipeline 5× to 500 docs/minute, reduced infrastructure costs 30% on GCP, and currently delivering backend services for real-time transaction ingestion and balance calculation across multiple banking APIs at Embat. Brings ownership of REST API design, microservices architecture, and data pipeline engineering alongside the quality culture that keeps backend systems defensible over time.",
+    summaryEs: "Ingeniero full-stack con 15 años de experiencia en sistemas backend distribuidos a escala. Escaló un pipeline de procesamiento 5× hasta 500 docs/minuto, redujo costes un 30% en GCP, y actualmente entrega servicios backend para ingesta de transacciones en tiempo real.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "Node.js · NestJS · Python · REST APIs · microservices · GCP · PostgreSQL · TypeScript", val_es: "Node.js · NestJS · Python · REST APIs · Microservicios · GCP · PostgreSQL · TypeScript" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Distributed backend depth + data pipeline track record + banking domain + production AI systems (8-agent)", val_es: "Profundidad en backend distribuido + historial de pipelines de datos + dominio bancario + sistemas de IA en producción" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Senior Backend Engineer · Hybrid Madrid", val_es: "Senior Backend Engineer · Híbrido Madrid" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j118 — XCEED / Staff Software Engineer (Frontend)
+  "01f1fe7c-fb20-4abd-9fdb-84a0b6ecbe2c": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Staff Software Engineer · Frontend Platform" },
+    summary: "Full-stack engineer with 15 years of production software experience — 8 years building frontend systems at staff level. Has designed and owned React/TypeScript architectures from greenfield platforms to high-scale fintech UIs: cut load times from 7s → 3s through microfrontend decomposition, reduced portal load from 1–2 min to 10s through deep model refactoring, and built a proprietary state management system from scratch. Expert-level command of the React ecosystem (Angular 10yr · Vue.js · SolidJS). Also ships across the full stack: Node.js/NestJS backend services and cloud infrastructure.",
+    summaryEs: "Ingeniero full-stack con 15 años — 8 de ellos construyendo sistemas frontend a nivel staff. Ha diseñado arquitecturas React/TypeScript desde plataformas greenfield hasta UIs fintech de alta escala. Experto en el ecosistema React. También entrega en el stack completo.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "React (8yr expert) · TypeScript · Angular · Vue.js · SolidJS · microfrontends · Node.js · NestJS", val_es: "React (8 años, experto) · TypeScript · Angular · Vue.js · SolidJS · Microfrontends · Node.js · NestJS" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Staff-level frontend architecture + performance track record + proprietary state management + full-stack delivery", val_es: "Arquitectura frontend a nivel staff + historial de rendimiento + sistema de estado propio + entrega full-stack" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Staff Software Engineer · Hybrid Madrid", val_es: "Staff Software Engineer · Híbrido Madrid" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j119 — Recodme / Tech Lead (React & Node.js)
+  "d6783ab9-ae34-4272-b042-54f518ad1d04": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Tech Lead · React & Node.js" },
+    summary: "Tech Lead with 15 years of production software experience — 8 of them leading teams on React and Node.js stacks. Owns full-stack architecture from greenfield ESG platforms to fintech banking infrastructure. Key metrics: portal load from 1–2 min to 10s, deployment cycle from 2 weeks to 2 days, feature delivery from 3/year to 15. Expert-level TypeScript/React on the frontend, Node.js/NestJS on the backend, combined with the team leadership and process discipline to keep engineering aligned to product delivery.",
+    summaryEs: "Tech Lead con 15 años de experiencia — 8 de ellos liderando equipos en stacks React y Node.js. Métricas clave: carga de portal de 1-2 min a 10s, ciclo de despliegue de 2 semanas a 2 días, entrega de funcionalidades de 3/año a 15.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "React (8yr expert) · TypeScript · Node.js · NestJS · team leadership · architecture ownership", val_es: "React (8 años, experto) · TypeScript · Node.js · NestJS · liderazgo de equipo · ownership de arquitectura" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Tech lead + React/Node.js expert + delivery acceleration track record + mentoring + process improvement", val_es: "Tech lead + experto React/Node.js + historial de aceleración de entrega + mentoría + mejora de procesos" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Tech Lead · Hybrid Madrid", val_es: "Tech Lead · Híbrido Madrid" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j120 — ToBeIT / Tech Lead - React + Node
+  "0cb40230-3146-445d-8285-1bdc937fcec4": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Tech Lead · React + Node.js" },
+    summary: "Tech Lead with 15 years of production software experience — 8 of them leading teams on React and Node.js stacks. Owns full-stack architecture from greenfield ESG platforms to fintech banking infrastructure. Key metrics: portal load from 1–2 min to 10s, deployment cycle from 2 weeks to 2 days, feature delivery from 3/year to 15. Expert-level TypeScript/React on the frontend, Node.js/NestJS on the backend, combined with the team leadership and process discipline to keep engineering aligned to product delivery.",
+    summaryEs: "Tech Lead con 15 años de experiencia — 8 de ellos liderando equipos en stacks React y Node.js. Métricas clave: carga de portal de 1-2 min a 10s, ciclo de despliegue de 2 semanas a 2 días, entrega de funcionalidades de 3/año a 15.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "React (8yr expert) · TypeScript · Node.js · NestJS · team leadership · architecture ownership", val_es: "React (8 años, experto) · TypeScript · Node.js · NestJS · liderazgo de equipo · ownership de arquitectura" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Tech lead + React/Node.js expert + delivery acceleration track record + mentoring + process improvement", val_es: "Tech lead + experto React/Node.js + historial de aceleración de entrega + mentoría + mejora de procesos" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Tech Lead · Hybrid Madrid", val_es: "Tech Lead · Híbrido Madrid" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j121 — Draiver / Forward Deployed Engineer
+  "edbd4ae0-001e-4cce-b3ef-0df52ec887b9": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Forward Deployed Engineer · Customer-Facing Technical" },
+    summary: "Engineer with 15 years of production software experience — comfortable moving between customer environments, complex technical requirements, and internal engineering teams. Has worked pre-sales, solutioning, and delivery across consulting, SaaS, and scale-up contexts. Designed and shipped production AI systems (Claude-based 8-agent platform), scaled backend infrastructure 5×, and built the technical trust with clients that protects revenue and accelerates adoption. Broad full-stack toolkit (React/TypeScript · Node.js/NestJS · Python · GCP/AWS), strong communication under pressure, rapid diagnosis in unfamiliar environments.",
+    summaryEs: "Ingeniero con 15 años de experiencia — cómodo moviéndose entre entornos de clientes, requisitos técnicos complejos y equipos internos. Ha trabajado en pre-ventas, solutioning y entrega en contextos de consultoría, SaaS y scale-ups.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "React · TypeScript · Node.js · NestJS · Python · GCP · AWS · AI systems · pre-sales", val_es: "React · TypeScript · Node.js · NestJS · Python · GCP · AWS · Sistemas de IA · Pre-ventas" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Client-facing technical depth + rapid diagnosis in unknown environments + AI/ML in production + consulting track record", val_es: "Profundidad técnica cara al cliente + diagnóstico rápido en entornos desconocidos + IA/ML en producción + historial de consultoría" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Forward Deployed Engineer · Hybrid Madrid", val_es: "Forward Deployed Engineer · Híbrido Madrid" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j122 — cloro / Founding Engineer
+  "0b46be02-3976-46ac-b90e-801fca45e285": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Founding Engineer · 0→1 Builder" },
+    summary: "Full-stack engineer with 15 years of production software experience and a repeated pattern of being the technical foundation of a company — at Sygris, Invofox, and Syntax Informática, joined early, owned the architecture, scaled the team, and shipped the product. Has designed greenfield platforms from scratch, scaled infrastructure 5× on Google Cloud, and shipped production AI systems (Claude-based 8-agent platform). Comfortable across the full stack (React/TypeScript · Node.js/NestJS · Python · GCP/AWS), comfortable at 0→1, and has the business instinct — pre-sales, ROI alignment, subscription model design — that early engineering decisions at a startup actually require.",
+    summaryEs: "Ingeniero full-stack con 15 años y un patrón repetido de ser la base técnica de una empresa — en Sygris, Invofox y Syntax Informática, se incorporó pronto, fue dueño de la arquitectura, escaló el equipo y entregó el producto.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "React · TypeScript · Node.js · NestJS · Python · GCP · AWS · 0→1 · greenfield · AI systems", val_es: "React · TypeScript · Node.js · NestJS · Python · GCP · AWS · 0→1 · Greenfield · Sistemas de IA" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Founding engineer track record + greenfield architecture + team scaling + business instinct for early-stage decisions", val_es: "Historial como founding engineer + arquitectura greenfield + escalado de equipo + instinto de negocio para decisiones en etapas tempranas" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Founding Engineer · Hybrid Madrid", val_es: "Founding Engineer · Híbrido Madrid" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j123 — Orbio AI / Forward Deployed Engineer
+  "fbf7a667-0e3a-49b1-a450-d2fc21a968e8": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Forward Deployed Engineer · AI-Forward" },
+    summary: "Engineer with 15 years of production software experience — combining deep AI/ML system design with the customer-facing and solutioning skills that FDE roles require. Has designed and shipped an 8-agent Claude-based AI platform running real-time infrastructure monitoring, data analysis, and process health evaluation in production; led LLM benchmarking and multi-model hot-balancing strategies; and evaluated model performance trade-offs across the current frontier model landscape (Claude, GPT-6, DeepSeek, GLM). Brings a broad full-stack toolkit and the communication and problem-solving skills to work across customer environments, complex technical requirements, and internal engineering teams.",
+    summaryEs: "Ingeniero con 15 años de experiencia — combinando diseño profundo de sistemas AI/ML con las habilidades cara al cliente que requieren los roles FDE. Ha diseñado y entregado una plataforma de 8 agentes basada en Claude. Lidera benchmarking de LLMs y estrategias de hot-balancing multi-modelo.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "Claude API · multi-agent systems · LLM benchmarking · React · TypeScript · Node.js · Python · GCP", val_es: "Claude API · Sistemas multi-agente · Benchmarking LLMs · React · TypeScript · Node.js · Python · GCP" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Production AI systems + FDE client skills + LLM multi-model expertise + full-stack delivery + rapid technical diagnosis", val_es: "Sistemas de IA en producción + habilidades FDE con clientes + experiencia multi-modelo LLM + entrega full-stack + diagnóstico técnico rápido" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Forward Deployed Engineer · Hybrid or Remote Madrid", val_es: "Forward Deployed Engineer · Híbrido o Remoto Madrid" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
 };
 
 export default jobs;

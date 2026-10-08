@@ -2,7 +2,7 @@
 // Source of truth consumed by TAILOR when generating CV PDFs.
 // When a new job is added: generate a UUID, add to registry + jobs/index.js, push.
 
-const BASE_URL = "https://profile.nepot-ai.com/profile";
+const BASE_URL = "https://profile.nepot-ai.com/cvs";
 
 const registry = [
   {
@@ -308,6 +308,15 @@ const registry = [
   { jobId: "j113-xe-se",             guid: "abd15d0c-d78c-40db-b3e6-5004b2168932", url: `${BASE_URL}/abd15d0c-d78c-40db-b3e6-5004b2168932`, role: "Full Stack Software Engineer (Senior)",                       company: "Xe.com" },
   { jobId: "j114-personio",          guid: "b37f282e-a8d4-45f6-a08e-e41840fca3e3", url: `${BASE_URL}/b37f282e-a8d4-45f6-a08e-e41840fca3e3`, role: "Lead Full Stack Software Engineer",                          company: "Personio" },
   { jobId: "j115-bending-spoons",    guid: "4696b0f5-7d73-4442-a6d0-c669b4e4f311", url: `${BASE_URL}/4696b0f5-7d73-4442-a6d0-c669b4e4f311`, role: "Software Engineer",                                          company: "Bending Spoons" },
+  // ── Batch 20261008 — j116–j123 ─────────────────────────────────────────────
+  { jobId: "j116-myinvestor",       guid: "c704b850-fbbd-4139-aabb-2c4b2f6ec833", url: `${BASE_URL}/c704b850-fbbd-4139-aabb-2c4b2f6ec833`, role: "Engineering Manager - Desarrollo",        company: "MyInvestor" },
+  { jobId: "j117-experis-proptech", guid: "20f11dc4-e481-4406-a432-432749bae978", url: `${BASE_URL}/20f11dc4-e481-4406-a432-432749bae978`, role: "Senior Backend Engineer",                 company: "Experis / PropTech Coliving" },
+  { jobId: "j118-xceed",            guid: "01f1fe7c-fb20-4abd-9fdb-84a0b6ecbe2c", url: `${BASE_URL}/01f1fe7c-fb20-4abd-9fdb-84a0b6ecbe2c`, role: "Staff Software Engineer (Frontend)",      company: "XCEED" },
+  { jobId: "j119-recodme",          guid: "d6783ab9-ae34-4272-b042-54f518ad1d04", url: `${BASE_URL}/d6783ab9-ae34-4272-b042-54f518ad1d04`, role: "Tech Lead (React & Node.js)",             company: "Recodme" },
+  { jobId: "j120-tobeit",           guid: "0cb40230-3146-445d-8285-1bdc937fcec4", url: `${BASE_URL}/0cb40230-3146-445d-8285-1bdc937fcec4`, role: "Tech Lead - React + Node",                company: "ToBeIT" },
+  { jobId: "j121-draiver-fde",      guid: "edbd4ae0-001e-4cce-b3ef-0df52ec887b9", url: `${BASE_URL}/edbd4ae0-001e-4cce-b3ef-0df52ec887b9`, role: "Forward Deployed Engineer",               company: "Draiver" },
+  { jobId: "j122-cloro-founding",   guid: "0b46be02-3976-46ac-b90e-801fca45e285", url: `${BASE_URL}/0b46be02-3976-46ac-b90e-801fca45e285`, role: "Founding Engineer",                       company: "cloro (via Jack & Jill)" },
+  { jobId: "j123-orbio-ai-fde",     guid: "fbf7a667-0e3a-49b1-a450-d2fc21a968e8", url: `${BASE_URL}/fbf7a667-0e3a-49b1-a450-d2fc21a968e8`, role: "Forward Deployed Engineer",               company: "Orbio AI" },
 ];
 
 export default registry;

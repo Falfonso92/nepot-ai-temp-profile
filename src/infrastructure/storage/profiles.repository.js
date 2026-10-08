@@ -1,10 +1,7 @@
 import { supabase } from './supabase.client.js';
 
-// Fallback to static JS files while data column is not yet fully populated
-import jobs from '../../data/jobs/index.js';
-
 export async function getProfileByGuid(guid) {
-  if (!supabase) return jobs[guid] ?? null;
+  if (!supabase) return null;
 
   const [profileRes, jpRes] = await Promise.all([
     supabase
@@ -20,11 +17,9 @@ export async function getProfileByGuid(guid) {
       .maybeSingle(),
   ]);
 
-  if (profileRes.error || !profileRes.data) return jobs[guid] ?? null;
+  if (profileRes.error || !profileRes.data) return null;
 
-  const profileData = Object.keys(profileRes.data.data ?? {}).length > 0
-    ? profileRes.data.data
-    : (jobs[guid] ?? null);
+  const profileData = profileRes.data.data;
 
   if (!profileData) return null;
 
