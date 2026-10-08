@@ -129,7 +129,6 @@ const profile = {
     cvLabel:   "View LinkedIn",
     cvLabelEs: "Ver LinkedIn",
     cvUrl: "https://www.linkedin.com/in/franciscoal/",
-    cvPdfUrl: null,
   },
 
   footer: {

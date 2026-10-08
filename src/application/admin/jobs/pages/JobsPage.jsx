@@ -639,8 +639,9 @@ export default function JobsPage({ ownerId, backLink = '/admin', backLabel = 'â†
                           )}
                           {job.cv_path ? (
                             <IconBtn
-                              onClick={() => downloadFile(getCVUrl(job.cv_path), `${job.company ?? 'cv'}-${job.job_id}.pdf`)}
-                              icon={<IconDownload />} bg="#DCFCE7" tooltip="Download CV (PDF)"
+                              href={getCVUrl(job.cv_path)}
+                              icon={<IconCV />} bg="#DCFCE7" tooltip="View CV (PDF)"
+                              target="_blank" rel="noreferrer"
                             />
                           ) : canEdit && (
                             <UploadBtn jpId={job.jp_id} onDone={refresh} />
