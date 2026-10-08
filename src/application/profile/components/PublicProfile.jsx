@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 
 const CSS = `
   html { scroll-behavior: smooth; }
@@ -48,7 +48,10 @@ const S = {
 
 const T = {
   en: {
-    nav: ["Now", "Career", "Deep dives", "30 / 60 / 90", "References"],
+    nav: ["Now", "Career", "Deep dives", "30 / 60 / 90", "References", "CV"],
+    cvKicker: "CURRICULUM VITAE",
+    cvTitle: "My CV.",
+    cvDownload: "Download PDF",
     onThisPage: "ON THIS PAGE",
     openToTalk: "OPEN TO TALK",
     getInTouch: "Get in touch →",
@@ -80,7 +83,10 @@ const T = {
     recQ: (r) => r.q,
   },
   es: {
-    nav: ["Ahora", "Carrera", "Proyectos", "30 / 60 / 90", "Referencias"],
+    nav: ["Ahora", "Carrera", "Proyectos", "30 / 60 / 90", "Referencias", "CV"],
+    cvKicker: "CURRÍCULUM VITAE",
+    cvTitle: "Mi CV.",
+    cvDownload: "Descargar PDF",
     onThisPage: "EN ESTA PÁGINA",
     openToTalk: "DISPONIBLE",
     getInTouch: "Contactar →",
@@ -113,7 +119,7 @@ const T = {
   },
 };
 
-const NAV_IDS = ["now", "timeline", "cases", "plan", "recs"];
+const BASE_NAV_IDS = ["now", "timeline", "cases", "plan", "recs"];
 
 function Pill({ children, dot, color = "stone" }) {
   const palette = {
@@ -436,6 +442,48 @@ function Recommendations({ recommendations, t, isMobile }) {
   );
 }
 
+function CvViewer({ cvPdfUrl, t, isMobile }) {
+  if (!cvPdfUrl) return null;
+  return (
+    <section className="np-section" style={{ marginBottom: isMobile ? 40 : 56 }}>
+      <SectionHead num="06" kicker={t.cvKicker} title={t.cvTitle} anchor="cv" isMobile={isMobile} />
+      {isMobile ? (
+        <div style={{
+          background: S.white, border: `1px solid ${S.border}`, borderRadius: 10,
+          padding: "24px 20px", textAlign: "center",
+        }}>
+          <p style={{ fontSize: 13, color: S.stoneMid, margin: "0 0 16px" }}>
+            {t.cvDownload}
+          </p>
+          <a
+            href={cvPdfUrl}
+            target="_blank"
+            rel="noreferrer"
+            download
+            style={{
+              display: "inline-block",
+              padding: "11px 22px",
+              background: S.stone, color: S.white,
+              borderRadius: 8, fontSize: 14, fontWeight: 600,
+              textDecoration: "none",
+            }}
+          >
+            {t.cvDownload} ↓
+          </a>
+        </div>
+      ) : (
+        <div style={{ border: `1px solid ${S.border}`, borderRadius: 10, overflow: "hidden", background: S.white }}>
+          <iframe
+            src={cvPdfUrl}
+            title="CV"
+            style={{ display: "block", width: "100%", height: 900, border: "none" }}
+          />
+        </div>
+      )}
+    </section>
+  );
+}
+
 function FooterCTA({ data, t, isMobile }) {
   return (
     <section style={{
@@ -471,13 +519,17 @@ export default function PublicProfile({ data }) {
 
   const isProgrammaticScroll = useRef(false);
   const scrollLockTimer = useRef(null);
+  const hasCvPdf = !!data.cta?.cvPdfUrl;
   const navItems = [
     ["now", t.nav[0]],
     ["timeline", t.nav[1]],
     ["cases", t.nav[2]],
     ["plan", t.nav[3]],
     ["recs", t.nav[4]],
+    ...(hasCvPdf ? [["cv", t.nav[5]]] : []),
   ];
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const NAV_IDS = useMemo(() => hasCvPdf ? [...BASE_NAV_IDS, "cv"] : BASE_NAV_IDS, [hasCvPdf]);
 
   useEffect(() => {
     if (!isMobile || !mobileNavRef.current) return;
@@ -522,7 +574,7 @@ export default function PublicProfile({ data }) {
       window.removeEventListener("scroll", onScroll);
       if (raf !== null) cancelAnimationFrame(raf);
     };
-  }, []);
+  }, [NAV_IDS]);
 
   const handleNavClick = useCallback((e, id) => {
     e.preventDefault();
@@ -660,6 +712,7 @@ export default function PublicProfile({ data }) {
           <CaseStudies caseStudies={data.caseStudies} t={t} isMobile={isMobile} />
           <Plan plan={data.plan} t={t} isMobile={isMobile} />
           <Recommendations recommendations={data.recommendations} t={t} isMobile={isMobile} />
+          <CvViewer cvPdfUrl={data.cta?.cvPdfUrl} t={t} isMobile={isMobile} />
           <FooterCTA data={data} t={t} isMobile={isMobile} />
 
           <footer style={{
