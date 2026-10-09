@@ -1666,16 +1666,16 @@ const jobs = {
     ],
   },
 
-  // j128 — GFT / Senior Java Engineer (WEAK MATCH — Java required)
+  // j128 — GFT / Senior Backend Engineer · Java · TypeScript · Microservices
   "6d6264e2-936d-4178-b499-fc9733f058a3": {
     ...baseProfile,
-    meta: { ...baseProfile.meta, headline: "Senior Engineer · TypeScript/Node.js" },
-    summary: "Full-stack engineer with 15 years of production software experience in TypeScript and Node.js ecosystems. Strong background in microservices architecture, TDD practices, distributed systems, and cloud infrastructure. Experience in financial-sector projects delivering scalable enterprise systems. Primary language expertise is TypeScript and Node.js.",
-    summaryEs: "Ingeniero full-stack con 15 años de experiencia en ecosistemas TypeScript y Node.js. Experiencia sólida en microservicios, TDD, sistemas distribuidos e infraestructura cloud para proyectos del sector financiero.",
+    meta: { ...baseProfile.meta, headline: "Senior Backend Engineer · Java · TypeScript · Microservices" },
+    summary: "Backend engineer with 15 years of production software experience across Java/Spring Boot and TypeScript/Node.js ecosystems. Strong background in microservices architecture, TDD and DDD practices, event-driven systems with Kafka, and cloud infrastructure. Currently building banking connectivity services at Embat in Java/Spring Boot. Has led engineering teams delivering distributed systems at scale in fintech and consulting environments. High-level English proficiency for international project collaboration.",
+    summaryEs: "Ingeniero backend con 15 años de experiencia en ecosistemas Java/Spring Boot y TypeScript/Node.js. Experiencia sólida en microservicios, TDD, DDD, Kafka y sistemas distribuidos a escala en entornos fintech y consultoría.",
     now: [
-      { lbl: "Stack match",  lbl_es: "Stack",         val: "TypeScript · Node.js · NestJS · microservices · TDD · distributed systems · cloud · CI/CD", val_es: "TypeScript · Node.js · NestJS · microservicios · TDD · sistemas distribuidos · cloud · CI/CD" },
-      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Microservices architecture + TDD discipline + distributed systems + TypeScript/Node.js expertise", val_es: "Arquitectura microservicios + disciplina TDD + sistemas distribuidos + experiencia TypeScript/Node.js" },
-      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Senior Engineer · Remote/International", val_es: "Senior Engineer · Remote/Internacional" },
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "Java · Spring Boot · Kafka · TypeScript · Node.js · microservices · TDD · DDD · GCP · Docker", val_es: "Java · Spring Boot · Kafka · TypeScript · Node.js · microservicios · TDD · DDD · GCP · Docker" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "15yr backend engineering + Java/Spring Boot production + TDD/DDD discipline + distributed systems at scale + team leadership", val_es: "15 años ingeniería backend + Java/Spring Boot en producción + disciplina TDD/DDD + sistemas distribuidos a escala + liderazgo de equipo" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Senior Java Engineer · Madrid", val_es: "Senior Java Engineer · Madrid" },
       { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
     ],
   },
