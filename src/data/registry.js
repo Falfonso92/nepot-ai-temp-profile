@@ -309,14 +309,23 @@ const registry = [
   { jobId: "j114-personio",          guid: "b37f282e-a8d4-45f6-a08e-e41840fca3e3", url: `${BASE_URL}/b37f282e-a8d4-45f6-a08e-e41840fca3e3`, role: "Lead Full Stack Software Engineer",                          company: "Personio" },
   { jobId: "j115-bending-spoons",    guid: "4696b0f5-7d73-4442-a6d0-c669b4e4f311", url: `${BASE_URL}/4696b0f5-7d73-4442-a6d0-c669b4e4f311`, role: "Software Engineer",                                          company: "Bending Spoons" },
   // ── Batch 20261008 — j116–j123 ─────────────────────────────────────────────
-  { jobId: "j116-myinvestor",       guid: "c704b850-fbbd-4139-aabb-2c4b2f6ec833", url: `${BASE_URL}/c704b850-fbbd-4139-aabb-2c4b2f6ec833`, role: "Engineering Manager - Desarrollo",        company: "MyInvestor" },
-  { jobId: "j117-experis-proptech", guid: "20f11dc4-e481-4406-a432-432749bae978", url: `${BASE_URL}/20f11dc4-e481-4406-a432-432749bae978`, role: "Senior Backend Engineer",                 company: "Experis / PropTech Coliving" },
-  { jobId: "j118-xceed",            guid: "01f1fe7c-fb20-4abd-9fdb-84a0b6ecbe2c", url: `${BASE_URL}/01f1fe7c-fb20-4abd-9fdb-84a0b6ecbe2c`, role: "Staff Software Engineer (Frontend)",      company: "XCEED" },
-  { jobId: "j119-recodme",          guid: "d6783ab9-ae34-4272-b042-54f518ad1d04", url: `${BASE_URL}/d6783ab9-ae34-4272-b042-54f518ad1d04`, role: "Tech Lead (React & Node.js)",             company: "Recodme" },
-  { jobId: "j120-tobeit",           guid: "0cb40230-3146-445d-8285-1bdc937fcec4", url: `${BASE_URL}/0cb40230-3146-445d-8285-1bdc937fcec4`, role: "Tech Lead - React + Node",                company: "ToBeIT" },
-  { jobId: "j121-draiver-fde",      guid: "edbd4ae0-001e-4cce-b3ef-0df52ec887b9", url: `${BASE_URL}/edbd4ae0-001e-4cce-b3ef-0df52ec887b9`, role: "Forward Deployed Engineer",               company: "Draiver" },
-  { jobId: "j122-cloro-founding",   guid: "0b46be02-3976-46ac-b90e-801fca45e285", url: `${BASE_URL}/0b46be02-3976-46ac-b90e-801fca45e285`, role: "Founding Engineer",                       company: "cloro (via Jack & Jill)" },
-  { jobId: "j123-orbio-ai-fde",     guid: "fbf7a667-0e3a-49b1-a450-d2fc21a968e8", url: `${BASE_URL}/fbf7a667-0e3a-49b1-a450-d2fc21a968e8`, role: "Forward Deployed Engineer",               company: "Orbio AI" },
+  { jobId: "j116-myinvestor",       guid: "0b8199bd-9bb5-4a89-b270-1a5b8ffebaf3", url: `${BASE_URL}/0b8199bd-9bb5-4a89-b270-1a5b8ffebaf3`, role: "Engineering Manager - Desarrollo",        company: "MyInvestor" },
+  { jobId: "j117-experis-proptech", guid: "a3f8c21d-5b6e-4d91-8c47-2e9f0a1b3d5c", url: `${BASE_URL}/a3f8c21d-5b6e-4d91-8c47-2e9f0a1b3d5c`, role: "Senior Backend Engineer",                 company: "Experis / PropTech Coliving" },
+  { jobId: "j118-xceed",            guid: "7e2d9f4a-3c18-4b72-a6e5-8d0c9f2b4e6a", url: `${BASE_URL}/7e2d9f4a-3c18-4b72-a6e5-8d0c9f2b4e6a`, role: "Staff Software Engineer (Frontend)",      company: "XCEED" },
+  { jobId: "j119-recodme",          guid: "1b5a8e3c-9d27-4f63-b8a1-5c7e2d0f9b3e", url: `${BASE_URL}/1b5a8e3c-9d27-4f63-b8a1-5c7e2d0f9b3e`, role: "Tech Lead (React & Node.js)",             company: "Recodme" },
+  { jobId: "j120-tobeit",           guid: "4c9d2b7e-6f31-4a85-c2b9-7e4f1a0d8c5b", url: `${BASE_URL}/4c9d2b7e-6f31-4a85-c2b9-7e4f1a0d8c5b`, role: "Tech Lead - React + Node",                company: "ToBeIT" },
+  { jobId: "j121-draiver-fde",      guid: "9f3e7d2b-8a45-4c61-b3d7-2e9a0f5c8b1d", url: `${BASE_URL}/9f3e7d2b-8a45-4c61-b3d7-2e9a0f5c8b1d`, role: "Forward Deployed Engineer",               company: "Draiver" },
+  { jobId: "j122-cloro-founding",   guid: "2a6b9e4f-7c38-4d52-a9b6-5e8f3c1d0b7a", url: `${BASE_URL}/2a6b9e4f-7c38-4d52-a9b6-5e8f3c1d0b7a`, role: "Founding Engineer",                       company: "cloro (via Jack & Jill)" },
+  { jobId: "j123-orbio-ai-fde",     guid: "6d1c8b5e-4a29-4e73-b7c3-9f2e5a0d8b4c", url: `${BASE_URL}/6d1c8b5e-4a29-4e73-b7c3-9f2e5a0d8b4c`, role: "Forward Deployed Engineer",               company: "Orbio AI" },
+  // ── Batch 20261009 — j124–j131 ─────────────────────────────────────────────
+  { jobId: "j124-appinio",          guid: "8dea6d7c-d6c8-4c99-b05b-86560d53d370", url: `${BASE_URL}/8dea6d7c-d6c8-4c99-b05b-86560d53d370`, role: "Senior Backend Engineer",                 company: "Appinio" },
+  { jobId: "j125-cobee",            guid: "59b03456-c009-491b-9bae-b60e0142f939", url: `${BASE_URL}/59b03456-c009-491b-9bae-b60e0142f939`, role: "Senior Product Engineer",                 company: "Cobee by Pluxee" },
+  { jobId: "j126-sgs",              guid: "8a623f21-84df-4229-98af-b4c206cd0dd5", url: `${BASE_URL}/8a623f21-84df-4229-98af-b4c206cd0dd5`, role: "AI Native Founding Product & Platform Engineer", company: "SGS" },
+  { jobId: "j127-ebury",            guid: "c8aa9d5f-b148-4ca2-8349-63b90e6747e5", url: `${BASE_URL}/c8aa9d5f-b148-4ca2-8349-63b90e6747e5`, role: "Staff Engineer – Credit & Underwriting",  company: "Ebury" },
+  { jobId: "j128-gft",              guid: "6d6264e2-936d-4178-b499-fc9733f058a3", url: `${BASE_URL}/6d6264e2-936d-4178-b499-fc9733f058a3`, role: "Senior Java Engineer",                    company: "GFT" },
+  { jobId: "j129-airflows",         guid: "9a88feb9-634a-4b81-bfe4-e54d6573a40b", url: `${BASE_URL}/9a88feb9-634a-4b81-bfe4-e54d6573a40b`, role: "Forward Deployed Engineer",               company: "Airflows" },
+  { jobId: "j130-esolution",        guid: "cfacf413-dc70-4a41-a82a-d59c23e7eb29", url: `${BASE_URL}/cfacf413-dc70-4a41-a82a-d59c23e7eb29`, role: "Senior Backend Developer (CTO path)",     company: "Esolution & City Hub España" },
+  { jobId: "j131-backbase",         guid: "749bc8fc-9059-49df-a85c-d979a006f7eb", url: `${BASE_URL}/749bc8fc-9059-49df-a85c-d979a006f7eb`, role: "Senior Engineering Team Lead",            company: "Backbase" },
 ];
 
 export default registry;
