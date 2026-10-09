@@ -1666,15 +1666,15 @@ const jobs = {
     ],
   },
 
-  // j128 — GFT / Senior Backend Engineer · Java · TypeScript · Microservices
+  // j128 — GFT / Senior Java Engineer
   "6d6264e2-936d-4178-b499-fc9733f058a3": {
     ...baseProfile,
-    meta: { ...baseProfile.meta, headline: "Senior Backend Engineer · Java · TypeScript · Microservices" },
-    summary: "Backend engineer with 15 years of production software experience across Java/Spring Boot and TypeScript/Node.js ecosystems. Strong background in microservices architecture, TDD and DDD practices, event-driven systems with Kafka, and cloud infrastructure. Currently building banking connectivity services at Embat in Java/Spring Boot. Has led engineering teams delivering distributed systems at scale in fintech and consulting environments. High-level English proficiency for international project collaboration.",
-    summaryEs: "Ingeniero backend con 15 años de experiencia en ecosistemas Java/Spring Boot y TypeScript/Node.js. Experiencia sólida en microservicios, TDD, DDD, Kafka y sistemas distribuidos a escala en entornos fintech y consultoría.",
+    meta: { ...baseProfile.meta, headline: "Senior Java Engineer · Spring Boot · Microservices" },
+    summary: "Java backend engineer with 15 years of production software experience. Strong background in microservices architecture with Spring Boot, TDD and DDD practices, event-driven systems with Kafka, and cloud infrastructure on GCP and AWS. Currently building banking connectivity services at Embat in Java/Spring Boot. Has led engineering teams delivering distributed Java systems at scale in fintech and consulting environments.",
+    summaryEs: "Ingeniero Java backend con 15 años de experiencia en producción. Arquitectura de microservicios con Spring Boot, TDD, DDD, Kafka y cloud. Actualmente construyendo servicios de conectividad bancaria en Java/Spring Boot en Embat.",
     now: [
-      { lbl: "Stack match",  lbl_es: "Stack",         val: "Java · Spring Boot · Kafka · TypeScript · Node.js · microservices · TDD · DDD · GCP · Docker", val_es: "Java · Spring Boot · Kafka · TypeScript · Node.js · microservicios · TDD · DDD · GCP · Docker" },
-      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "15yr backend engineering + Java/Spring Boot production + TDD/DDD discipline + distributed systems at scale + team leadership", val_es: "15 años ingeniería backend + Java/Spring Boot en producción + disciplina TDD/DDD + sistemas distribuidos a escala + liderazgo de equipo" },
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "Java · Spring Boot · Kafka · microservices · TDD · DDD · GCP · Docker · CI/CD", val_es: "Java · Spring Boot · Kafka · microservicios · TDD · DDD · GCP · Docker · CI/CD" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Java production engineering + Spring Boot microservices + TDD/DDD discipline + distributed systems at scale + team leadership", val_es: "Ingeniería Java en producción + microservicios Spring Boot + disciplina TDD/DDD + sistemas distribuidos a escala + liderazgo de equipo" },
       { lbl: "Open to",      lbl_es: "Abierto a",     val: "Senior Java Engineer · Madrid", val_es: "Senior Java Engineer · Madrid" },
       { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
     ],
