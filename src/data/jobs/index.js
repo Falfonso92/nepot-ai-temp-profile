@@ -1721,6 +1721,90 @@ const jobs = {
       { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
     ],
   },
+
+  // j132 — Wave Group / Forward Deployed Engineer + AI
+  "235bc5f2-c4eb-46bb-8c13-84735f05fbf3": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Forward Deployed Engineer · AI Platform" },
+    summary: "Engineer with 15 years of production experience — combining deep AI and multi-agent system design with the customer-facing delivery skills that FDE roles require. Designed and shipped an 8-agent Claude-based AI platform running real-time infrastructure monitoring, data analysis, and process health evaluation in production. Led LLM benchmarking, multi-model hot-balancing, and agentic pipeline design across the current frontier model landscape. Full-stack toolkit: Python, Node.js, React, cloud infrastructure.",
+    summaryEs: "Ingeniero con 15 años de experiencia — combina diseño de sistemas de IA y multi-agente con las habilidades de entrega orientada al cliente que requieren los roles FDE.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "Python · FastAPI · Node.js · React · LLM/agentic AI · multi-agent orchestration · AWS/GCP", val_es: "Python · FastAPI · Node.js · React · IA agentic · orquestación multi-agente · AWS/GCP" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "FDE track record + AI production systems + client-facing delivery + multi-agent architecture", val_es: "Historial FDE + sistemas de IA en producción + entrega orientada al cliente + arquitectura multi-agente" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Forward Deployed Engineer · Hybrid Madrid/Barcelona", val_es: "Forward Deployed Engineer · Híbrido Madrid/Barcelona" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j133 — Indra Group / Senior Frontend Engineer Vue.js
+  "6ab9dec7-7701-44e6-a56a-c4ef480d8dde": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Senior Frontend Engineer · Vue.js" },
+    summary: "Frontend engineer with 15 years of production experience across Vue.js, React, and Angular — with deep expertise in complex, data-intensive web applications: dashboards, simulation interfaces, operational systems, and high-criticality UIs. Has led the architecture of a greenfield low-code platform from scratch, implemented proprietary state management systems, and built real-time data flows via WebSockets and event-driven patterns.",
+    summaryEs: "Ingeniero frontend con 15 años de experiencia en Vue.js, React y Angular — con profunda experiencia en aplicaciones web complejas e intensivas en datos.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "Vue.js · React · Angular · TypeScript · WebSockets · REST APIs · real-time UI", val_es: "Vue.js · React · Angular · TypeScript · WebSockets · REST APIs · UI en tiempo real" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Multi-framework frontend expertise + complex UI architecture + real-time systems + high-criticality delivery", val_es: "Experiencia multi-framework + arquitectura UI compleja + sistemas en tiempo real + entrega de alta criticidad" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Senior Frontend Engineer · Vue.js · Hybrid Madrid", val_es: "Senior Frontend Engineer · Vue.js · Híbrido Madrid" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j134 — METRICA / Senior Fullstack Engineer
+  "6700b8b9-f2ec-47ae-b409-c6474aba503e": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Senior Fullstack Engineer" },
+    summary: "Full-stack engineer with 15 years of production software experience — delivering end-to-end across React, TypeScript, Node.js, NestJS, and cloud infrastructure. Has owned full-stack architecture from greenfield platforms to high-scale fintech systems. Works autonomously on complex implementation tasks and brings the communication and agile discipline that consulting and integration projects require. Fluent in English.",
+    summaryEs: "Ingeniero full-stack con 15 años de experiencia — entregando de extremo a extremo en React, TypeScript, Node.js, NestJS e infraestructura cloud.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "React · TypeScript · Node.js · NestJS · PostgreSQL · GCP · AWS · Docker · Kubernetes", val_es: "React · TypeScript · Node.js · NestJS · PostgreSQL · GCP · AWS · Docker · Kubernetes" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Full-stack end-to-end ownership + cloud architecture + measurable delivery track record + English fluency", val_es: "Ownership full-stack + arquitectura cloud + historial de entrega medible + inglés fluido" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Senior Fullstack Engineer · Hybrid Madrid", val_es: "Senior Fullstack Engineer · Híbrido Madrid" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j135 — ActioGlobal / Senior Frontend Developer
+  "ceee80df-6eb4-4ed8-84a4-4b76d254e465": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Senior Frontend Developer · Component Architecture" },
+    summary: "Frontend engineer with 15 years of production experience — expert-level React, Angular, and Vue.js, with deep component architecture ownership across consulting and product environments. Has built and maintained component libraries, design systems, and Storybook-driven component documentation across multiple client projects. Brings the cross-framework breadth that component migration and Web Components projects require.",
+    summaryEs: "Ingeniero frontend con 15 años de experiencia — React, Angular y Vue.js a nivel experto, con profunda propiedad de arquitectura de componentes en entornos de consultoría y producto.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "React · Angular · Vue.js · TypeScript · Web Components · Storybook · component libraries", val_es: "React · Angular · Vue.js · TypeScript · Web Components · Storybook · librerías de componentes" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Multi-framework expertise + component library ownership + Storybook documentation + consulting delivery", val_es: "Experiencia multi-framework + ownership de librerías de componentes + documentación Storybook + entrega en consultoría" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Senior Frontend Developer · Hybrid Madrid", val_es: "Senior Frontend Developer · Híbrido Madrid" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j136 — E-Frontiers / Senior Full Stack Developer (Freelance)
+  "38c73ffb-df3b-42fb-9206-48136b67ccab": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Senior Full Stack Developer · Node.js / React" },
+    summary: "Full-stack engineer with 15 years of production experience — Node.js, React, TypeScript, AWS, Terraform, and Docker as the core stack. Has designed and operated microservices architectures, distributed systems, and cloud infrastructure at scale. Brings Clean Architecture discipline, comprehensive test coverage practices (Jest, Vitest, Playwright), and the autonomous delivery mindset that freelance and contractor roles require.",
+    summaryEs: "Ingeniero full-stack con 15 años de experiencia — Node.js, React, TypeScript, AWS, Terraform y Docker como stack principal.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "Node.js · React · TypeScript · AWS · GCP · Terraform · Docker · Kubernetes · microservices", val_es: "Node.js · React · TypeScript · AWS · GCP · Terraform · Docker · Kubernetes · microservicios" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Clean Architecture + full test coverage + cloud infrastructure + autonomous contractor delivery", val_es: "Clean Architecture + cobertura de tests completa + infraestructura cloud + entrega autónoma como contratista" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Senior Full Stack Developer · Freelance/Contract", val_es: "Senior Full Stack Developer · Freelance/Contrato" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j137 — Hunter Bond / Fullstack Software Engineer Python/React (FinTech)
+  "32afe087-2d21-47da-a731-871322252703": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Fullstack Software Engineer · FinTech" },
+    summary: "Full-stack engineer with 15 years of production experience — expert-level React and TypeScript on the frontend, with backend delivery in Python and Node.js. Has built real-time data platforms, trading-adjacent dashboards, and financial connectivity infrastructure: currently at Embat delivering banking API integrations, balance calculations, and transaction processing systems. Brings the ownership mindset and end-to-end delivery discipline that FinTech engineering requires.",
+    summaryEs: "Ingeniero full-stack con 15 años de experiencia — React y TypeScript a nivel experto en frontend, con entrega de backend en Python y Node.js. Actualmente en Embat entregando integraciones bancarias, cálculos de balance y sistemas de procesamiento de transacciones.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "React · TypeScript · Python · Node.js · PostgreSQL · GCP · AWS · Docker · banking APIs", val_es: "React · TypeScript · Python · Node.js · PostgreSQL · GCP · AWS · Docker · APIs bancarias" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "FinTech domain expertise + banking connectivity + real-time data + end-to-end ownership", val_es: "Experiencia en dominio FinTech + conectividad bancaria + datos en tiempo real + ownership end-to-end" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Fullstack Software Engineer · FinTech · Hybrid Madrid", val_es: "Fullstack Software Engineer · FinTech · Híbrido Madrid" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
 };
 
 export default jobs;

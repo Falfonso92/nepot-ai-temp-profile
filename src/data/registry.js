@@ -326,6 +326,13 @@ const registry = [
   { jobId: "j129-airflows",         guid: "9a88feb9-634a-4b81-bfe4-e54d6573a40b", url: `${BASE_URL}/9a88feb9-634a-4b81-bfe4-e54d6573a40b`, role: "Forward Deployed Engineer",               company: "Airflows" },
   { jobId: "j130-esolution",        guid: "cfacf413-dc70-4a41-a82a-d59c23e7eb29", url: `${BASE_URL}/cfacf413-dc70-4a41-a82a-d59c23e7eb29`, role: "Senior Backend Developer (CTO path)",     company: "Esolution & City Hub España" },
   { jobId: "j131-backbase",         guid: "749bc8fc-9059-49df-a85c-d979a006f7eb", url: `${BASE_URL}/749bc8fc-9059-49df-a85c-d979a006f7eb`, role: "Senior Engineering Team Lead",            company: "Backbase" },
+  // ── Batch 20261009-b — j132–j137 ───────────────────────────────────────────
+  { jobId: "j132-wave",             guid: "235bc5f2-c4eb-46bb-8c13-84735f05fbf3", url: `${BASE_URL}/235bc5f2-c4eb-46bb-8c13-84735f05fbf3`, role: "Forward Deployed Engineer",               company: "Wave Group" },
+  { jobId: "j133-indra-vue",        guid: "6ab9dec7-7701-44e6-a56a-c4ef480d8dde", url: `${BASE_URL}/6ab9dec7-7701-44e6-a56a-c4ef480d8dde`, role: "Senior Frontend Engineer · Vue.js",        company: "Indra Group" },
+  { jobId: "j134-metrica",          guid: "6700b8b9-f2ec-47ae-b409-c6474aba503e", url: `${BASE_URL}/6700b8b9-f2ec-47ae-b409-c6474aba503e`, role: "Senior Fullstack Engineer",                company: "METRICA" },
+  { jobId: "j135-actioglobal",      guid: "ceee80df-6eb4-4ed8-84a4-4b76d254e465", url: `${BASE_URL}/ceee80df-6eb4-4ed8-84a4-4b76d254e465`, role: "Senior Frontend Developer",                company: "ActioGlobal" },
+  { jobId: "j136-efrontiers",       guid: "38c73ffb-df3b-42fb-9206-48136b67ccab", url: `${BASE_URL}/38c73ffb-df3b-42fb-9206-48136b67ccab`, role: "Senior Full Stack Developer",              company: "E-Frontiers" },
+  { jobId: "j137-hunterbond",       guid: "32afe087-2d21-47da-a731-871322252703", url: `${BASE_URL}/32afe087-2d21-47da-a731-871322252703`, role: "Fullstack Software Engineer",               company: "Hunter Bond" },
 ];
 
 export default registry;
