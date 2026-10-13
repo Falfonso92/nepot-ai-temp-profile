@@ -1792,6 +1792,20 @@ const jobs = {
     ],
   },
 
+  // j138 — Qualitas Funds / Senior Full Stack Developer (.NET + React)
+  "cabcc7b8-c033-4b4c-8c6f-5b67f0c3f508": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Senior Full Stack Developer · .NET · React · Microservices" },
+    summary: "Full-stack engineer with 15 years of production software experience across .NET/C# and React/TypeScript ecosystems. Strong background in enterprise platform development: REST APIs, microservices architecture, relational databases, and Azure DevOps CI/CD pipelines. Has built and owned complete investment and SaaS platforms from greenfield to production — including React SPAs, service-oriented backends, and SQL-backed data models. Combines technical depth with product thinking and clear communication with non-technical business stakeholders. Active practitioner of AI-assisted development using Claude API and GitHub Copilot in production workflows.",
+    summaryEs: "Ingeniero full-stack con 15 años de experiencia en ecosistemas .NET/C# y React/TypeScript. Plataformas enterprise, APIs REST, microservicios, bases de datos relacionales y CI/CD con Azure DevOps. Combina profundidad técnica con mentalidad de producto y comunicación clara con stakeholders no técnicos.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: ".NET Core · C# · React · TypeScript · SQL Server · Azure DevOps · microservices · REST APIs · Docker", val_es: ".NET Core · C# · React · TypeScript · SQL Server · Azure DevOps · microservicios · REST APIs · Docker" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Enterprise full-stack ownership — .NET/C# backend + React frontend + SQL + Azure DevOps + AI-assisted development in production", val_es: "Ownership full-stack enterprise — backend .NET/C# + frontend React + SQL + Azure DevOps + desarrollo asistido por IA en producción" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Senior Full Stack Developer · Madrid", val_es: "Senior Full Stack Developer · Madrid" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
   // j137 — Hunter Bond / Fullstack Software Engineer Python/React (FinTech)
   "32afe087-2d21-47da-a731-871322252703": {
     ...baseProfile,

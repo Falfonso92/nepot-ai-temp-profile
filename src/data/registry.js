@@ -333,6 +333,8 @@ const registry = [
   { jobId: "j135-actioglobal",      guid: "ceee80df-6eb4-4ed8-84a4-4b76d254e465", url: `${BASE_URL}/ceee80df-6eb4-4ed8-84a4-4b76d254e465`, role: "Senior Frontend Developer",                company: "ActioGlobal" },
   { jobId: "j136-efrontiers",       guid: "38c73ffb-df3b-42fb-9206-48136b67ccab", url: `${BASE_URL}/38c73ffb-df3b-42fb-9206-48136b67ccab`, role: "Senior Full Stack Developer",              company: "E-Frontiers" },
   { jobId: "j137-hunterbond",       guid: "32afe087-2d21-47da-a731-871322252703", url: `${BASE_URL}/32afe087-2d21-47da-a731-871322252703`, role: "Fullstack Software Engineer",               company: "Hunter Bond" },
+  // ── Batch 20261013 — j138 ──────────────────────────────────────────────────
+  { jobId: "j138-qualitas",         guid: "cabcc7b8-c033-4b4c-8c6f-5b67f0c3f508", url: `${BASE_URL}/cabcc7b8-c033-4b4c-8c6f-5b67f0c3f508`, role: "Senior Full Stack Developer (.NET + React)", company: "Qualitas Funds" },
 ];
 
 export default registry;
