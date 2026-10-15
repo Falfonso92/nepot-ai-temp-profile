@@ -1792,6 +1792,20 @@ const jobs = {
     ],
   },
 
+  // j140 — Better Stack / Full-stack Engineer
+  "a052ce22-5a7f-495b-a751-badbc4c1a2c9": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Full-stack Engineer · End-to-end Ownership · AI in Production" },
+    summary: "Full-stack engineer with 15 years of end-to-end product delivery — backend, frontend, infrastructure, and the operating model that makes a small team ship fast. My background is TypeScript, Node.js, React, and PostgreSQL. I use AI tools daily in real production systems — not autocomplete, but actual multi-agent systems that do work. I also build things outside of my job, because I find it hard to stop.",
+    summaryEs: "Ingeniero full-stack con 15 años de entrega end-to-end. TypeScript, Node.js, React, PostgreSQL. IA en producción: sistemas multi-agente reales. Construyo cosas fuera del trabajo porque no puedo parar.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "TypeScript · Node.js · React · PostgreSQL · GCP · AWS · AI systems (Claude API)", val_es: "TypeScript · Node.js · React · PostgreSQL · GCP · AWS · Sistemas IA (Claude API)" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "End-to-end ownership + production AI systems + PostgreSQL depth + async-first delivery", val_es: "Ownership end-to-end + sistemas de IA en producción + PostgreSQL + entrega async-first" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Full-stack Engineer · Remote", val_es: "Full-stack Engineer · Remoto" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
   // j139 — Present Connection / Senior .NET / C# / Azure Engineer
   "f76601fe-7456-4ba3-9d30-6e268d184283": {
     ...baseProfile,

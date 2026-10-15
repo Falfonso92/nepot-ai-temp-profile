@@ -336,6 +336,8 @@ const registry = [
   // ── Batch 20261013 — j138 ──────────────────────────────────────────────────
   { jobId: "j138-qualitas",         guid: "cabcc7b8-c033-4b4c-8c6f-5b67f0c3f508", url: `${BASE_URL}/cabcc7b8-c033-4b4c-8c6f-5b67f0c3f508`, role: "Senior Full Stack Developer (.NET + React)", company: "Qualitas Funds" },
   { jobId: "j139-presentconnection", guid: "f76601fe-7456-4ba3-9d30-6e268d184283", url: `${BASE_URL}/f76601fe-7456-4ba3-9d30-6e268d184283`, role: "Senior .NET / C# / Azure Engineer",           company: "Present Connection" },
+  // ── Batch 20261016 — j140 ──────────────────────────────────────────────────
+  { jobId: "j140-betterstack",      guid: "a052ce22-5a7f-495b-a751-badbc4c1a2c9", url: `${BASE_URL}/a052ce22-5a7f-495b-a751-badbc4c1a2c9`, role: "Full-stack Engineer",                        company: "Better Stack" },
 ];
 
 export default registry;
