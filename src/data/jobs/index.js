@@ -1793,7 +1793,7 @@ const jobs = {
   },
 
   // j140 — Better Stack / Full-stack Engineer
-  "a052ce22-5a7f-495b-a751-badbc4c1a2c9": {
+  "5a6caa98-6f4d-421c-bd15-dfbf59242270": {
     ...baseProfile,
     meta: { ...baseProfile.meta, headline: "Full-stack Engineer · End-to-end Ownership · AI in Production" },
     summary: "Full-stack engineer with 15 years owning features end-to-end — schema, backend, frontend, deployment, without handing off. I care about correctness and performance as constraints, not afterthoughts: portal loads reduced, pipelines scaled, infrastructure costs cut. I use AI in production, building multi-agent systems and RAG systems that do real work without engineering involvement. I build things outside my job because I find it hard to stop. I work best in small teams, async, and with clear ownership rather than hand-offs.",
