@@ -1795,13 +1795,13 @@ const jobs = {
   // j139 — Present Connection / Senior .NET / C# / Azure Engineer
   "f76601fe-7456-4ba3-9d30-6e268d184283": {
     ...baseProfile,
-    meta: { ...baseProfile.meta, headline: "Senior .NET / C# Engineer · Azure · Distributed Systems" },
-    summary: "Senior .NET/C# engineer with 15 years of production software experience — .NET and C# active throughout my career, not just early years. Strong Azure background: App Service, Azure SQL, Azure DevOps, Service Bus, and Entra ID in production systems. Specialised in distributed systems with multiple sources of truth, service decomposition, and the operating model work that comes with moving away from low-code platforms to in-house builds. Works fully autonomously, based in Madrid.",
-    summaryEs: "Senior .NET/C# con 15 años de experiencia activa en toda mi carrera. Azure en produccion: App Service, Azure SQL, Azure DevOps, Service Bus, Entra ID. Sistemas distribuidos, migracion low-code a in-house. Madrid.",
+    meta: { ...baseProfile.meta, headline: "Senior Software Engineer · Distributed Systems · Cloud" },
+    summary: "Software engineer with 15 years of experience building distributed systems, cloud infrastructure, and the teams that operate them. My background spans the full delivery lifecycle: system design, service decomposition, multi-cloud infrastructure (AWS, GCP, Azure), CI/CD pipelines, and the operating model work that comes with replacing legacy or low-code platforms with proper in-house builds. I work across language ecosystems — C#, TypeScript, Python — and focus on getting the architecture right rather than the technology stack. Comfortable working fully autonomously on greenfield systems and in complex, multi-source-of-truth environments. Based in Madrid.",
+    summaryEs: "Ingeniero de software con 15 años construyendo sistemas distribuidos, infraestructura cloud y los equipos que los operan. Multi-cloud (AWS, GCP, Azure), CI/CD, migración de plataformas low-code a builds propias. Trabajo a través de ecosistemas: C#, TypeScript, Python. Madrid.",
     now: [
-      { lbl: "Stack match",  lbl_es: "Stack",         val: "C# · .NET Core · Azure App Service · Azure SQL · Azure DevOps · Service Bus · Entra ID · Docker · microservices", val_es: "C# · .NET Core · Azure App Service · Azure SQL · Azure DevOps · Service Bus · Entra ID · Docker · microservicios" },
-      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Distributed systems expertise + low-code-to-in-house migration + full Azure ownership + autonomous delivery from Madrid", val_es: "Sistemas distribuidos + migracion low-code a in-house + Azure completo + entrega autonoma desde Madrid" },
-      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Senior .NET / C# Engineer · Remote", val_es: "Senior .NET / C# Engineer · Remoto" },
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "TypeScript · C# · Python · AWS · GCP · Azure · Distributed systems · CI/CD · microservices", val_es: "TypeScript · C# · Python · AWS · GCP · Azure · Sistemas distribuidos · CI/CD · microservicios" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Multi-cloud distributed systems + low-code-to-in-house migration + full CI/CD ownership + autonomous delivery from Madrid", val_es: "Sistemas distribuidos multi-cloud + migración low-code a in-house + CI/CD completo + entrega autónoma desde Madrid" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Senior Software Engineer · Remote", val_es: "Senior Software Engineer · Remoto" },
       { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
     ],
   },
