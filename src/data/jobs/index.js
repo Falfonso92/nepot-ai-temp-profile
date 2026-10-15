@@ -1792,6 +1792,20 @@ const jobs = {
     ],
   },
 
+  // j139 — Present Connection / Senior .NET / C# / Azure Engineer
+  "f76601fe-7456-4ba3-9d30-6e268d184283": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Senior .NET / C# Engineer · Azure · Distributed Systems" },
+    summary: "Senior .NET/C# engineer with 15 years of production software experience — .NET and C# active throughout my career, not just early years. Strong Azure background: App Service, Azure SQL, Azure DevOps, Service Bus, and Entra ID in production systems. Specialised in distributed systems with multiple sources of truth, service decomposition, and the operating model work that comes with moving away from low-code platforms to in-house builds. Works fully autonomously, based in Madrid.",
+    summaryEs: "Senior .NET/C# con 15 años de experiencia activa en toda mi carrera. Azure en produccion: App Service, Azure SQL, Azure DevOps, Service Bus, Entra ID. Sistemas distribuidos, migracion low-code a in-house. Madrid.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "C# · .NET Core · Azure App Service · Azure SQL · Azure DevOps · Service Bus · Entra ID · Docker · microservices", val_es: "C# · .NET Core · Azure App Service · Azure SQL · Azure DevOps · Service Bus · Entra ID · Docker · microservicios" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Distributed systems expertise + low-code-to-in-house migration + full Azure ownership + autonomous delivery from Madrid", val_es: "Sistemas distribuidos + migracion low-code a in-house + Azure completo + entrega autonoma desde Madrid" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Senior .NET / C# Engineer · Remote", val_es: "Senior .NET / C# Engineer · Remoto" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
   // j138 — Qualitas Funds / Senior Full Stack Developer (.NET + React)
   "cabcc7b8-c033-4b4c-8c6f-5b67f0c3f508": {
     ...baseProfile,

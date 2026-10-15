@@ -335,6 +335,7 @@ const registry = [
   { jobId: "j137-hunterbond",       guid: "32afe087-2d21-47da-a731-871322252703", url: `${BASE_URL}/32afe087-2d21-47da-a731-871322252703`, role: "Fullstack Software Engineer",               company: "Hunter Bond" },
   // ── Batch 20261013 — j138 ──────────────────────────────────────────────────
   { jobId: "j138-qualitas",         guid: "cabcc7b8-c033-4b4c-8c6f-5b67f0c3f508", url: `${BASE_URL}/cabcc7b8-c033-4b4c-8c6f-5b67f0c3f508`, role: "Senior Full Stack Developer (.NET + React)", company: "Qualitas Funds" },
+  { jobId: "j139-presentconnection", guid: "f76601fe-7456-4ba3-9d30-6e268d184283", url: `${BASE_URL}/f76601fe-7456-4ba3-9d30-6e268d184283`, role: "Senior .NET / C# / Azure Engineer",           company: "Present Connection" },
 ];
 
 export default registry;
