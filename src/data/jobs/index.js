@@ -1796,8 +1796,8 @@ const jobs = {
   "a052ce22-5a7f-495b-a751-badbc4c1a2c9": {
     ...baseProfile,
     meta: { ...baseProfile.meta, headline: "Full-stack Engineer · End-to-end Ownership · AI in Production" },
-    summary: "Full-stack engineer with 15 years of end-to-end product delivery — backend, frontend, infrastructure, and the operating model that makes a small team ship fast. My background is TypeScript, Node.js, React, and PostgreSQL. I use AI tools daily in real production systems — not autocomplete, but actual multi-agent systems that do work. I also build things outside of my job, because I find it hard to stop.",
-    summaryEs: "Ingeniero full-stack con 15 años de entrega end-to-end. TypeScript, Node.js, React, PostgreSQL. IA en producción: sistemas multi-agente reales. Construyo cosas fuera del trabajo porque no puedo parar.",
+    summary: "Full-stack engineer with 15 years owning features end-to-end — schema, backend, frontend, deployment, without handing off. I care about correctness and performance as constraints, not afterthoughts: portal loads reduced, pipelines scaled, infrastructure costs cut. I use AI in production, building multi-agent systems and RAG systems that do real work without engineering involvement. I build things outside my job because I find it hard to stop. I work best in small teams, async, and with clear ownership rather than hand-offs.",
+    summaryEs: "Ingeniero full-stack con 15 años de ownership end-to-end. Corrección y rendimiento como restricciones, no como opcionales. IA en producción: sistemas multi-agente y RAG que hacen trabajo real. Construyo fuera del trabajo. Mejor en equipos pequeños, async, con ownership claro.",
     now: [
       { lbl: "Stack match",  lbl_es: "Stack",         val: "TypeScript · Node.js · React · PostgreSQL · GCP · AWS · AI systems (Claude API)", val_es: "TypeScript · Node.js · React · PostgreSQL · GCP · AWS · Sistemas IA (Claude API)" },
       { lbl: "What I bring", lbl_es: "Lo que aporto", val: "End-to-end ownership + production AI systems + PostgreSQL depth + async-first delivery", val_es: "Ownership end-to-end + sistemas de IA en producción + PostgreSQL + entrega async-first" },
