@@ -1847,6 +1847,176 @@ const jobs = {
       { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
     ],
   },
+
+  // ── Batch 20261016-b — j141–j155 ────────────────────────────────────────────
+
+  // j141 — Maisa / Senior Software Engineer (Frontend · React + TypeScript)
+  "ba5d2405-852f-4cf5-9e5c-f2ef1a0ad56b": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Senior Software Engineer · Frontend · React & TypeScript" },
+    summary: "Full-stack engineer with 15 years owning features end-to-end — schema, backend, frontend, deployment, without handing off. I care about correctness and performance as constraints, not afterthoughts: portal loads reduced, pipelines scaled, infrastructure costs cut. I use AI in production, building multi-agent systems and RAG systems that do real work without engineering involvement. I build things outside my job because I find it hard to stop. I work best in small teams, async, and with clear ownership rather than hand-offs.",
+    summaryEs: "Ingeniero full-stack con 15 años de ownership end-to-end. Corrección y rendimiento como restricciones, no como opcionales. IA en producción: sistemas multi-agente y RAG que hacen trabajo real. Mejor en equipos pequeños, async, con ownership claro.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "TypeScript · React · Vue.js · Node.js · PostgreSQL · AWS · GCP · CI/CD · Vitest · Playwright", val_es: "TypeScript · React · Vue.js · Node.js · PostgreSQL · AWS · GCP · CI/CD" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Frontend ownership from requirements to release · testing depth · REST API integration · production AI systems", val_es: "Ownership frontend de requisitos a release · testing · integración de APIs REST · sistemas de IA en producción" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Senior Software Engineer · Frontend · Remote / Madrid", val_es: "Senior Software Engineer · Frontend · Remoto / Madrid" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j142 — InteractiveAI / Senior Full-Stack Developer
+  "52e6827d-1d37-4447-9b80-af386b737061": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Senior Software Engineer · Full-Stack · End-to-end Ownership" },
+    summary: "Full-stack engineer with 15 years owning features end-to-end — schema, backend, frontend, deployment, without handing off. I care about correctness and performance as constraints, not afterthoughts: portal loads reduced, pipelines scaled, infrastructure costs cut. I use AI in production, building multi-agent systems and RAG systems that do real work without engineering involvement. I build things outside my job because I find it hard to stop. I work best in small teams, async, and with clear ownership rather than hand-offs.",
+    summaryEs: "Ingeniero full-stack con 15 años de ownership end-to-end. Corrección y rendimiento como restricciones, no como opcionales. IA en producción: sistemas multi-agente y RAG que hacen trabajo real. Mejor en equipos pequeños, async, con ownership claro.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "TypeScript · Node.js · React · PostgreSQL · AWS · GCP · AI systems (Claude API)", val_es: "TypeScript · Node.js · React · PostgreSQL · AWS · GCP · Sistemas IA (Claude API)" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "End-to-end ownership + production AI systems + PostgreSQL depth + async-first delivery", val_es: "Ownership end-to-end + sistemas de IA en producción + PostgreSQL + entrega async-first" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Senior Software Engineer · Full-Stack · Madrid / Lisbon", val_es: "Senior Software Engineer · Full-Stack · Madrid / Lisboa" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j143 — StatusNeo / Senior Software Engineer — AI & Agentic Systems
+  "045ac6b1-664f-4fa6-ae65-241f06c8ff96": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Senior Software Engineer · AI & Agentic Systems · Cloud-native" },
+    summary: "Full-stack engineer with 15 years owning features end-to-end — schema, backend, frontend, deployment, without handing off. I care about correctness and performance as constraints, not afterthoughts: portal loads reduced, pipelines scaled, infrastructure costs cut. I use AI in production, building multi-agent systems and RAG systems that do real work without engineering involvement. I build things outside my job because I find it hard to stop. I work best in small teams, async, and with clear ownership rather than hand-offs.",
+    summaryEs: "Ingeniero full-stack con 15 años de ownership end-to-end. IA en producción: sistemas multi-agente y RAG. Arquitectura cloud-native en AWS, GCP y Azure. Mejor en equipos pequeños, async, con ownership claro.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "TypeScript · Node.js · React · AWS · GCP · Azure · Claude API · multi-agent AI · LLM integration · Docker · Kubernetes", val_es: "TypeScript · Node.js · React · AWS · GCP · Azure · Claude API · IA multi-agente · Docker · Kubernetes" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Production AI agent systems + multi-cloud architecture + end-to-end ownership + LLM integration experience", val_es: "Sistemas de agentes IA en producción + arquitectura multi-cloud + ownership end-to-end" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Senior Software Engineer · AI/Agents · On-site Madrid", val_es: "Senior Software Engineer · IA/Agentes · Presencial Madrid" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j146 — Pleo / Staff Front End Engineer — Web Core
+  "051c1a5c-0dbe-41d2-8c57-624e98f20503": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Staff Software Engineer · Frontend Platform · Developer Productivity" },
+    summary: "Full-stack engineer with 15 years owning features end-to-end — schema, backend, frontend, deployment, without handing off. I care about correctness and performance as constraints, not afterthoughts: portal loads reduced, pipelines scaled, infrastructure costs cut. I use AI in production, building multi-agent systems and RAG systems that do real work without engineering involvement. I build things outside my job because I find it hard to stop. I work best in small teams, async, and with clear ownership rather than hand-offs.",
+    summaryEs: "Ingeniero full-stack con 15 años de ownership end-to-end. Plataforma frontend, productividad de desarrolladores y CI/CD. Mejor en equipos pequeños, async, con ownership claro.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "TypeScript · React · Vue.js · CI/CD · Developer tooling · Node.js · AWS · GCP · Docker", val_es: "TypeScript · React · Vue.js · CI/CD · Herramientas de desarrollo · Node.js · AWS · GCP" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Frontend platform ownership + CI/CD depth + staff-level technical direction + force-multiplier patterns", val_es: "Ownership de plataforma frontend + CI/CD + dirección técnica a nivel staff" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Staff Software Engineer · Frontend Platform · Madrid", val_es: "Staff Software Engineer · Plataforma Frontend · Madrid" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j148 — MDW / Full Stack Specialist
+  "83d0c0c7-c11a-4832-bb1e-e17b2f5a9b6f": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Senior Software Engineer · Full-Stack · Cloud & AI Integration" },
+    summary: "Full-stack engineer with 15 years owning features end-to-end — schema, backend, frontend, deployment, without handing off. I care about correctness and performance as constraints, not afterthoughts: portal loads reduced, pipelines scaled, infrastructure costs cut. I use AI in production, building multi-agent systems and RAG systems that do real work without engineering involvement. I build things outside my job because I find it hard to stop. I work best in small teams, async, and with clear ownership rather than hand-offs.",
+    summaryEs: "Ingeniero full-stack con 15 años de ownership end-to-end. Cloud en AWS, GCP y Azure. IA en producción: RAG y sistemas multi-agente. Mejor en equipos pequeños, async, con ownership claro.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "Python · TypeScript · Node.js · React · Azure · AWS · GCP · LLM/RAG · Docker · Terraform · CI/CD", val_es: "Python · TypeScript · Node.js · React · Azure · AWS · GCP · LLM/RAG · Docker · Terraform" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Multi-cloud full-stack ownership + LLM/RAG integration in production + IaC + end-to-end delivery", val_es: "Ownership full-stack multi-cloud + integración LLM/RAG en producción + IaC + entrega end-to-end" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Senior Software Engineer · Full-Stack · Remote Spain", val_es: "Senior Software Engineer · Full-Stack · Remoto España" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j149 — Uptail / Founding Forward Deployed Engineer
+  "89c4f089-924d-4709-b067-e22a0ce22657": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Senior Software Engineer · LLM & Voice AI · API Integrations" },
+    summary: "Full-stack engineer with 15 years owning features end-to-end — schema, backend, frontend, deployment, without handing off. I care about correctness and performance as constraints, not afterthoughts: portal loads reduced, pipelines scaled, infrastructure costs cut. I use AI in production, building multi-agent systems and RAG systems that do real work without engineering involvement. I build things outside my job because I find it hard to stop. I work best in small teams, async, and with clear ownership rather than hand-offs.",
+    summaryEs: "Ingeniero full-stack con 15 años de ownership end-to-end. IA en producción: multi-agente y RAG. Integraciones API entre sistemas dispares. Bilingüe español/inglés. Mejor en equipos pequeños, async.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "Python · TypeScript · Node.js · LLM APIs · Voice AI · CRM integrations · REST APIs · PostgreSQL · AWS", val_es: "Python · TypeScript · Node.js · APIs LLM · IA de voz · integraciones CRM · REST APIs" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "LLM features shipped to real users + API integrations across systems + bilingual technical communication", val_es: "Features LLM lanzadas a usuarios reales + integraciones API + comunicación técnica bilingüe" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Senior Software Engineer · LLM & Integrations · Madrid Hybrid", val_es: "Senior Software Engineer · LLM e Integraciones · Híbrido Madrid" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j150 — Factorial / Staff AI Engineer — API & Integrations
+  "390b10b9-f6c5-4eca-af54-43876c0816ab": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Staff Software Engineer · AI Systems · API Design & Integrations" },
+    summary: "Full-stack engineer with 15 years owning features end-to-end — schema, backend, frontend, deployment, without handing off. I care about correctness and performance as constraints, not afterthoughts: portal loads reduced, pipelines scaled, infrastructure costs cut. I use AI in production, building multi-agent systems and RAG systems that do real work without engineering involvement. I build things outside my job because I find it hard to stop. I work best in small teams, async, and with clear ownership rather than hand-offs.",
+    summaryEs: "Ingeniero full-stack con 15 años de ownership end-to-end. IA en producción: agentes, RAG y evals. Diseño de APIs públicas y sistemas de integración. Mejor en equipos pequeños, async.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "TypeScript · Node.js · Ruby · React · PostgreSQL · LLM agents · Claude API · MCP · AWS · GCP", val_es: "TypeScript · Node.js · Ruby · React · PostgreSQL · agentes LLM · Claude API · MCP" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Production AI agent systems + public API design + integrations framework + staff-level ownership", val_es: "Sistemas de agentes IA en producción + diseño de APIs públicas + framework de integraciones + ownership staff" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Staff Software Engineer · AI & APIs · Madrid", val_es: "Staff Software Engineer · IA y APIs · Madrid" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j151 — Cabify / Software Engineer — Backend + AI
+  "f155fc38-1b79-4746-9655-32cdeeac8071": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Senior Software Engineer · Backend & AI · Distributed Systems" },
+    summary: "Full-stack engineer with 15 years owning features end-to-end — schema, backend, frontend, deployment, without handing off. I care about correctness and performance as constraints, not afterthoughts: portal loads reduced, pipelines scaled, infrastructure costs cut. I use AI in production, building multi-agent systems and RAG systems that do real work without engineering involvement. I build things outside my job because I find it hard to stop. I work best in small teams, async, and with clear ownership rather than hand-offs.",
+    summaryEs: "Ingeniero full-stack con 15 años de ownership end-to-end. Sistemas distribuidos a escala. IA en producción: LLMs, RAG, agentes. Agnóstico de lenguaje. Mejor en equipos pequeños, async.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "TypeScript · Node.js · Go · PostgreSQL · AWS · LLM APIs · RAG · distributed systems · Docker · Kubernetes", val_es: "TypeScript · Node.js · Go · PostgreSQL · AWS · APIs LLM · RAG · sistemas distribuidos" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Distributed systems at scale + LLM/RAG integration + language-agnostic + quality and reliability ownership", val_es: "Sistemas distribuidos a escala + integración LLM/RAG + agnóstico de lenguaje + ownership de calidad" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Senior Software Engineer · Backend & AI · Madrid On-site", val_es: "Senior Software Engineer · Backend e IA · Presencial Madrid" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j152 — Capchase / Tech Generalist — Software Engineer
+  "664eaedb-4b7c-4b5f-bdeb-2e4ebcf7ff04": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Senior Software Engineer · Full-Stack · Systems & Fintech" },
+    summary: "Full-stack engineer with 15 years owning features end-to-end — schema, backend, frontend, deployment, without handing off. I care about correctness and performance as constraints, not afterthoughts: portal loads reduced, pipelines scaled, infrastructure costs cut. I use AI in production, building multi-agent systems and RAG systems that do real work without engineering involvement. I build things outside my job because I find it hard to stop. I work best in small teams, async, and with clear ownership rather than hand-offs.",
+    summaryEs: "Ingeniero full-stack con 15 años de ownership end-to-end. Sistemas de pagos, reconciliación y arquitecturas financieras. GCP, Kubernetes, TypeScript/Node.js. Mejor en equipos pequeños, async.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "TypeScript · Node.js · React · PostgreSQL · GCP · Kubernetes · BigQuery · CI/CD · Docker · fintech APIs", val_es: "TypeScript · Node.js · React · PostgreSQL · GCP · Kubernetes · BigQuery · APIs fintech" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Systems thinking + TypeScript/Node.js depth + GCP + financial systems experience + autonomous remote delivery", val_es: "Pensamiento de sistemas + TypeScript/Node.js + GCP + experiencia en sistemas financieros + entrega autónoma" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Senior Software Engineer · Generalist · Remote-first Madrid", val_es: "Senior Software Engineer · Generalista · Remote-first Madrid" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j153 — TuxCare / Staff Engineer
+  "9762ad00-c064-4e90-92bf-4811b15d641a": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Staff Software Engineer · Systems & Infrastructure · End-to-end Ownership" },
+    summary: "Full-stack engineer with 15 years owning features end-to-end — schema, backend, frontend, deployment, without handing off. I care about correctness and performance as constraints, not afterthoughts: portal loads reduced, pipelines scaled, infrastructure costs cut. I use AI in production, building multi-agent systems and RAG systems that do real work without engineering involvement. I build things outside my job because I find it hard to stop. I work best in small teams, async, and with clear ownership rather than hand-offs.",
+    summaryEs: "Ingeniero full-stack con 15 años de ownership end-to-end. Sistemas backend, infraestructura Linux, entrega independiente. Mejor en equipos pequeños, async, con ownership claro.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "Python · Go · TypeScript · Node.js · Linux · PostgreSQL · AWS · GCP · Docker · Kubernetes · CI/CD", val_es: "Python · Go · TypeScript · Node.js · Linux · PostgreSQL · AWS · GCP · Docker · Kubernetes" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "End-to-end ownership of major systems + hands-on coding depth + Linux production experience + staff-level systems design", val_es: "Ownership end-to-end de sistemas mayores + profundidad de código + experiencia Linux en producción" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Staff Software Engineer · Systems Engineering · Remote", val_es: "Staff Software Engineer · Ingeniería de Sistemas · Remoto" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j154 — Alignerr / Back End Developer — AI Infrastructure
+  "0860ebed-e45f-4567-b730-33d0cdab34a6": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Senior Software Engineer · Backend & AI Infrastructure · Distributed Systems" },
+    summary: "Full-stack engineer with 15 years owning features end-to-end — schema, backend, frontend, deployment, without handing off. I care about correctness and performance as constraints, not afterthoughts: portal loads reduced, pipelines scaled, infrastructure costs cut. I use AI in production, building multi-agent systems and RAG systems that do real work without engineering involvement. I build things outside my job because I find it hard to stop. I work best in small teams, async, and with clear ownership rather than hand-offs.",
+    summaryEs: "Ingeniero full-stack con 15 años de ownership end-to-end. Servicios backend, pipelines de datos y infraestructura de IA. Multi-cloud: AWS, GCP, Azure. Mejor en equipos pequeños, async.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "Python · Node.js · TypeScript · PostgreSQL · MongoDB · Redis · AWS · GCP · Azure · Docker · Kubernetes · Kafka", val_es: "Python · Node.js · TypeScript · PostgreSQL · MongoDB · Redis · AWS · GCP · Azure · Kafka" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Backend services + REST API design + distributed systems + data pipelines + multi-cloud infrastructure", val_es: "Servicios backend + diseño de APIs REST + sistemas distribuidos + pipelines de datos + infraestructura multi-cloud" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Senior Software Engineer · Backend AI Infra · Remote Contract", val_es: "Senior Software Engineer · Infraestructura IA · Contrato Remoto" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
+
+  // j155 — knowmad mood / AI Technical Lead & Evangelist
+  "e0f2e489-b031-40c2-b462-e1b1241ffa75": {
+    ...baseProfile,
+    meta: { ...baseProfile.meta, headline: "Technical Lead · GenAI & Agent Architectures · Microsoft AI Ecosystem" },
+    summary: "Full-stack engineer with 15 years owning features end-to-end — schema, backend, frontend, deployment, without handing off. I care about correctness and performance as constraints, not afterthoughts: portal loads reduced, pipelines scaled, infrastructure costs cut. I use AI in production, building multi-agent systems and RAG systems that do real work without engineering involvement. I build things outside my job because I find it hard to stop. I work best in small teams, async, and with clear ownership rather than hand-offs.",
+    summaryEs: "Líder técnico con 15 años de ownership end-to-end. IA generativa y arquitecturas de agentes en producción. Ecosistema Microsoft AI y multi-cloud. Mejor en equipos pequeños, async, con ownership claro.",
+    now: [
+      { lbl: "Stack match",  lbl_es: "Stack",         val: "TypeScript · Python · .NET · Azure AI Services · Azure OpenAI · Claude API · MCP · multi-agent AI · GenAI architectures", val_es: "TypeScript · Python · .NET · Azure AI · Azure OpenAI · Claude API · MCP · IA multi-agente" },
+      { lbl: "What I bring", lbl_es: "Lo que aporto", val: "Production AI agent systems + Microsoft AI ecosystem + team coaching + AI governance + technical leadership", val_es: "Sistemas de agentes IA en producción + ecosistema Microsoft AI + coaching de equipos + liderazgo técnico" },
+      { lbl: "Open to",      lbl_es: "Abierto a",     val: "Technical Lead · GenAI / AI Leadership · Madrid Hybrid", val_es: "Technical Lead · IA Generativa / Liderazgo IA · Híbrido Madrid" },
+      { lbl: "Available",    lbl_es: "Disponible",    val: "Immediate", val_es: "Inmediata" },
+    ],
+  },
 };
 
 export default jobs;

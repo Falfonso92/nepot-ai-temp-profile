@@ -338,6 +338,19 @@ const registry = [
   { jobId: "j139-presentconnection", guid: "f76601fe-7456-4ba3-9d30-6e268d184283", url: `${BASE_URL}/f76601fe-7456-4ba3-9d30-6e268d184283`, role: "Senior .NET / C# / Azure Engineer",           company: "Present Connection" },
   // ── Batch 20261016 — j140 ──────────────────────────────────────────────────
   { jobId: "j140-betterstack",      guid: "5a6caa98-6f4d-421c-bd15-dfbf59242270", url: `${BASE_URL}/5a6caa98-6f4d-421c-bd15-dfbf59242270`, role: "Full-stack Engineer",                        company: "Better Stack" },
+  // ── Batch 20261016-b — j141–j155 ───────────────────────────────────────────
+  { jobId: "j141-maisa",         guid: "ba5d2405-852f-4cf5-9e5c-f2ef1a0ad56b", url: `${BASE_URL}/ba5d2405-852f-4cf5-9e5c-f2ef1a0ad56b`, role: "Senior Software Engineer",               company: "Maisa" },
+  { jobId: "j142-interactiveai", guid: "52e6827d-1d37-4447-9b80-af386b737061", url: `${BASE_URL}/52e6827d-1d37-4447-9b80-af386b737061`, role: "Senior Full-Stack Developer",              company: "InteractiveAI" },
+  { jobId: "j143-statusneo",     guid: "045ac6b1-664f-4fa6-ae65-241f06c8ff96", url: `${BASE_URL}/045ac6b1-664f-4fa6-ae65-241f06c8ff96`, role: "Senior Software Engineer — AI & Agentic", company: "StatusNeo" },
+  { jobId: "j146-pleo",          guid: "051c1a5c-0dbe-41d2-8c57-624e98f20503", url: `${BASE_URL}/051c1a5c-0dbe-41d2-8c57-624e98f20503`, role: "Staff Front End Engineer — Web Core",      company: "Pleo" },
+  { jobId: "j148-mdw",           guid: "83d0c0c7-c11a-4832-bb1e-e17b2f5a9b6f", url: `${BASE_URL}/83d0c0c7-c11a-4832-bb1e-e17b2f5a9b6f`, role: "Full Stack Specialist",                    company: "MDW" },
+  { jobId: "j149-uptail",        guid: "89c4f089-924d-4709-b067-e22a0ce22657", url: `${BASE_URL}/89c4f089-924d-4709-b067-e22a0ce22657`, role: "Founding Forward Deployed Engineer",        company: "Uptail" },
+  { jobId: "j150-factorial",     guid: "390b10b9-f6c5-4eca-af54-43876c0816ab", url: `${BASE_URL}/390b10b9-f6c5-4eca-af54-43876c0816ab`, role: "Staff AI Engineer — API & Integrations",   company: "Factorial" },
+  { jobId: "j151-cabify",        guid: "f155fc38-1b79-4746-9655-32cdeeac8071", url: `${BASE_URL}/f155fc38-1b79-4746-9655-32cdeeac8071`, role: "Software Engineer — Backend + AI",          company: "Cabify" },
+  { jobId: "j152-capchase",      guid: "664eaedb-4b7c-4b5f-bdeb-2e4ebcf7ff04", url: `${BASE_URL}/664eaedb-4b7c-4b5f-bdeb-2e4ebcf7ff04`, role: "Tech Generalist — Software Engineer",       company: "Capchase" },
+  { jobId: "j153-tuxcare",       guid: "9762ad00-c064-4e90-92bf-4811b15d641a", url: `${BASE_URL}/9762ad00-c064-4e90-92bf-4811b15d641a`, role: "Staff Engineer",                            company: "TuxCare" },
+  { jobId: "j154-alignerr",      guid: "0860ebed-e45f-4567-b730-33d0cdab34a6", url: `${BASE_URL}/0860ebed-e45f-4567-b730-33d0cdab34a6`, role: "Back End Developer — AI Infrastructure",   company: "Alignerr" },
+  { jobId: "j155-knowmadmood",   guid: "e0f2e489-b031-40c2-b462-e1b1241ffa75", url: `${BASE_URL}/e0f2e489-b031-40c2-b462-e1b1241ffa75`, role: "AI Technical Lead & Evangelist",            company: "knowmad mood" },
 ];
 
 export default registry;
